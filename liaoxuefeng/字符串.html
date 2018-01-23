@@ -1,0 +1,48 @@
+<html>
+        <head>
+          <script>
+            'use strict'
+            console.log('I\'m "OK"');
+            console.log('I\'m \"OK\"');
+            console.log('\x41');
+            console.log('\u4e2d\u6587');
+            console.log(`多行
+字符串
+测试`);
+            var name = '小明';
+            var age = 20;
+            var message = '你好，' + name + ', 你今年' + age + '岁了!';
+            var message2 = `你好，${name}, 你今年${age}岁了!`;
+            console.log(message);
+            console.log(message2);
+
+            var s = 'Hello, world!';
+            console.log(s.length);
+            console.log(s[0]);
+            console.log(s[6]);
+            console.log(s[7]);
+            console.log(s[12]);
+            console.log(s[13]);
+
+            s = 'Test';
+            console.log(s);
+            // s[0] = 'X';
+            // console.log(s);
+
+            console.log(s.toUpperCase());
+            var lower = s.toLowerCase();
+            console.log(lower);
+            
+            s = 'Hello, world!';
+            console.log(s.indexOf('world'));
+            console.log(s.indexOf('World'));
+
+            console.log(s.substring(0, 5));
+            console.log(s.substring(7));
+            
+          </script>
+        </head>
+        <body>
+          My JavaScript
+        </body>
+</html>
