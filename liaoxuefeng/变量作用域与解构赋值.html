@@ -3,6 +3,107 @@
         <script>
             'use strict'
             
+            function foo()
+            {
+                var x = 1;
+                
+                function bar()
+                {
+                    var y = x + 1;  // bar可以访问foo的变量x!
+                }
+                var z = y + 1;  // ReferenceError! foo不可以访问bar的变量y!
+            }
+            
+            function bar()
+            {
+                var x = 'A';
+                x = x + 'B';
+            }
+
+           function foo1()
+           {
+               var x = 1;
+
+               function bar()
+               {
+                   var x = 'A';
+                   console.log('x in bar() = ' + x);    // 'A'
+               }
+               console.log('x in foo1() = ' + x);   // 1
+               bar();
+           }
+            foo1();
+
+           function foo2()
+           {
+               var x = 'Hello, ' + y;
+               console.log(x);
+               var y = 'Bob';
+           }
+           foo2();
+
+           function foo3()
+           {
+               var y;
+               var x = 'Hello, ' + y;   // 提升变量y的申明，此时y为undefined
+                console.log(x);
+                y = 'Bob';
+           }
+           foo3();
+
+           function foo4()
+           {
+               var
+                    x = 1,
+                    y = x + 1,
+                    z, i;
+                // return 1;
+           }
+
+           var course = 'Learn JavaScript';
+           console.log(course);
+           console.log(window.course);
+           console.log(window.foo4());
+
+           function foo5()
+           {
+                console.log('foo5');
+           }
+           foo5();
+           window.foo5();
+
+           var foo6 = function()
+           {
+               console.log('foo6');
+           }
+           window.foo6();
+           
+           window.alert('调用window.alert()');
+           // 把alert保存到另一个变量:
+           var old_alert = window.alert;
+           window.old_alert("调用window.old_alert()")
+           alert = function()
+           {
+                console.log('alert 被换了');
+           }
+           window.alert();
+           window.alert = old_alert;
+           window.alert('又可以用alert()了!');
+
+           // 唯一的全局变量MYAPP;
+           var MYAPP = {};
+
+           // 其他变量
+           MYAPP.name = 'myapp';
+           MYAPP.version = 1.0;
+
+           // 其他函数
+           MYAPP.foo7 = function()
+           {
+               return 'foo7';
+           }
+           console.log(MYAPP.foo7());
+
         </script>
     </head>
     <body>
