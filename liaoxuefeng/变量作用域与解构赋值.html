@@ -104,6 +104,100 @@
            }
            console.log(MYAPP.foo7());
 
+           function foo8()
+           {
+               for (var i = 0; i < 100; i++)
+               {
+
+               }
+               console.log(i);
+           }
+           foo8();
+
+           function foo9()
+           {
+               var sum = 0;
+               for (let i = 0; i < 100; i++)
+               {
+                   sum += i;
+               }
+               console.log(i);
+           }
+        //    foo9();
+
+           const PI = 3.14;
+        //    PI = 3;
+           console.log(PI);
+
+           var array = ['hello', 'JavaScript', 'ES6'];
+        //    var x = array[0];
+        //    var y = array[1];
+        //    var z = array[2];
+           var [x, y, z] = ['hello', 'JavaScript', 'ES6'];
+           console.log('x = ' + x);
+           console.log('y = ' + y);
+           console.log('z = ' + z);
+
+           let [j, [k, l]] = ['hello', ['JavaScript', 'ES6']];
+           console.log('j = ' + j);
+           console.log('k = ' + k);
+           console.log('l = ' + l);
+
+           let [, , g] = ['hello', 'JavaScript', 'ES6']; 
+           console.log('g = ' + g);
+
+           var person = 
+           {
+               name: '小明',
+               age: 20,
+               gender: 'male',
+               passport: 'G-12345678',
+               shcool: 'No.4 middle school',
+               address:
+               {
+                   city: 'Beijing',
+                   street: 'No.1 Road',
+                   zipcode: '100001'
+               }
+           }
+        //    var {name, age, passport} = person;
+        //    var {name, age, passport, address:{city, zipcode}} = person;
+        //    console.log("name = " + name);
+        //    console.log("age = " + age);
+        //    console.log("city = " + city);
+        //    console.log("zipcode = " + zipcode);
+           // 注意: address不是变量，而是为了让city和zip获得嵌套的address对象的属性:
+        //    console.log("address = " + address);
+           
+           // 把passport属性赋值给变量id:
+        //    let {name, passport:id} = person;
+        //    console.log('Name = ' + name);
+        //    console.log('id = ' + id);
+        //    console.log(passport);
+
+        var {name, single = true} = person;
+        console.log(name);
+        console.log(single);
+
+        var x, y;
+        ({x, y} = {name: '小明', x: 100, y: 200});
+
+        var x = 1, y = 2;
+        [x, y] = [y, x];
+        console.log(x);
+        console.log(y);
+
+        var {hostname:domain, pathname:path} = location;
+        console.log(domain);
+        console.log(path);
+        
+        function buildDate({year, month, day, hour = 0, minute = 0, second = 0})
+        {
+            return new Date(year + '-' + month + '-' + day + '-' + hour + ':' + minute + ':' + second);
+        }
+        console.log(buildDate({year: 2017, month: 1, day: 1}));
+        console.log(buildDate({year: 2017, month: 1, day: 1, hour: 20, minute: 15}));
+
         </script>
     </head>
     <body>

@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script>
+            'use strict'
+            
+            var xiaoming = 
+            {
+                name: '小明',
+                birth: 1990,
+                age: function()
+                {
+                    var that = this;    // 在方法内部一开始就捕获this
+
+                    function getAgeFromBirth()
+                    {
+                        var y = new Date().getFullYear();
+                        return y - that.birth;  // 用that而不是this
+                    }
+                    return getAgeFromBirth();
+                }
+            }
+            console.log(xiaoming.age);
+            console.log(xiaoming.age());
+
+            function getAge()
+            {
+                var y = new Date().getFullYear();
+                return y - this.birth;
+            }
+
+            var xiaohong = 
+            {
+                name: '小红',
+                birth: 1980,
+                age: getAge
+            }
+            console.log(xiaohong.age());
+            // console.log(getAge());
+            console.log(getAge.apply(xiaohong, []));    // 25, this指向xiaoming, 参数为空
+
+            var fn =  xiaohong.age;
+            // console.log(fn());
+
+            var fn2 = xiaoming.age;
+            // fn2();
+            console.log(fn2.apply(xiaoming, []));
+
+            console.log(Math.max(3, 5, 4));
+            console.log(Math.max.apply(null, [3, 5, 4]));
+            console.log(Math.max.call(null, 3, 5, 4));
+
+            var count = 0;
+            var oldParseInt = parseInt; // 保存原函数
+
+            window.parseInt = function()
+            {
+                count += 1;
+                console.log(arguments);
+                return oldParseInt.apply(null, arguments);  // 调用原函数
+            }
+            // 测试
+            parseInt('10');
+            parseInt('20');
+            parseInt('30');
+            console.log('count = ' + count);
+
+        </script>
+    </head>
+    <body>
+        My JavaScript
+    </body>
+</html>
