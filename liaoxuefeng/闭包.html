@@ -35,6 +35,50 @@
             var f1 = lazy_sum([1, 2, 3, 4, 5]);
             var f2 = lazy_sum([1, 2, 3, 4, 5]);
             console.log(f1 === f2);
+
+            // function count()
+            // {
+            //     var arr = [];
+            //     for (var i = 1; i <= 3; i++)
+            //     {
+            //         arr.push(
+            //             function ()
+            //             {
+            //                 console.log(i);
+            //                 return i * i;
+            //             }
+            //         );
+            //     }
+            //     return arr;
+            // }
+            // var result = count();
+            // var f1 = result[0];
+            // var f2 = result[1];
+            // var f3 = result[2];
+            // console.log(f1(), f2(), f3());
+
+            function count()
+            {
+                var arr = [];
+                for (var i = 1; i <= 3; i++)
+                {
+                    arr.push((
+                        function (n)
+                        {
+                            return function ()
+                            {
+                                return n * n;
+                            };
+                        }
+                    )(i));
+                }
+                return arr;
+            }
+            var result = count();
+            var f1 = result[0];
+            var f2 = result[1];
+            var f3 = result[2];
+            console.log(f1(), f2(), f3());
             
         </script>
     </head>
