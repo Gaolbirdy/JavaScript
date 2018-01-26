@@ -38,6 +38,59 @@
                 console.log('测试失败!');
             }
 
+            result = arr.reduce(
+                function (x, y)
+                {
+                    return x * 10 + y;
+                }
+            )
+            console.log(result);
+
+            function string2int(s)
+            {
+                var strArr = s.split('');
+                var numArr = strArr.map(
+                    function (x)
+                    {
+                        return +x;
+                    }
+                )
+                return numArr.reduce(
+                    function (x, y)
+                    {
+                        return x * 10 + y;
+                    }
+                )
+            }
+            // 测试:
+            if (string2int('0') === 0 && string2int('12345') === 12345 && string2int('12300') === 12300) {
+                if (string2int.toString().indexOf('parseInt') !== -1) {
+                    console.log('请勿使用parseInt()!');
+                } else if (string2int.toString().indexOf('Number') !== -1) {
+                    console.log('请勿使用Number()!');
+                } else {
+                    console.log('测试通过!');
+                }
+            }
+            else {
+                console.log('测试失败!');
+            }
+            
+
+            function normalize(arr)
+            {
+                
+                return arr.map(
+                    function (x)
+                    {
+                        // x.toLowerCase();
+                        x.toUpperCase();
+                        return x;
+                    }
+                )
+            }
+            console.log(normalize(['Adas']));
+
         </script>
     </head>
     <body>
