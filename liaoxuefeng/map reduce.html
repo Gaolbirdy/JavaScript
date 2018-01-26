@@ -43,7 +43,7 @@
                 {
                     return x * 10 + y;
                 }
-            )
+            );
             console.log(result);
 
             function string2int(s)
@@ -54,13 +54,13 @@
                     {
                         return +x;
                     }
-                )
+                );
                 return numArr.reduce(
                     function (x, y)
                     {
                         return x * 10 + y;
                     }
-                )
+                );
             }
             // 测试:
             if (string2int('0') === 0 && string2int('12345') === 12345 && string2int('12300') === 12300) {
@@ -83,13 +83,30 @@
                 return arr.map(
                     function (x)
                     {
-                        // x.toLowerCase();
-                        x.toUpperCase();
+                        x = x.toLowerCase();
+                        x = x.replace(x[0], x[0].toUpperCase());
                         return x;
                     }
-                )
+                );
             }
-            console.log(normalize(['Adas']));
+            // 测试:
+            if (normalize(['adam', 'LISA', 'barT']).toString() === ['Adam', 'Lisa', 'Bart'].toString()) {
+                console.log('测试通过!');
+            }
+            else {
+                console.log('测试失败!');
+            }
+
+            
+            var arr = ['1', '2', '3'];
+            var r;
+            r = arr.map(
+                function (x)
+                {
+                    return parseInt(x);
+                }
+            );
+            console.log(r);
 
         </script>
     </head>
