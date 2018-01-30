@@ -113,7 +113,7 @@
             console.log(pow2(5));
             console.log(pow3(7));
 
-
+            // 定义数字0:
             var zero = function (f)
             {
                 console.log(f);
@@ -125,6 +125,15 @@
             };
             var x = zero(111)
             console.log(x());
+
+            // 定义数字1:
+            var one = function (f)
+            {
+                return function (x)
+                {
+                    return f(x);
+                }
+            }
             
         </script>
     </head>
