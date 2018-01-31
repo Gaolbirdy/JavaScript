@@ -116,24 +116,23 @@
             // 定义数字0:
             var zero = function (f)
             {
-                console.log(f);
                 return function (x)
                 {
-                    console.log(x);
-                    return 2;
+                    return x;
                 };
             };
-            var x = zero(111)
-            console.log(x());
 
             // 定义数字1:
-            var one = function (f)
+            var one = function (f)  // 传入的f作为函数
             {
-                return function (x)
+                return function (x) // 传入的x作为f函数的参数
                 {
                     return f(x);
                 }
             }
+            var xx = one(zero());
+            console.log(xx(1));
+
             
         </script>
     </head>
