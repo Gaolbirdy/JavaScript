@@ -125,15 +125,39 @@
             // 定义数字1:
             var one = function (f)  // 传入的f作为函数
             {
-                return function (x) // 传入的x作为f函数的参数
+                return function (x) // 传入的x作为 f() 函数的参数
                 {
                     return f(x);
                 }
             }
-            var xx = one(zero());
-            console.log(xx(1));
-
             
+            // 定义加法
+            function add(n, m)  // 传入的m n作为函数
+            {
+                return function (f) // 传入的f作为 m() n() 函数的参数
+                {
+                    return function (x) // 传入的x作为 n(f)() 函数的参数
+                    {
+                        return m(f)(n(f)(x));
+                    }
+                }
+            }
+
+            // console.log(add);
+            // console.log(add(1, 2));
+            // console.log((add(1, 2))());
+            // console.log(((add(1, 2))())());
+
+            // 计算数字2 = 1 + 1:
+            var two = add(one, one);
+
+            // 给2传一个函数,会打印3次:
+            (two(function (x)
+            {
+                console.log(x);
+                console.log('print 2 times');
+            }))(1111);
+
         </script>
     </head>
     <body>
