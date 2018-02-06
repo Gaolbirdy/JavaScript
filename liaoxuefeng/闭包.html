@@ -151,12 +151,39 @@
             // 计算数字2 = 1 + 1:
             var two = add(one, one);
 
-            // 给2传一个函数,会打印3次:
-            (two(function (x)
+            // // 给2传一个函数,会打印3次:
+            // (two(function (x)
+            // {
+            //     console.log(x);
+            //     console.log('print 2 times');
+            // }))(1111);
+
+            // 计算数字3 = 1 + 2:
+            var three= add(one, two);
+
+            // 给3传一个函数,会打印3次:
+            (three(function ()
             {
-                console.log(x);
-                console.log('print 2 times');
-            }))(1111);
+                console.log("print 3 times");
+            }))();
+
+            // 计算数字5 = 2 + 3:
+            var five = add(two, three);
+
+            // 给5传一个函数,会打印5次:
+            (five(function ()
+            {
+                console.log("print 5 times");
+            }))();
+
+            // 计算数字10 = 5 + 5:
+            var ten = add(five, five);
+
+            // 给10传一个函数,会打印10次:
+            (ten(function ()
+            {
+                console.log("print 10 times");
+            }))();
 
         </script>
     </head>
