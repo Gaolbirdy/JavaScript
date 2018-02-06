@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            'use strict'
+
+            var fn = x => x * x;
+            console.log(fn(10));
+
+            fn = x => 
+            {
+                if (x > 0)
+                {
+                    return x * x;
+                }
+                else
+                {
+                    return - x * x;
+                }
+            };
+            console.log(fn(10));
+            console.log(fn(-9));
+
+            fn = (x, y) => x * x + y * y;
+            console.log(fn(3, 4));
+
+            fn = () => 3.14;
+            console.log(fn());
+
+            fn = (x, y, ...rest) =>
+            {
+                var i, sum = x + y;
+                for (i = 0; i < rest.length; i++)
+                {
+                    sum += rest[i];
+                }
+                return sum;
+            }
+            console.log(fn(10, 20, 1, 2, 3, 4, 5));
+
+            fn = x => 
+            ({
+                foo : x
+            })
+            console.log(fn());
+            
+        </script>
+    </head>
+    <body>
+        My JavaScript
+    </body>
+</html>
