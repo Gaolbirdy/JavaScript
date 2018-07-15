@@ -11,7 +11,7 @@
     document.write("Exiting the loop! " + x);
 </script> -->
 
-<script>
+<!-- <script>
     var x = 1;
     document.write("Entering the loop<br/>");
     while(x < 10)
@@ -22,4 +22,46 @@
         document.write(x + "<br/>");
     }
     document.write("Exiting the loop! " + x);
+</script> -->
+
+<!-- <script>
+    document.write("Entering the loop!<br/>");
+
+    outerloop:
+    for(var i = 0; i < 6; i++)
+    {
+        document.write("Outerloop: " + i + "<br/>");
+        innerloop:
+        for(var j = 0; j < 5; j++)
+        {
+            if(j > 3)
+                break;
+            if(i == 2)
+                break innerloop;
+            if(i == 4)
+                break outerloop;
+                // continue outerloop;
+            document.write("Innerloop: " + j + " <br/>");
+        }
+    }
+
+    document.write("Exiting the loop!<br/> ");
+</script> -->
+
+<script>
+    document.write("Entering the loop!<br/>");
+    
+    outerloop:
+    for(var i = 0; i < 3; i++)
+    {
+        document.write("Outerloop: " + i + "<br/>");
+        for(var j = 0; j < 5; j++)
+        {
+            if(j == 3)
+                continue outerloop;
+            document.write("Innerloop: " + j + "<br/>");
+        }
+    }
+
+    document.write("Exiting the loop!<br/>");
 </script>
