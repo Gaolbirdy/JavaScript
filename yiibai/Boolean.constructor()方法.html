@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>JavaScript constructor() Method</title>
+    </head>
+    <body>
+        <script>
+            function Book(title)
+            {
+                this.title = title;
+            }
+
+            var bool = new Boolean();
+            var num = new Number();
+            var book = new Book("xx");
+
+            document.write("bool.constructor() is: " + bool.constructor + "<br>");
+            document.write("num.constructor() is: " + num.constructor + "<br>");
+            document.write("book.constructor() is: " + book.constructor + "<br>");
+        </script>
+    </body>
+</html>
