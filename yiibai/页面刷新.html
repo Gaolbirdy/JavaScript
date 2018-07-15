@@ -1,0 +1,16 @@
+<!-- <script>
+    alert("hello");
+</script>
+<a href="javascript:location.reload(true)">Refresh Page</a> -->
+
+<script>
+    function AutoRefresh(t)
+    {
+        setTimeout("location.reload(true);", t);
+    }
+    // AutoRefresh(2000);
+</script>
+
+<body onload="JavaScript:AutoRefresh(5000);">
+    <p>This page will refresh every 5 seconds.</p>
+</body>

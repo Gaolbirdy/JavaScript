@@ -1,0 +1,49 @@
+<!-- <script>
+    var str = document.title;
+    var x = document;
+    x.write("This is test" + "<br/>");
+
+    var employee = new Object();
+    var books = new Array("C++", "Perl", "Java");
+    var day = new Date("August 15, 1947");
+    
+    x.write(employee + "<br/>");
+    x.write(books + "<br/>");
+    x.write(day + "<br/>");
+</script> -->
+
+<!-- <script>
+    var book = new Object();
+        book.subject = "Perl";
+        book.author = "Mohtashim";
+</script>
+
+<script>
+    document.write("Book name is : " + book.subject + "<br>");
+    document.write("Book author is : " + book.author + "<br>");
+    document.write(book + "<br>");
+</script> -->
+
+<script>
+    function book(title, author)
+    {
+        this.title = title;
+        this.author = author;
+        this.addPrice = addPrice;
+    }
+
+    function addPrice(amount)
+    {
+        this.price = amount;
+    }
+</script>
+
+<script>
+    var myBook = new book("Perl", "Mohtashim");
+    
+    myBook.addPrice(100);
+    document.write("Book title is : " + myBook.title + "<br>");
+    document.write("Book author is : " + myBook.author + "<br>");
+    document.write("Book price is : " + myBook.price + "<br>");
+    
+</script>

@@ -9,7 +9,7 @@
     
 </body> -->
 
-<script>
+<!-- <script>
     function validation()
     {
         return true;
@@ -18,6 +18,25 @@
 
 <body>
     <form method="POST" action='t.cgi' onsubmit="return validation()">
-        
+    ......
+    <input type="submit" value="Submit"/>
     </form>
+</body> -->
+
+<script>
+    function over()
+    {
+        alert("Mouse Over");
+    }
+
+    function out()
+    {
+        alert("Mouse Out");
+    }
+</script>
+
+<body>
+    <div onmouseover="over()" onmouseout="out()">
+        <h2>This is inside the division</h2>
+    </div>
 </body>

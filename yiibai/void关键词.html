@@ -1,0 +1,24 @@
+<!-- <script>
+    // void func();
+    // javascript:void func();
+
+    // void(func())
+    // javascript:void(func())
+</script>
+
+<body>
+    <a href="javascript:void(alert('Warning!!!'))">Click me!</a>
+    <a href="javascript:void(0)">Click me!</a>
+</body> -->
+
+<script>
+    function getValue()
+    {
+        var a, b, c;
+        
+        a = void(b = 5, c =7);
+        document.write('a = ' + a + ' b = ' + b + ' c = ' + c);
+    }
+
+    getValue();
+</script>
