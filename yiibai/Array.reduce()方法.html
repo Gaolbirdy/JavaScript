@@ -1,0 +1,45 @@
+<script>
+    if(!Array.prototype.reduce)
+    {
+        Array.prototype.reduce = function(fun /*, initial*/)
+        {
+            var len = this.length;
+            if(typeof fun != "function")
+                throw new TypeError();
+
+            if(len == 0 && arguments.length == 1)
+                throw new TypeError();
+            
+            var i = 0;
+            if(arguments.length >= 2)
+            {
+                var rv = arguments[1];
+            }
+            else
+            {
+                do
+                {
+                    if(i in this)
+                    {
+                        rv = this[i++];
+                        break;
+                    }
+
+                    if(++i >= len)
+                        throw new TypeError();
+                }while(true);
+            }
+
+            for(; i < len; i++)
+            {
+                if(i in this)
+                rv = fun.call(null, rv, this[i], i, this);
+            }
+
+            return rv;
+        };
+    }
+
+    var total = [0, 1, 2, 3].reduce(function(a, b){return a + b;});
+    document.write("total is : " + total);
+</script>
