@@ -1,0 +1,81 @@
+<!-- <script>
+    function myFunc()
+    {
+        var a = 100;
+        
+        try 
+        {
+            alert1("Value of variable a is: " + a);    
+        } 
+        catch (e) 
+        {
+            alert("Error: " + e.description);
+        }
+        finally
+        {
+            alert("Finally block will always execute!");
+        }
+    }
+</script>
+
+<body>
+    <p>Click the following to see the result:</p>
+    <form>
+        <input type="button" value="Click Me" onclick="myFunc()"/>
+    </form>
+</body> -->
+
+<!-- <script>
+    function myFunc()
+    {
+        var a = 100;
+        var b = 0;
+
+        try
+        {
+            if(b == 0)
+            {
+                throw("Divide by zero error.");
+            }
+            else
+            {
+                var c = a / b;
+            }
+        }
+        catch(e)
+        {
+            alert("Error: " + e);
+        }
+    }
+</script>
+
+<body>
+    <p>Click the following to see the result:</p>
+    <form action="">
+        <input type="button" value="Click Me" onclick="myFunc()"/>
+    </form>
+</body> -->
+
+<script>
+    window.onerror = function()
+    {
+        alert("An error occurred.");
+    }
+
+    window.onerror = function(msg, url, line)
+    {
+        // msg = "An error occurred.";
+        alert("Message: " + msg);
+        alert("url: " + url);
+        alert("Line number: " + line);
+    }
+</script>
+
+<body>
+    <p>Click the following to see the result:</p>
+    <form action="">
+        <!-- <input type="button" value="Click Me" onclick="document.write(1)"/> -->
+        <input type="button" value="Click Me" onclick="myFunc()"/>
+        
+    </form>
+</body>
