@@ -57,10 +57,10 @@
 </body> -->
 
 <script>
-    window.onerror = function()
-    {
-        alert("An error occurred.");
-    }
+    // window.onerror = function()
+    // {
+    //     alert("An error occurred.");
+    // }
 
     window.onerror = function(msg, url, line)
     {
@@ -76,6 +76,6 @@
     <form action="">
         <!-- <input type="button" value="Click Me" onclick="document.write(1)"/> -->
         <input type="button" value="Click Me" onclick="myFunc()"/>
-        
+        <img src="myimage.gif" onerror="alert('An error occurred loading the image.')"/>
     </form>
 </body>
