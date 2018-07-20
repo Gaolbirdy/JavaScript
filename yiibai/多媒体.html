@@ -1,0 +1,91 @@
+<!-- <html>
+    <head>
+        <title>List of Plug-Ins</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Plug-in Name</th>
+                <th>FileName</th>
+                <th>Description</th>
+            </tr>
+            <script>
+                for(i = 0; i < navigator.plugins.length; i++)
+                {
+                    document.write("<tr><td>");
+                    document.write(navigator.plugins[i].name);
+                    document.write("</td><td>");
+                    document.write(navigator.plugins[i].filename);
+                    document.write("</td><td>");
+                    document.write(navigator.plugins[i].description);
+                    document.write("</td></tr>");
+                }
+            </script>
+        </table>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <title>Using Plug-Ins</title>
+    </head>
+    <body>
+        <script>
+            var media = navigator.mimeTypes["video/quicktime"];
+            if(media)
+            {
+                document.write("<embed src='quick.mov' height=100 width=100>");
+            }
+            else
+            {
+                document.write("none")
+                document.write("<img src='quick.gif' height=100 width=100>")
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Using Embeded Object</title>
+        <script>
+            function play()
+            {
+                if(!document.demo.IsPlaying())
+                {
+                    document.demo.Play();
+                }
+            }
+
+            function stop()
+            {
+                if(document.demo.IsPlaying())
+                {
+                    document.demo.StopPlay();
+                }
+            }
+            
+            function rewind()
+            {
+                if(document.demo.IsPlaying())
+                {
+                    document.demo.StopPlay();
+                }
+                document.demo.Rewind();
+            }
+        </script>
+    </head>
+    <body>
+        <embed id="demo" name="demo"
+            src="http://www.amrood.com/games/kumite.swf"
+            width="318" height="300" play="false" loop="false"
+            pluginspage="http://www.macromedia.com/go/getflashplayer"
+            swliveconnect="true">
+        </embed>
+        <form name="form" id="form" action"#" method="get">
+            <input type="button" value="Start" onclick="play();"/>
+            <input type="button" value="Stop" onclick="stop();"/>
+            <input type="button" value="Rewind" onclick="rewind();"/>
+        </form>
+    </body>
+</html>
