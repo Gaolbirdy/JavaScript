@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- <html>
+    <head>
+        <script>
+            document.write("hello in head");
+        </script>
+    </head>
+    <body>
+        <p>
+        JavaScript 能够直接写入 HTML 输出流中：
+        </p>
+        <script>
+            document.write("<h2>这是一个标题</h2>");
+            document.write("<p>这是一个段落。</p>");
+        </script>
+        <p>
+        您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+        如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+        </p>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <script>
+            function getValue()
+            {
+                return 1234;
+            }
+        </script>
+        <script>
+            var x = getValue();
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write(x);
+        </script>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <title>菜鸟教程</title>
+        <script>
+            function myFunction()
+            {
+                document.getElementById("demo").innerHTML = "我的第一个 JavaScript 函数";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>我的web页面</h1>
+        <p id="demo">一个段落。</p>
+        <button onclick="myFunction()">点击这里</button>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+        <title>菜鸟教程</title>
+    </head>
+    <body>
+        <h1>我的web页面</h1>
+        <p id="demo">一个段落。</p>
+        <button onclick="myFunction()">点击这里</button>
+
+        <script>
+            function myFunction()
+            {
+                document.getElementById("demo").innerHTML = "我的第一个 JavaScript 函数 in body";
+            }
+        </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>菜鸟教程</title>
+    </head>
+    <body>
+        <h1>my web</h1>
+        <p id="demo">一个段落</p>
+        <button onclick="myFunction()">点击这里</button>
+        <p><b>注释：</b>myFunction 保存在名为 "myScript.js" 的外部文件中。</p>
+        <script src="myScript.js"></script>
+    </body>
+</html>

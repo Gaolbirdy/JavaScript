@@ -1,0 +1,37 @@
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = 3.14;
+    document.getElementById("demo").innerHTML = 123e5;
+    document.getElementById("demo").innerHTML = 'John Doe';
+    document.getElementById("demo").innerHTML = 5 * 10;
+
+    var array = [40, 100, 1, 5, 25, 10]
+    document.getElementById("demo").innerHTML = array;
+    document.getElementById("demo").innerHTML = array[4];
+
+    var obj = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    document.getElementById("demo").innerHTML = obj;
+    document.getElementById("demo").innerHTML = obj.firstName;
+    document.getElementById("demo").innerHTML += obj.lastName;
+
+    function myFunction(a, b)
+    {
+        return a * b;
+    }
+    var func = myFunction(3, 4);
+    document.getElementById("demo").innerHTML = func;
+    func = myFunction;
+    document.getElementById("demo").innerHTML = func(4, 5);
+    
+    var length;
+    length = 6;
+    document.getElementById("demo").innerHTML = length;
+    document.getElementById("demo").innerHTML = (5 + 6) * 10;
+
+    var x, y, z;
+    x = 5;
+    y = 6;
+    z = (x + y) * 100;
+    document.getElementById("demo").innerHTML = z;
+
+</script>
