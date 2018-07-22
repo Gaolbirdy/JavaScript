@@ -1,0 +1,58 @@
+<script>
+    var x = 5;
+    var y = 6;
+    var z = x + y;
+
+    document.write(x + "<br>");
+    document.write(y + "<br>");
+    document.write(z + "<br>");
+
+    var pi = 3.14
+    var name = "Bill Gates";
+    var answer = "Yes I am!";
+    document.write(pi + "<br>");
+    document.write(name + "<br>");
+    document.write(answer + "<br>");
+
+    var carname;
+    document.write(carname + "<br>");
+    carname = "Volvo";
+
+</script>
+<p>点击这里来创建变量，并显示结果。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var carname = "Volvo";
+        document.getElementById("demo").innerHTML = carname;
+    }
+</script>
+
+<script>
+    var lastname = "Doe",
+    age = 30,
+    job = "carpenter";
+
+    var m, n, o = 1;
+    document.write(m);
+
+    var car = "Volvo";
+    var car;
+    document.write(car);
+
+</script>
+
+<p>假设 y=5，计算 x=y+2，并显示结果。</p>
+<button onclick="myFunc()">点击这里</button>
+<p id="demo1"></p>
+<script>
+    function myFunc()
+    {
+        var y = 5;
+        var x = y + 2;
+        var demo1P = document.getElementById("demo1");
+        demo1P.innerHTML = "x = " + x;
+    }
+</script>

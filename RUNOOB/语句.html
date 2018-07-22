@@ -1,0 +1,35 @@
+<!-- <p id="demo">我的第一个段落</p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<div id="myDIV">一个DIV</div>
+<script>
+    document.getElementById("demo").innerHTML = "你好 Dolly";
+
+    a = 1;
+    b = 2;
+    c = a + b;
+    document.getElementById("demo1").innerHTML = c;
+
+    x = 1; y = 2; z = x + y;
+    document.getElementById("demo2").innerHTML = z;
+
+    document.getElementById("myDIV").innerHTML = "你最近怎么样?";
+</script> -->
+
+<p id="myPar">我是一个段落</p>
+<div id="myDIV">我是一个DIV</div>
+<p>
+    <button onclick="myFunction()">点击这里</button>
+</p>
+<script>
+    function myFunction()
+    {
+        document.getElementById("myPar").innerHTML = "你好世界！";
+        document.getElementById("myDIV").innerHTML = "你最近怎么样?";
+    }
+
+    document.write("你好 \
+    世界！\
+    hello");
+</script>
+<p>当您点击上面的按钮时，两个元素会改变。</p>

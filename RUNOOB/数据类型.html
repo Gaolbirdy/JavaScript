@@ -1,0 +1,87 @@
+<script>
+    var x;
+    x = 5;
+    x = "John";
+
+    var carname = "Volvo XC60";
+    var carname = 'Volvo XC60';
+
+    var answer = "It's alright";
+    document.writeln(answer);
+    var answer = "He is called 'Johnny'";
+    document.writeln(answer);
+    var answer = 'He is called "Johnny"';
+    document.writeln(answer);
+
+    var x1 = 34.00;
+    var x2 = 34;
+    document.writeln(x1);
+    document.writeln(x2);
+
+    var y = 123e5;
+    var z = 123e-5;
+    document.writeln(y);
+    document.writeln(z);
+
+    var x  = true;
+    var y = false;
+    
+    // var cars = [];
+    // var cars = new Array();
+    // cars[0] = "Saab";
+    // cars[1] = "Volvo";
+    // cars[2] = "BMW";
+    // var cars = new Array("Saab", "Volvo", "BMW");
+    // document.write(cars);
+
+    var i;
+    var cars = new Array();
+    cars[0] = "Saab";
+    cars[1] = "Volvo";
+    cars[2] = "BMW";
+
+    for(i = 0; i < cars.length; i++)
+    {
+        document.write(cars[i] + "<br>");
+    }
+
+    // var person = {firstname:"John", lastname:"Doe", id:5566};
+    var person = 
+    {
+        firstname : "John",
+        lastname : "Doe",
+        id : 5566
+    };
+    document.write(person + "<br>");
+    document.write(person.lastname + "<br>");
+    document.write(person["lastname"] + "<br>");
+    document.write(person["id"] + "<br>");
+
+    var num = 100;
+    num = NaN;
+    document.write(num + "<br>");
+    num = undefined;
+    document.write(num + "<br>");
+    num = null;
+    document.write(num + "<br>");
+
+    var person1;
+    var car = "Volvo";
+    document.write(person1 + "<br>");
+    document.write(car + "<br>");
+    car = null;
+    document.write(car + "<br>");
+
+
+    var carname = new String;
+    document.write(typeof carname + "<br>");
+    var x = new Number;
+    document.write(typeof x + "<br>");
+    var yy = new Boolean;
+    document.write(typeof yy + "<br>");
+    var cars = new Array;
+    document.write(typeof cars + "<br>");
+    var person = new Object;
+    document.write(typeof person + "<br>");
+
+</script>

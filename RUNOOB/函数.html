@@ -1,0 +1,75 @@
+<!-- <script>
+    function myFunction()
+    {
+        alert("Hello World!");
+    }
+</script>
+
+<body>
+    <button onclick="myFunction()">Try it</button>
+</body> -->
+
+<!-- <p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction('Harry Potter', 'Wizard', 23)">点击这里</button>
+<button onclick="myFunction('Bob','Builder')">点击这里</button>
+<script>
+    function myFunction(name, job, age)
+    {
+        alert("Welcome " + name + ", the " + job + ", age: " + age);
+    }
+</script> -->
+
+<!-- <p>本例调用的函数会执行一个计算，然后返回结果：</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    function myFunction(a, b)
+    {
+        return a * b;
+    }
+
+    function myFunc(a, b)
+    {
+        if(a > b)
+        {
+            return;
+        }
+        var x = a + b;
+        return x;
+    }
+
+    document.getElementById("demo").innerHTML = myFunction(3, 4);
+    document.getElementById("demo1").innerHTML = myFunc(4, 3);
+    document.getElementById("demo2").innerHTML = myFunc(3, 4);
+</script> -->
+
+<script>
+    // console.log(carname);
+    console.log(window.carname);
+    carname = "Volvo";
+    console.log(window.carname);
+
+    var var1 = 1;
+    var2 = 2;
+
+    console.log(this.var1);
+    console.log(window.var1);
+
+    console.log(var2);
+    console.log(this.var2);
+    console.log(window.var2);
+    
+    delete var1;
+    console.log(delete var1);
+    console.log(var1);
+    console.log(this.var1);
+    console.log(window.var1);
+
+    delete var2;
+    console.log(delete var2);
+    console.log(this.var2);
+    console.log(window.var2);
+    console.log(var2);
+    
+</script>
