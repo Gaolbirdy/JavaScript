@@ -76,16 +76,28 @@
     document.getElementById("demo").innerHTML = person + "<br>" + typeof person;
 </script> -->
 
-<script>
+<!-- <script>
     // var x = 100;
     // x = null;
     // document.write(x);
     // document.write(typeof x);
 
-    var x = 100;
-    x = undefined;
-    document.writeln(x);
-    document.writeln(typeof x);
+    // var x = 100;
+    // x = undefined;
+    // document.writeln(x);
+    // document.writeln(typeof x);
 
-    valueOf();
+</script> -->
+
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = 
+        typeof undefined + "<br>" + 
+        typeof null + "<br>" +
+        (null === undefined) + "<br>" + 
+        (null == undefined) + "<br>" +
+        (null === null) + "<br>" +
+        (null == null) + "<br>" +
+        (undefined === undefined) + "<br>" +
+        (undefined == undefined);
 </script>
