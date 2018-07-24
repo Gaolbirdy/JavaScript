@@ -1,0 +1,66 @@
+<!-- <p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var x = "";
+        var time = new Date().getHours();
+        if(time < 20)
+        {
+            x = "Good day";
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+</script> -->
+
+<!-- <p>点击这个按钮，获得基于时间的问候。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var x = "";
+        var time = new Date().getHours() + 12;
+
+        if(time < 18)
+        {
+            x  = "Good day";
+        }
+        else
+        {
+            x = "Good evening";
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+</script> -->
+
+<!-- <script>
+    var d = new Date();
+    var time = d.getHours() + 8;
+    if(time < 10)
+    {
+        document.write("<b>早上好<b>");
+    }
+    else if(time >= 10 && time < 16)
+    {
+        document.write("<b>今天好<b>");
+    }
+    else
+    {
+        document.write("<b>晚上好!</b>");
+    }
+</script>
+<p>
+这个例子演示了 if..else if...else 语句。
+</p> -->
+
+<p id="demo"></p>
+<script>
+    var r = Math.random();
+    var x = document.getElementById("demo");
+    if(r > 0.5)
+        x.innerHTML = "<a href='http://www.runoob.com'>访问菜鸟教程</a>";
+    else
+        x.innerHTML = "<a href='http://www.baidu.com'>访问baidu</a>";
+</script>

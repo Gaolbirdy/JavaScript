@@ -1,0 +1,91 @@
+<!-- <p> typeof 操作符返回变量或表达式的类型。</p>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = 
+        typeof "John" + "<br>" +
+        typeof 3.14 + "<br>" +
+        typeof false + "<br>" +
+        typeof [1,2,3,4] + "<br>" +
+        typeof {name : "John", age : 34};
+</script> -->
+
+<!-- <script>
+    document.writeln(typeof(typeof 123));
+    document.writeln(typeof(typeof true));
+    document.writeln(typeof(typeof ""));
+    document.writeln(typeof(typeof []));
+    document.writeln((typeof null));
+    document.writeln((typeof NaN));
+    document.writeln((typeof undefined));
+</script> -->
+
+<!-- <p>对象可以通过设置为 <b>null</b> 来清空。</p>
+<p id="demo"></p>
+<script>
+    var person = 
+    {
+        firstname : "John",
+        lastname : "Doe",
+        age : 50,
+        eyeColor : "blue"
+    };
+
+    var person = null;
+    document.getElementById("demo").innerHTML = typeof person;
+
+    document.write(person);
+</script> -->
+
+<!-- <p>对象可以设置为 <b>undefined</b> 来清空。</p>
+<p id="demo"></p>
+<script>
+    var person = 
+    {
+        firstname : "John",
+        lastname : "Doe",
+        age : 50,
+        eyeColor : "blue"
+    };
+    var person = undefined;
+
+    document.getElementById("demo").innerHTML = typeof person;
+
+    document.write(person);
+</script> -->
+
+<!-- <p>变量的值如果不存在则该变量值为 <b>undefined</b>。</p>
+<p id="demo"></p>
+<script>
+    var person;
+    document.getElementById("demo").innerHTML = person + "<br>" + typeof person;
+</script> -->
+
+<!-- <p>变量可以通过设置 <b>undefined</b> 来清空。</p>
+<p id="demo"></p>
+<script>
+    var person =
+    {
+        firstname : "John",
+        lastname : "Doe",
+        age : 56,
+        eyeColor : "blue"
+    };
+
+    var person = undefined;
+
+    document.getElementById("demo").innerHTML = person + "<br>" + typeof person;
+</script> -->
+
+<script>
+    // var x = 100;
+    // x = null;
+    // document.write(x);
+    // document.write(typeof x);
+
+    var x = 100;
+    x = undefined;
+    document.writeln(x);
+    document.writeln(typeof x);
+
+    valueOf();
+</script>
