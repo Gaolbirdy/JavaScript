@@ -1,4 +1,4 @@
-<p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
+<!-- <p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
 <p id="demo"></p>
 <script>
     document.getElementById("demo").innerHTML =
@@ -12,5 +12,159 @@
         typeof function(){} + "<br>" +
         typeof myCar + "<br>" +
         typeof null;
+
+</script> -->
+
+<!-- <p> constructor 属性返回变量或对象的构造函数。</p>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML =
+    "john".constructor + "<br>" + 
+    (3.14).constructor + "<br>" +
+    false.constructor + "<br>" +
+    [1,2,3,4].constructor + "<br>" +
+    {name : 'john', age : 34}.constructor + "<br>" +
+    new Date().constructor + "<br>" +
+    function(){}.constructor; 
+</script> -->
+
+<!-- <p>判断是否为数组。</p>
+<p id="demo"></p>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = isArray(fruits);
+
+    function isArray(myArray)
+    {
+        return myArray.constructor.toString().indexOf("Array") > -1;
+    }
+</script> -->
+
+<!-- <p>判断是否为日期。</p>
+<p id="demo"></p>
+<script>
+    var myDate = new Date();
+    document.getElementById("demo").innerHTML = isDate(myDate);
+
+    function isDate(myDate)
+    {
+        return myDate.constructor.toString().indexOf("Date") > -1;
+    }
+</script> -->
+
+<!-- <p> String() 方法可以将数字转换为字符串。</p>
+<p id="demo"></p>
+<script>
+    var x = 123;
+    document.getElementById("demo").innerHTML = 
+        String(x) + "<br>" +
+        String(123) + "<br>" +
+        String(100 + 23);
+</script> -->
+
+<!-- <p>toString() 方法将数字转换为字符串。</p>
+<p id="demo"></p>
+<script>
+    var x = 123;
+    document.getElementById("demo").innerHTML = 
+        x.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+</script> -->
+
+<!-- <script>
+    // document.write(String(false));
+    // document.write(String(true));
+    // document.write(false.toString());
+    // document.write(true.toString());
+
+    // document.write(Date());
+    // document.write(String(new Date()));
+
+    // var obj = new Date();
+    // document.write(obj.toString());
+
+    // document.writeln(Number("3.14"));
+    // document.writeln(Number(" "));
+    // document.writeln(Number(""));
+    // document.writeln(Number("99 98"));
+</script> -->
+
+<!-- <p> typeof 操作符返回变量或表达式的类型。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var y = "5";
+        var x = + y;
+        document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x + "<br>" + x + "<br>" + y;
+    }
+    
+</script> -->
+
+<!-- <p> typeof 操作符返回变量或表达式的类型。</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var y = "John";
+        var x = + y;
+        document.getElementById("demo").innerHTML = typeof x + "<br>" + x;
+    }
+</script> -->
+
+<!-- <script>
+    // document.writeln(Number(false));
+    // document.writeln(Number(true));
+    // document.writeln(Boolean(1));
+    // document.writeln(Boolean(0));
+    // document.writeln(Boolean(3));
+
+    // var d = new Date();
+    // document.writeln(Number(d));
+    // document.writeln(d.getTime());
+    
+    // document.writeln(5 + null);
+    // document.writeln("5" + null);
+    // document.writeln("5" + 1);
+    // document.writeln("5" - 1);
+
+    // var myVar = {name : "Fjohn"};
+    // document.writeln(myVar);
+    // myVar = [1,2,3,4];
+    // document.writeln(myVar);
+    // myVar = new Date();
+    // document.writeln(myVar);
+    // myVar = 123;
+    // document.writeln(myVar);
+    // myVar = true;
+    // document.writeln(myVar);
+    // myVar = false
+    // document.writeln(myVar);
+
+    
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var myVar = {name : "Fjohn"};
+    myVar = [1,2,3,4];
+    myVar = new Date();
+    myVar = 123;
+    myVar = true;
+    myVar = false;
+    document.getElementById("demo").innerHTML = myVar;
+</script> -->
+
+<p>fasle 转换为其他类型:</p>
+<p id="demo" style="font-family: courier"></p>
+<script>
+    var x = [];
+    document.getElementById("demo").innerHTML = 
+        "Number : " + Number(x) + "<br>" +
+        "String : " + String(x) + "<br>" +
+        "Boolean : " + Boolean(x);
 
 </script>
