@@ -1,0 +1,171 @@
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许使用未定义的变量。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict";
+    x = 3.14;
+</script> -->
+
+<!-- <h2>全局 "use strict" 声明.</h2>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    myFunction();
+
+    function myFunction()
+    {
+        y = 3.14;
+    }
+</script> -->
+
+<!-- <p>在函数内使用 "use strict" 只在函数内报错。</p>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    x = 3.14;
+    myFunction();
+
+    function myFunction()
+    {
+        "use strict";
+        y = 3.14;
+    }
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许使用未定义的对象。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    x = {p1 : 10, p2 : 20};
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许删除变量或对象。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    var x = 3.14;
+    delete x;
+    document.write(x);
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许删除函数。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    function x(p1, p2){};
+    delete x;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许变量重名。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    function x(p1, p1){};
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许使用八进制。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    var x = 010;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许使用转义字符。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    var x = "\010";
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许对只读属性赋值。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    var obj = {};
+    Object.defineProperty(obj, "x", {value : 0, writable : false});
+    obj.x = 3.14;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许对一个使用getter方法读取的属性进行赋值。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    var obj = {get x() {return 0}};
+    obj.x = 3.14;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许删除一个不允许删除的属性值。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    delete Object.prototype;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>变量名不能使用 "eval" 字符串。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict";
+    var eval = 3.14;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>变量名不能使用 "arguments" 字符串。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    var arguments = 3.14;
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>不允许使用以下这种语句。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    with (Math){x = cos(2)};
+</script> -->
+
+<!-- <h1>使用 "use strict":</h1>
+<h3>由于一些安全原因，在作用域 eval() 创建的变量不能被调用。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict"
+    eval ("var x = 2");
+    alert(x);
+</script> -->
+
+<!-- <script>
+    function f()
+    {
+        "use strict";
+        document.writeln(this);
+        return !this;
+    };
+    document.writeln(f());
+</script> -->
+
+<!-- <script>
+    function f()
+    {
+        "use strict";
+        this.a = 1;
+    };
+
+    f();
+</script> -->
+
+<h1>使用 "use strict":</h1>
+<h3>严格模式不允许使用保留关键字。</h3>
+<p>浏览器按下 F12 开启调试模式，查看报错信息。</p>
+<script>
+    "use strict";
+    var public = 1500;
+</script>
