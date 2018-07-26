@@ -1,0 +1,104 @@
+<!-- <script>
+    var patt = /runoob/i;
+</script> -->
+
+<!-- <p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var str = "Visit Runoob!";
+        var n = str.search(/Runoob/i);
+        document.getElementById("demo").innerHTML = n;
+    }
+</script> -->
+
+<!-- <p>搜索字符串 "Runoob", 并显示匹配的起始位置：</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var str = "Visit Runoob!";
+        var n = str.search("Runoob");
+        document.getElementById("demo").innerHTML = n;
+    }
+</script> -->
+
+<!-- <p>替换 "microsoft" 为 "Runoob" :</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo">请访问 Microsoft!</p>
+<script>
+    function myFunction()
+    {
+        var str = document.getElementById("demo").innerHTML;
+        var txt = str.replace(/microsoft/i, "Runoob");
+
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script> -->
+
+<!-- <p>替换 "Microsoft" 为 "Runoob" :</p>
+<button onclick="myFunction()">点我</button>
+<p id="demo">请访问 Microsoft!</p>
+<script>
+    function myFunction()
+    {
+        var str = document.getElementById("demo").innerHTML;
+        var txt = str.replace("Microsoft", "Runoob");
+
+        document.getElementById("demo").innerHTML =  txt;
+    }
+</script> -->
+
+<!-- <script>
+    var patt1 = new RegExp("e");
+    var patt = /e/;
+    document.writeln(patt1.test("The best things in life are free"));
+    document.writeln(patt.test("The best things in life are free"));
+    document.write(/e/.test("The best things in life are free"));
+</script> -->
+
+<!-- <script>
+    var patt1 = new RegExp("e");
+    document.writeln(patt1.exec("The best things in life are free"));
+    document.writeln(/e/.exec("The best things in life are free"));
+</script> -->
+
+<!-- <script>
+    function isValid(str)
+    {
+        return /^\w+$/.test(str);
+    }
+
+    str = "1234abd__";
+    document.write(isValid(str));
+    document.write("<br>");
+
+    str2= "$32343#";
+    document.write(isValid(str2));
+    document.write("<br>");
+</script> -->
+
+<!-- <script>
+    var val = "123456";
+    var isletter = /^[a-zA-Z]+$/.test(val);
+    document.write(isletter);
+    document.write("<br>");
+
+    var val2 = "asaaa";
+    var isletter2 = /^[a-zA-Z]+$/.test(val2);
+    document.write(isletter2);
+</script> -->
+
+<script>
+    var val = "123456";
+    var isnum = /^\d+$/.test(val);
+    document.write(isnum);
+    document.write("<br>");
+
+    var val2 = "as123";
+    var isnum2 = /^\d+$/.test(val2);
+    document.write(isnum2);
+</script>

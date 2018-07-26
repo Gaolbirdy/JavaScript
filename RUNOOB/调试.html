@@ -1,0 +1,19 @@
+<!-- <h1>我的第一个 Web 页面</h1>
+<p>
+浏览器中(Chrome, IE, Firefox) 使用 F12 来启用调试模式， 在调试窗口中点击 "Console" 菜单。
+</p>
+<script>
+    var a = 5;
+    var b = 6;
+    var c = a + b;
+    console.log(c);
+    document.write(c);
+</script> -->
+
+<p id="demo"></p>
+<p>开启调试工具，在代码执行到第三行前会停止执行。</p>
+<script>
+    var x = 15 * 5;
+    debugger;
+    document.getElementById("demo").innerHTML = x;
+</script>
