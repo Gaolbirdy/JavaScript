@@ -1,0 +1,238 @@
+<!-- <p id="demo"></p>
+<script>
+    var x = 0;
+    // document.getElementById("demo").innerHTML = x == 100;
+    // document.getElementById("demo").innerHTML = Boolean(x == 10);
+    // document.getElementById("demo").innerHTML = Boolean(x = 10);
+    document.getElementById("demo").innerHTML = Boolean(x = 0);
+
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = 10;
+    var y = "10";
+    // document.getElementById("demo").innerHTML = Boolean(x == y);
+    document.getElementById("demo").innerHTML = Boolean(x === y);
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = 10;
+    switch(x)
+    {
+        // case 10:
+        case "10":
+            alert("Hello");
+    }
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = "10";
+    switch(x)
+    {
+        // case 10:
+        case 10:
+            alert("Hello");
+    }
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    // var x = 10 + 5;
+    var x = 10 + "5";
+
+    document.getElementById("demo").innerHTML = x;
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = 10;
+    var y = "5";
+    var z = x + y;
+    document.getElementById("demo").innerHTML = z;
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = 0.1;
+    var y = 0.2;
+    var z = x + y;
+    // document.getElementById("demo").innerHTML = z;
+    document.getElementById("demo").innerHTML = z == 0.3;
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = 0.1;
+    var y = 0.2;
+    var z = (x * 10 + y * 10) / 10;
+    document.getElementById("demo").innerHTML = z == 0.3;
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    // document.getElementById("demo").innerHTML = 
+    //     "Hello World";
+    // document.getElementById("demo").innerHTML = "Hello 
+    // World";
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = "Hello \
+    World";
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var x = 5;
+    if(x == 19);
+    {
+        document.getElementById("demo").innerHTML = "Hello";
+    }
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = myFunction(55);
+
+    // function myFunction(a)
+    // {
+    //     var power = 10
+    //     return a * power
+    // }
+
+    // function myFunction(a)
+    // {
+    //     var power = 10;
+    //     return a * power;
+    // }
+
+    // function myFunction(a)
+    // {
+    //     var
+    //     power = 10;
+    //     return a * power;
+    // }
+    // function myFunction(a)
+    // {
+    //     var
+    //     power = 10;
+    //     return a *
+    //     power;
+    // }
+
+    // function myFunction(a)
+    // {
+    //     var
+    //     power = 10;
+    //     return
+    //     a * power;
+    // }
+
+    function myFunction(a)
+    {
+        var
+        power
+        =
+        10;
+        return
+        a * power;
+    }
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var person = [];
+    person[0] = "John";
+    person[1] = "Doe";
+    person[2] = 46;
+    document.getElementById("demo").innerHTML = person[0] + " " + person.length;
+</script> -->
+
+<!-- <p>
+如果你使用名字作为索引，当访问数组时，JavaScript 会把数组重新定义为标准对象，数组的方法及属性将不能再使用，否则会产生错误:。
+</p>
+<p id="demo"></p>
+<script>
+    var person = [];
+    person["firstName"] = "John";
+    person["lastName"] = "Doe";
+    person["age"] = 46;
+    document.getElementById("demo").innerHTML = person[0] + " " + person.length + " " + person["lastName"] + " " + person.firstName;
+</script> -->
+
+<!-- <script>
+    var colors = [5, 6, 7,];
+    document.writeln(colors.length);
+</script> -->
+
+<!-- <script>
+    var websites = 
+    {
+    site : "菜鸟教程", 
+    url : "www.runoob.com", 
+    like : 460
+    };
+    document.writeln(websites.like);
+</script> -->
+
+<!-- <script>
+    // var myObj;
+    // document.writeln(typeof myObj);
+    // document.writeln(myObj !== null);
+
+    // var myObj;
+    // document.writeln(typeof myObj);
+    // document.writeln(typeof myObj !== "undefined");
+
+    // document.writeln(myObj !== null && typeof myObj !== "undefined");
+    // var myObj = {};
+    document.writeln(typeof myObj !== "undefined" && myObj !== null);
+
+</script> -->
+
+<!-- <script>
+    {
+        var x = 1;
+    }
+    document.write(x);
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    for(var i = 0; i < 10; i++)
+    {
+
+    }
+    document.getElementById("demo").innerHTML = i;
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    function f()
+    {
+        for(var i = 0; i < 10; i++)
+        {
+
+        }
+    }
+    f();
+    document.getElementById("demo").innerHTML = i;
+</script> -->
+
+<p id="demo"></p>
+<script>
+    function f()
+    {
+        for(var i = 0; i < 10; i++)
+        {
+
+        }
+        return i;
+    }
+    
+    document.getElementById("demo").innerHTML = f();
+</script>
