@@ -1,0 +1,44 @@
+<!-- <script>
+    function validateForm()
+    {
+        var x = document.forms["myForm"]["fname"].value;
+        
+        if(x == null || x == "")
+        {
+            alert("姓必须填写");
+            return false;
+        }
+    }
+</script>
+
+<form name="myForm" action="demo-form.php" onsubmit="return validateForm()" method="post">
+姓：<input type="text" name="fname">
+<input type="submit" value="提交">
+</form> -->
+
+<script>
+function validateForm()
+{
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+
+    if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length)
+    {
+        alert("不是一个有效的e-mail地址");
+        
+        document.getElementById("demo").innerHTML = atpos < 1;
+        document.getElementById("demo1").innerHTML = dotpos < atpos + 2;
+        document.getElementById("demo2").innerHTML = dotpos + 2 >= x.length;
+        return false;
+    }
+}
+</script>
+
+<form name="myForm" action="demo-form.php" onsubmit="return validateForm()" method="post">
+Email: <input type="text" name="email">
+<input type="submit" value="提交">
+</form>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
