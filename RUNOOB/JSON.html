@@ -1,8 +1,96 @@
-{
+<!-- {
     "sites":
     [
         {"name" : "Runoob", "url" : "www.Runoob.com"},
         {"name" : "Google", "url" : "www.google.com"},
-        {"name" : "Taobao", "url" : "www.taobao.com"},
+        {"name" : "Taobao", "url" : "www.taobao.com"}
     ]
-}
+} -->
+
+<!-- <h2>为 JSON 字符串创建对象</h2>
+<p id="demo"></p>
+<script>
+    var text = '{"sites" : [' +
+    '{"name" : "Runoob", "url" : "www.Runoob.com"},' +
+    '{"name" : "Google", "url" : "www.google.com"},' +
+    '{"name" : "Taobao", "url" : "www.taobao.com"}' +
+    ' ]}';
+
+    var obj =  JSON.parse(text);
+    document.getElementById("demo").innerHTML = obj.sites[2].name + " " + obj.sites[2].url;
+
+</script> -->
+
+<!-- <h2>从 JSON 字符串中创建一个对象</h2>
+<p id="demo"></p>
+<script>
+    var text = '{"employees" : [' +
+    '{"name":"菜鸟教程","site":"http://www.runoob.com" },' +
+    '{"name":"Google","site":"http://www.Google.com" },' +
+    '{"name":"Taobao","site":"http://www.taobao.com" }' +
+    ' ]}';
+
+    var obj = JSON.parse(text);
+
+    document.getElementById("demo").innerHTML = obj.employees[1].name + " " + obj.employees[1].site;
+</script> -->
+
+<!-- <h2>使用可选参数，回调函数</h2>
+<p id="demo"></p>
+<script>
+    var obj = JSON.parse('{"p" : 5}', function(k, v)
+    {
+        document.writeln(k);
+        document.writeln(v);
+
+        if(k === '')
+            return v;
+        return v * 2;
+    }
+    );
+    document.writeln(obj.p);
+</script> -->
+
+<h2>使用可选参数，回调函数</h2>
+<p id="demo"></p>
+<!-- <script>
+    JSON.parse('{"p" : 5}', function(k, v)
+    {
+        if(k === '')
+            return v;
+        return v * 2;
+    }
+    );
+
+    JSON.parse('{"1p" : 1, "2p" : 2, "3p" : {"4p" : 4, "5p" : {"6p" : 6}}}', function(k, v)
+    {
+        document.write(k);
+        document.write("<br>");
+        // document.write(v);
+        // document.write("<br>");
+        
+        return v;
+    }
+    );
+
+</script> -->
+
+<p id="demo"></p>
+<script>
+    var str = {"name" : "菜鸟教程", "site" : "htpp://www.runoob.com"};
+    // document.writeln(str.name);
+    // document.writeln(str.site);
+    // document.write(str);
+    // document.write("<br>");
+    
+    var str_pretty1 = JSON.stringify(str);
+    document.write("只有一个参数情况：");
+    document.write("<br>");
+    document.write("<pre>" + str_pretty1 + "</pre>");
+    document.write("<br>");
+    var str_pretty2 = JSON.stringify(str, null, 4); // 使用四个空格缩进
+    document.write("使用参数情况：");
+    document.write("<br>");
+    document.write("<pre>" + str_pretty2 + "</pre>");
+
+</script>
