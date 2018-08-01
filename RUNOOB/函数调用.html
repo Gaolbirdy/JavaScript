@@ -32,7 +32,7 @@
     document.getElementById("demo").innerHTML = myFunction();
 </script> -->
 
-<p>myObject.fullName() 返回 John Doe:</p>
+<!-- <p>myObject.fullName() 返回 John Doe:</p>
 <p id="demo"></p>
 <script>
     var myObject = {
@@ -42,9 +42,72 @@
         {
             return this.firstName + " " + this.lastName;
             // return firstName + lastName;
+        },
+        self : function()
+        {
+            return this;
         }
     }
 
     document.getElementById("demo").innerHTML = myObject.fullName();
-</script>
+    document.getElementById("demo").innerHTML = myObject.self();
+    document.getElementById("demo").innerHTML = myObject.self().fullName();
+    document.getElementById("demo").innerHTML = myObject.self().firstName;
+</script> -->
 
+<!-- <p>该实例中， myFunction 是函数构造函数:</p>
+<p id="demo"></p>
+<script>
+    function myFunction(arg1, arg2)
+    {
+        this.firstName = arg1;
+        this.lastName = arg2;
+        return this;
+    }
+
+    var x = new myFunction("John", "Doe");
+    document.getElementById("demo").innerHTML = x.lastName;
+
+    document.writeln(myFunction("", ""));
+    document.writeln(new myFunction("", ""));
+    // document.writeln(x());
+</script> -->
+
+<!-- <script>
+    function myFunction()
+    {
+        return this;
+    }
+    var x = new myFunction();
+    document.writeln(x);
+    document.write(myFunction());
+</script> -->
+
+<!-- <p id="demo"></p>
+<script>
+    var myObject;
+
+    function myFunction(a, b)
+    {
+        return a * b;
+    }
+
+    myObject = myFunction.call(myObject, 10, 2);
+    document.getElementById("demo").innerHTML = myObject;
+</script> -->
+
+<p id="demo"></p>
+<script>
+    var myObject, myArray;
+
+    function myFunction(a, b)
+    {
+        return a * b;
+    }
+
+    myArray = [10, 2];
+    myObject = myFunction.apply(myObject, myArray);
+    // myObject = myFunction.apply(myObject, [3, 4]);
+    document.getElementById("demo").innerHTML = myObject;
+    // document.write(typeof myObject);
+</script>
