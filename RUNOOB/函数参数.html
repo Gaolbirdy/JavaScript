@@ -1,0 +1,60 @@
+<!-- <p>设置参数的默认值。</p>
+<p id="demo"></p>
+<script>
+    function myFunction(x, y)
+    {
+        if(y === undefined)
+            y = 0;
+        return x * y;
+    }
+    document.getElementById("demo").innerHTML = myFunction(4);
+</script> -->
+
+<!-- <p>设置函数参数默认值。</p>
+<p id="demo"></p>
+<script>
+    function myFunction(x, y)
+    {
+        y = y || 0;
+        return x * y;
+    }
+    document.getElementById("demo").innerHTML = myFunction(4);
+</script> -->
+
+<!-- <p>查找最大的数。</p>
+<p id="demo"></p>
+<script>
+    var x = findMax(1, 123, 500, 115, 44, 88);
+
+    function findMax()
+    {
+        var i, max = arguments[0];
+
+        if(arguments.length < 2)
+            return max;
+
+        for (i = 0; i < arguments.length; i++) 
+        {
+            if(arguments[i] > max)
+                max = arguments[i];
+        }
+        return max;
+    }
+    document.getElementById("demo").innerHTML = x;
+</script> -->
+
+<p>计算所有参数之和：</p>
+<p id="demo"></p>
+<script>
+    function sumAll()
+    {
+        var i, sum = 0;
+        for(i = 0; i < arguments.length; i++)
+        {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+
+    document.getElementById("demo").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+</script>
