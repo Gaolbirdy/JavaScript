@@ -24,3 +24,145 @@
     document.writeln(window.myFunction);
 </script> -->
 
+<!-- <p>全局变量计数。</p>
+<button type="button" onclick="myFunction()">计数！</button>
+<p id="demo">0</p>
+<script>
+    var counter = 0;
+
+    function add()
+    {
+        return counter += 1;
+    }
+
+    function myFunction()
+    {
+        document.getElementById("demo").innerHTML = add();
+    }
+</script> -->
+
+<!-- <p>局部变量计数。</p>
+<button type="button" onclick="myFunction()">计数！</button>
+<p id="demo">0</p>
+<script>
+    function add()
+    {
+        var counter = 0;
+        return counter += 1;
+    }
+
+    function myFunction()
+    {
+        document.getElementById("demo").innerHTML = add();
+    }
+</script> -->
+
+<!-- <p>局部变量计数。</p>
+<p id="demo">0</p>
+<script>
+    document.getElementById("demo").innerHTML = add();
+
+    function add()
+    {
+        var counter = 0;
+
+        function plus()
+        {
+            counter += 1;
+        }
+        
+        plus();
+        return counter;
+    }
+</script> -->
+
+<!-- <script>
+    function myFunction()
+    {
+        return function() {return 100;};
+    }
+
+    document.writeln(myFunction());
+    document.writeln(myFunction()());
+</script> -->
+
+<!-- <script>
+    function myFunction()
+    {
+        return (function() {return 100;})();
+    }
+
+    document.writeln(myFunction());
+</script> -->
+
+<!-- <script>
+    (function myFunction()
+    {
+        document.write("call self");
+    })();
+</script> -->
+
+<!-- <p>局部变量计数。</p>
+<button onclick="myFunction()">计数</button>
+<p id="demo">0</p>
+<script>
+    var add = function()
+    {
+        var counter = 0;
+        return function()
+        {
+            document.writeln(counter); 
+            return counter += 1;
+        };
+    };
+
+    // document.writeln(add);
+    // document.writeln(add());
+    // document.writeln(add()());
+    // document.writeln(add()());
+
+    // document.writeln(add);
+    // document.writeln(add());
+
+    var y = add();
+    document.writeln(y);
+    document.writeln(y());
+    document.writeln(y());
+    document.writeln(y());
+
+    // var add = function()
+    // {
+    //     var counter = 0;
+    //     return function() {return counter += 1;};
+    // }();
+
+    // document.write(add);
+</script> -->
+
+<!-- <p>局部变量计数。</p>
+<button onclick="myFunction()">计数</button>
+<p id="demo">0</p>
+<script>
+    var add = (function()
+    {
+        var counter = 0;
+        return function() {return counter += 1;}
+    })();
+    document.write(add);
+
+    function myFunction()
+    {
+        document.getElementById("demo").innerHTML = add();
+    }
+</script> -->
+
+<script>
+    var x = (function()
+    {
+        var z = 1;
+        return function() {document.writeln(z)};
+    })();
+
+    x();
+    x();
+</script>
