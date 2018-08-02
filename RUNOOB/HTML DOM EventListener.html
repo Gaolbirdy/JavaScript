@@ -1,0 +1,114 @@
+<!-- <p>该实例使用 addEventListener() 方法在按钮中添加点击事件。 </p>
+<button id="myBtn" onclick="displayDate()">点我</button>
+<p id="demo"></p>
+<script>
+    function displayDate()
+    {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script> -->
+
+<!-- <p>该实例使用 addEventListener() 方法在按钮中添加点击事件。 </p>
+<button id="myBtn">双击我</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+    document.getElementById("myBtn").addEventListener("dblclick", displayDate);
+    document.getElementById("myBtn").addEventListener("dblclick", function() 
+    {
+        document.getElementById("demo1").innerHTML = "hello";
+    });
+
+    function displayDate()
+    {
+        document.getElementById("demo").innerHTML = Date();
+    }
+
+    // function hello()
+    // {
+    //     document.write("hello");
+    // }
+</script> -->
+
+<!-- <p>该实例使用 addEventListener() 方法在按钮中添加点击事件。 </p>
+<button id="myBtn">点我</button>
+<script>
+    document.getElementById("myBtn").addEventListener("click", function()
+    {
+        alert("Hello World");
+    });
+</script> -->
+
+<!-- <p>该实例使用 addEventListener() 方法在用户点击按钮时执行函数。</p>
+<button id="myBtn">点我</button>
+<script>
+    document.getElementById("myBtn").addEventListener("click", myFunction);
+    function myFunction()
+    {
+        alert("Hello World");
+    }
+</script> -->
+
+<!-- <p>该实例使用 addEventListener() 方法向同个按钮中添加两个点击事件。</p>
+<button id="myBtn">点我</button>
+<script>
+    var x = document.getElementById("myBtn");
+    x.addEventListener("click", myFunction);
+    x.addEventListener("click", someOtherFunction);
+
+    function myFunction()
+    {
+        alert("Hello World");
+    }
+
+    function someOtherFunction()
+    {
+        alert("函数已执行");
+    }
+</script> -->
+
+<!-- <p>实例使用 addEventListener() 方法在同一个按钮中添加多个事件。</p>
+<button id="myBtn">点我</button>
+<p id="demo"></p>
+<script>
+    var x = document.getElementById("myBtn");
+    x.addEventListener("mouseover", myFunction);
+    x.addEventListener("click", mySecondFunction);
+    x.addEventListener("mouseout", myThirdFunction);
+
+    function myFunction()
+    {
+        document.getElementById("demo").innerHTML += "Moused over!<br>";
+    }
+
+    function mySecondFunction()
+    {
+        document.getElementById("demo").innerHTML += "Clicked!<br>";
+    }
+
+    function myThirdFunction()
+    {
+        document.getElementById("demo").innerHTML += "Moused out!<br>";
+    }
+</script> -->
+
+<!-- <p>实例在 window 对象中使用 addEventListener() 方法。</p>
+<p>尝试重置浏览器的窗口触发 "resize" 事件句柄。</p>
+<p id="demo"></p>
+<script>
+    window.addEventListener("resize", function()
+    {
+        document.getElementById("demo").innerHTML = "调整窗口大小   " + Math.random();
+    });
+</script> -->
+
+<p>实例演示了在使用 addEventListener() 方法时如何传递参数。</p>
+<p>点击按钮执行计算。</p>
+<button id="myBtn">点我</button>
+<p id="demo"></p>
+<script>
+    var p1 = 5;
+    var p2 = 7;
+
+    document.getElementById("myBtn").addEventListener("click",)
+</script>

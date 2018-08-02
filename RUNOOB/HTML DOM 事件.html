@@ -51,4 +51,109 @@
 </script>
 <p id="demo"></p> -->
 
+<!-- <body onload="checkCookies()">
+<script>
+    function checkCookies()
+    {
+        // if(navigator.cookieEnabled == true)
+        if(navigator.cookieEnabled)
+            alert("Cookies可用");
+        else
+            alert("Cookies不可用");
+    }
+</script>
+<p>弹窗-提示浏览器 cookie 是否可用。</p>
+</body> -->
+
+<!-- <body onunload="checkCookies()">
+<script>
+    function checkCookies()
+    {
+        // if(navigator.cookieEnabled == true)
+        if(navigator.cookieEnabled)
+            alert("Cookies可用");
+        else
+            alert("Cookies不可用");
+    }
+</script>
+<p>弹窗-提示浏览器 cookie 是否可用。</p>
+</body> -->
+
+<!-- <script>
+    function myFunction()
+    {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+<body>
+输入你的名字:<input type="text" id="fname" onchange="myFunction()"/>
+<p>当你离开输入框后，函数将被触发，将小写字母转为大写字母。</p>
+</body> -->
+
+<!-- <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width: 120px;height: 20px;padding: 40px;">Mouse Over Me</div>
+<script>
+    function mOver(obj)
+    {
+        obj.innerHTML = "Thank You";
+    }
+
+    function mOut(obj)
+    {
+        obj.innerHTML = "Mouse Over me";
+    }
+</script> -->
+
+<!-- <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width: 120px;height: 20px;padding: 40px;">Thank You</div>
+<script>
+    function mDown(obj)
+    {
+        obj.innerHTML = "Release Me";
+        obj.style.backgroundColor = "#1ec5e5";
+    }
+
+    function mUp(obj)
+    {
+        obj.innerHTML = "Thank You";
+        obj.style.backgroundColor = "#D94A38";
+    }
+
+</script> -->
+
+<!-- <script>
+    function lighton()
+    {
+        document.getElementById('myimage').src = "images/pic_bulbon.gif";
+    }
+
+    function lightoff()
+    {
+        document.getElementById('myimage').src = "images/pic_bulboff.gif";
+    }
+</script>
+<body>
+    <img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="images/pic_bulboff.gif" width="100" height="180"/>
+</body>
+<p>点击不释放鼠标灯将一直亮着!</p> -->
+
+<!-- <script>
+    function mymessage()
+    {
+        alert("消息在onload事件触发后弹出");
+    }
+</script>
+<body onload="mymessage()"></body> -->
+
+<!-- <script>
+    function myFunction(x)
+    {
+        x.style.background = "yellow";
+    }
+</script>
+<body>
+输入你的名字:<input type="text" onfocus="myFunction(this)"/>
+<p>当输入框获取焦点时，修改背景色（background-color属性） 将被触发。</p>
+</body> -->
+
+<!-- <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">将鼠标移至文本上</h1> -->
 
