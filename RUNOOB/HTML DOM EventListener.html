@@ -102,7 +102,7 @@
     });
 </script> -->
 
-<p>实例演示了在使用 addEventListener() 方法时如何传递参数。</p>
+<!-- <p>实例演示了在使用 addEventListener() 方法时如何传递参数。</p>
 <p>点击按钮执行计算。</p>
 <button id="myBtn">点我</button>
 <p id="demo"></p>
@@ -110,5 +110,102 @@
     var p1 = 5;
     var p2 = 7;
 
-    document.getElementById("myBtn").addEventListener("click",)
+    document.getElementById("myBtn").addEventListener("click", function()
+    {
+        myFunction(p1, p2);
+    });
+
+    // document.getElementById("myBtn").addEventListener("click", myFunction(4, 3));
+
+    function myFunction(a, b)
+    {
+        var result = a * b;
+        document.getElementById("demo").innerHTML = result;
+    }
+</script> -->
+
+<!-- <title>runoob.com</title>
+<style>
+    div{
+        background-color: coral;
+        border: 1px solid;
+        padding: 50px;
+    }
+</style>
+<body>
+<p>实例演示了在添加不同事件监听时，冒泡与捕获的不同。</p>
+<div id="myDiv">
+    <p id="myP">点击段落，我是冒泡</p>
+</div><br>
+<div id="myDiv2">
+    <p id="myP2">点击段落，我是捕获</p>
+</div>
+<script>
+    document.getElementById("myP").addEventListener("click", function()
+    {
+        alert("你点击了 P 元素!");
+    }, false);
+    document.getElementById("myDiv").addEventListener("click", function()
+    {
+        alert("你点击了 DIV 元素!");
+    }, false);
+
+    document.getElementById("myP2").addEventListener("click", function()
+    {
+        alert("你点击了 P2 元素!");
+    }, true);
+    document.getElementById("myDiv2").addEventListener("click", function()
+    {
+        alert("你点击了 DIV2 元素!");
+    }, true);
+</script>
+</body> -->
+
+<!-- <style>
+    #myDIV
+    {
+        background-color: coral;
+        border: 1px solid;
+        padding: 50px;
+        color: white;
+    }
+</style>
+<div id="myDIV">div 元素添加了 onmousemove 事件句柄，鼠标在桔红色的框内移动时会显示随机数。
+    <p>点击按钮移除 DIV 的事件句柄。</p>
+    <button onclick="removeHandler()" id="myBtn">点我</button>
+</div>
+<p id="demo"></p>
+<script>
+    document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+
+    function myFunction()
+    {
+        document.getElementById("demo").innerHTML = Math.random();
+    }
+
+    function removeHandler()
+    {
+        document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+    }
+</script> -->
+
+<p> Internet Explorer 8 及更早IE版本不支持 addEventListener() 方法。</p>
+<p>该实例演示了所有浏览器兼容的解决方法。</p>
+<button id="myBtn">点我</button>
+<script>
+    var x = document.getElementById("myBtn");
+
+    if(x.addEventListener)
+    {
+        x.addEventListener("click", myFunction);
+    }
+    else if(x.attachEvent)
+    {
+        x.attachEvent("onclick", myFunction);
+    }
+
+    function myFunction()
+    {
+        alert("Hello World");
+    }
 </script>
