@@ -1,0 +1,54 @@
+<!-- <h1 onclick="this.innerHTML='Ooops!'">点击文本!</h1>
+
+<script>
+    function changetext(id)
+    {
+        id.innerHTML = "Ooops";
+    }
+</script>
+<h1 onclick="changetext(this)">点击文本</h1> -->
+
+<!-- <p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+<button onclick="displayDate()">点这里</button>
+<script>
+    function displayDate()
+    {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+<p id="demo"></p> -->
+
+<!-- <p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+<button id="myBtn">点这里</button>
+<script>
+    document.getElementById("myBtn").onclick = function(){displayDate()};
+    // document.getElementById("myBtn").onclick = displayDate();
+    // document.write(displayDate);
+    function displayDate()
+    {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+<p id="demo"></p> -->
+
+
+<!-- <p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+<button id="myBtn">点这里</button>
+<script>
+
+    // document.getElementById("myBtn").onclick = function(){displayDate()};
+
+    var displayDate = function ()
+    {
+        document.getElementById("demo").innerHTML = Date();
+    };
+
+    document.getElementById("myBtn").onclick = displayDate;
+
+    document.writeln(document.getElementById("myBtn").onclick);
+    document.writeln(displayDate);
+
+</script>
+<p id="demo"></p> -->
+
+
