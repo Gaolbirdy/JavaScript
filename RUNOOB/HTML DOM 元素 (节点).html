@@ -1,4 +1,4 @@
-<div id="div1">
+<!-- <div id="div1">
 <p id="p1">这是一个段落。</p>
 <p id="p2">这是另外一个段落。</p>
 </div>
@@ -13,4 +13,58 @@
     element.appendChild(para);
     // var node = document.createTextNode("这是一个新的段落");
 
+</script> -->
+
+<!-- <div id="div1">
+<p id="p1">这是一个段落</p>
+<p id="p2">这是另外一个段落</p>
+</div>
+
+<script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是一个新的段落");
+
+    para.appendChild(node);
+
+    var element = document.getElementById("div1");
+    var child = document.getElementById("p2");
+    element.insertBefore(para, child);
+</script> -->
+
+<!-- <div id="div1">
+<p id="p1">这是一个段落</p>
+<p id="p2">这是另外一个段落</p>
+</div>
+<script>
+    var parent = document.getElementById("div1");
+    var child =  document.getElementById("p1");
+    parent.removeChild(child);
+</script> -->
+
+<!-- <div id="div1">
+<p id="p1">这是一个段落</p>
+<p id="p2">这是另外一个段落</p>
+</div>
+<script>
+    var child = document.getElementById("p1");
+    document.writeln(child);
+    document.writeln(child.parentNode);
+    child.parentNode.removeChild(child);
+</script> -->
+
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另外一个段落。</p>
+</div>
+
+<script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("这是一个新的段落");
+
+    para.appendChild(node);
+
+    var parent = document.getElementById("div1");
+    var child = document.getElementById("p1");
+
+    parent.replaceChild(para, child);
 </script>

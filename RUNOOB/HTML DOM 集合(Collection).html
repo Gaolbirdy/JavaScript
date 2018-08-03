@@ -1,0 +1,38 @@
+<!-- <h2>JavaScript HTML DOM</h2>
+<p>Hello World</p>
+<p>Hello Runoob</p>
+<p id="demo">空</p>
+<script>
+    var myCollection = document.getElementsByTagName("p");
+    document.writeln(myCollection.length);
+    document.writeln(myCollection[2].innerHTML);
+    document.getElementById("demo").innerHTML = "第二个段落的内容为:<span style='color:red;'>" + myCollection[1].innerHTML + '</span>';
+    document.writeln(myCollection[2].innerHTML);
+</script> -->
+
+<!-- <h2>JavaScript HTML DOM</h2>
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p id="demo"></p>
+<script>
+    var myCollection = document.getElementsByTagName("p");
+    document.getElementById("demo").innerHTML = "文档包含" + myCollection.length + " 个段落。";
+</script> -->
+
+<h2>JavaScript HTML DOM</h2>
+<p>Hello World!</p>
+<p>Hello Runoob!</p>
+<p>点击按钮修改 p 元素的背景颜色。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var myCollection = document.getElementsByTagName("p");
+        var i;
+
+        for(i = 0; i < myCollection.length; i++)
+        {
+            myCollection[i].style.color = "red";
+        }
+    }
+</script>
