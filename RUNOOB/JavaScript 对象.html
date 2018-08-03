@@ -1,0 +1,185 @@
+<!-- <script>
+    var message = "Hello World!";
+    var x = message.length;
+    document.write(x);
+</script> -->
+
+<!-- <script>
+    var message = "Hello World!";
+    var x = message.toUpperCase();
+    document.write(x);
+</script> -->
+
+<!-- <script>
+    var person = new Object();
+    person.firstName = "John";
+    person.lastName = "Doe";
+    person.age = 50;
+    person.eyecolor = "blue";
+    document.write(person.firstName + " is " + person.age + " years old.");
+</script> -->
+
+<!-- <script>
+    var person = {
+        firstName : "John",
+        lastName : "Doe",
+        age : 50,
+        eyecolor : "blue"
+    };
+    document.write(person.firstName + " is " + person.age + " years old.");
+</script> -->
+
+<!-- <script>
+    function myFunction()
+    {
+        return 1;
+    }
+
+    document.writeln(myFunction);
+    document.writeln(myFunction());
+</script> -->
+
+<!-- <script>
+    function person(firstName, lastName, age, eyecolor)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyecolor = eyecolor;
+    }
+
+    var myFather = new person("John", "Doe", 50, "blue");
+    document.write(myFather.firstName + " is " + myFather.age + " years old.");
+</script> -->
+
+<!-- <script>
+    function person(firstName, lastName, age, eyecolor)
+    {
+        this.fName = firstName;
+        this.lName = lastName;
+        this.age = age;
+        this.eColor = eyecolor;
+    }
+
+    var myFather = new person("John", "Doe", 50, "blue");
+    document.writeln(myFather);
+    document.writeln(typeof myFather);
+    document.writeln(myFather.fName + " is " + myFather.age + " years old.");
+</script> -->
+
+<!-- <script>
+    function person(firstName, lastName, age, eyecolor)
+    {
+        this.fName = firstName;
+        this.lName = lastName;
+        this.age = age;
+        this.eColor = eyecolor;
+    }
+
+    document.writeln(new person("John", "Doe", 50, "blue"));
+    document.writeln(typeof (new person("John", "Doe", 50, "blue")));
+    document.writeln(person("John", "Doe", 50, "blue"));
+    document.writeln(typeof (person("John", "Doe", 50, "blue")));
+</script> -->
+
+<!-- <script>
+    // var person;
+    // document.writeln(person);
+    // document.writeln(typeof person);
+
+    // var person = new Object();
+    // document.writeln(person);
+    // document.writeln(typeof person);
+
+    var person = new Object();
+    person.firstName = "John";
+    person.lastName = "Doe";
+    person.age = 50;
+    person.eyecolor = "blue";
+
+    var x = person.firstName;
+    document.write(x);
+</script> -->
+
+<!-- <script>
+    function person(firstName, lastName, age, eyecolor)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyecolor = eyecolor;
+
+        this.changeName = changeName;
+        function changeName(name)
+        {
+            this.lastName = name;
+        }
+    }
+
+    var myMother = new person("Sally", "Rally", 48, "green");
+    document.writeln(myMother.lastName);
+    myMother.changeName("Doe");
+    document.writeln(myMother.lastName);
+    document.writeln(myMother.changeName);
+    document.writeln(typeof myMother.changeName);
+</script> -->
+
+<!-- <script>
+    function person(firstName, lastName, age, eyecolor)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.eyecolor = eyecolor;
+
+        this.changeName = function (name)
+        {
+            this.lastName = name;
+        }
+    }
+
+    var myMother = new person("Sally", "Rally", 48, "green");
+    // document.writeln(myMother.lastName);
+    // myMother.changeName("Doe");
+    // document.writeln(myMother.lastName);
+    // document.writeln(myMother.changeName);
+    // document.writeln(typeof myMother.changeName);
+
+    for(var x in myMother)
+    {
+        document.writeln(x + "<br>");
+    }
+
+    // for(var x in myMother)
+    // {
+    //     document.writeln(typeof x + "<br>");
+    // }
+
+    document.write("<br>");
+    for(var x in myMother)
+    {
+        document.writeln(typeof (myMother[x]) + "<br>");
+    }
+</script> -->
+
+<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+    function myFunction()
+    {
+        var x;
+        var txt = "";
+        var person = {
+            fName : "Bill",
+            lName : "Gates",
+            age : 56
+        };
+
+        for(x in person)
+        {
+            txt = txt + person[x];
+        }
+        document.getElementById("demo").innerHTML = txt;
+    }
+</script>

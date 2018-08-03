@@ -1,0 +1,109 @@
+<!-- <script>
+    var d = new Date();
+    document.write(d);
+    document.write("<br>");
+    document.write(Date());
+</script> -->
+
+<!-- <p id="demo">点击按钮获取今年的年份。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var d = new Date();
+        var x = document.getElementById("demo");
+        x.innerHTML = d.getFullYear();
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮显示1970年1月1号至今的毫秒数。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var d = new Date();
+        var x = document.getElementById("demo");
+        x.innerHTML = d.getTime();
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮显示修改后的年月日。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    var d = new Date();
+    
+    document.getElementById("demo").innerHTML += '<br>' + d;
+    function myFunction()
+    {
+        // document.write(d);
+        d.setFullYear(2020, 10, 3);
+        var x = document.getElementById("demo");
+        x.innerHTML = d;
+    }
+</script>
+<p>记住 JavaScript 月数是从0至11。10是11月。</p> -->
+
+<!-- <p id="demo">点击按钮把 utc 日期和时间转换成字符串。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var d = new Date();
+        var x = document.getElementById("demo");
+        x.innerHTML = d.toUTCString();
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮显示今天周几</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var d = new Date();
+        // document.write(d.getDay());
+
+        var weekday = new Array(7);
+        weekday[0] = "周日";
+        weekday[1] = "周一";
+        weekday[2] = "周二";
+        weekday[3] = "周三";
+        weekday[4] = "周四";
+        weekday[5] = "周五";
+        weekday[6] = "周六";
+
+        var x = document.getElementById("demo");
+        x.innerHTML = weekday[d.getDay()];
+    }
+</script> -->
+
+<!-- <script>
+    function startTime()
+    {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+
+        // setTimeout(startTime, 3000);
+        // setTimeout(startTime, 1000);
+        // setTimeout(startTime, 1000);
+        t = setTimeout(function() {startTime();}, 500);
+
+        // setTimeout(startTime(), 500);
+    }
+
+    function checkTime(i)
+    {
+        if(i < 10)
+            i = "0" + i;
+        return i;
+    }
+</script>
+<body onload="startTime()">
+<div id="txt"></div>    
+</body> -->
+
