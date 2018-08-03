@@ -1,2 +1,42 @@
-<script src="http://apps.bdimg.com/libs/prototype/1.7.1.0/prototype.js">
+<!-- <script src="http://apps.bdimg.com/libs/prototype/1.7.1.0/prototype.js">
+
 </script>
+<script>
+    function myFunction()
+    {
+        var obj = document.getElementById("h01");
+        obj.innerHTML = "Hello Prototype";
+    }
+    onload = myFunction;
+</script>
+<h1 id="h01"></h1> -->
+
+<!-- <script src="http://apps.bdimg.com/libs/prototype/1.7.1.0/prototype.js"></script>
+<script>
+    function myFunction()
+    {
+        $("h01").insert("Hello Prototype");
+    }
+    Event.observe(window, "load", myFunction);
+</script>
+<h1 id="h01"></h1> -->
+
+<!-- <script src="https://apps.bdimg.com/libs/prototype/1.7.1.0/prototype.js"></script>
+<script>
+    function myFunction()
+    {
+        $("h01").insert("Hello Prototype!");
+    }
+    Event.observe(window, "load", myFunction);
+</script>
+<h1 id="h01"></h1> -->
+
+<script src="https://apps.bdimg.com/libs/prototype/1.7.1.0/prototype.js"></script>
+<script>
+    function myFunction()
+    {
+        $("h01").writeAttribute("style", "color:red").insert("Hello Prototype!");
+    }
+    Event.observe(window, "load", myFunction);
+</script>
+<h1 id="h01"></h1>
