@@ -1,0 +1,20 @@
+<!-- <script>
+    // document.write(location + "<br>");
+    // document.write(location + "<br>");
+    // location = "http://www.baidu.com";
+    document.write(location.hostname + "<br>");
+    document.write(location.pathname + "<br>");
+    document.write(location.port + "<br>");
+    document.write(location.protocol + "<br>");
+    document.write(location.href + "<br>");
+    document.write(location + "<br>");
+
+</script> -->
+
+<script>
+    function newDoc()
+    {
+        window.location.assign("http://www.baidu.com");
+    }
+</script>
+<input type="button" value="加载新文档" onclick="newDoc()">

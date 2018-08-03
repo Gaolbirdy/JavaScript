@@ -1,0 +1,45 @@
+<!-- <script>
+    var re = new RegExp("\\w+");
+    var re = /\w+/;
+</script> -->
+
+<!-- <script>
+    var str = "Visit RUnoob";
+    var patt1 = /runoob/i;
+    document.write(str.match(patt1));
+</script> -->
+
+<!-- <script>
+    var str = "Is this all there is?";
+    var patt1 = /is/g;
+    document.write(str.match(patt1));
+</script> -->
+
+<!-- <script>
+    var str = "Is this all there is?";
+    var patt1 = /is/gi;
+    document.write(str.match(patt1));
+</script> -->
+
+<!-- <script>
+    var patt1 = new RegExp("e");
+    document.write(patt1.test("The best things in life are free"));
+</script> -->
+
+<!-- <script>
+    var str = "runoob";
+    var patt1 = new RegExp('\\w', 'g'); // 有转义作为正则表达式处理
+    var patt2 = new RegExp('\w', 'g');  // 无转义作为字符串处理
+    var patt3 = /\w+/g; // 与 patt1 效果相同
+    document.write(patt1.test(str));
+    document.write("<br>");
+    document.write(patt2.test(str));
+    document.write("<br>");
+    document.write(patt3.test(str));
+
+</script> -->
+
+<script>
+    var patt1 = new RegExp("e");
+    document.write(patt1.exec("The best things in life are free"));
+</script>

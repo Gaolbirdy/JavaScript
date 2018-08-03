@@ -1,0 +1,249 @@
+<!-- <script>
+    var i;
+    var mycars = new Array();
+    mycars[0] = "Saab";
+    mycars[1] = "Volvo";
+    mycars[2] = "BMW";
+
+    for(i = 0; i < mycars.length; i++)
+    {
+        document.write(mycars[i] + "<br/>");
+    }
+</script> -->
+
+<!-- <script>
+    var i;
+    var mycars = new Array("Saab", "Volvo", "BMW");
+
+    for(i = 0; i < mycars.length; i++)
+    {
+        document.write(mycars[i] + "<br/>");
+    }
+</script> -->
+
+<!-- <script>
+    var i;
+    var mycars = ["Saab", "Volvo", "BMW"];
+
+    for(i = 0; i < mycars.length; i++)
+    {
+        document.write(mycars[i] + "<br/>");
+    }
+    
+    mycars[0] = "Opel";
+    for(i = 0; i < mycars.length; i++)
+    {
+        document.write(mycars[i] + "<br/>");
+    }
+</script> -->
+
+<!-- <script>
+    var myArray = new Array();
+    var mycars = ["BMW", "Volvo"];
+
+    myArray[0] = Date.now;
+    myArray[1] = myFunction;
+    myArray[2] = mycars;
+    myArray[3] = myArray[0]();
+    myArray[4] = myArray[1]();
+    // document.write(Date.now());
+
+    function myFunction()
+    {
+
+    }
+
+    for(var i = 0; i < myArray.length; i++)
+    {
+        document.write(myArray[i] + "<br/>");
+    }
+
+    var x = myArray.length;
+    document.writeln(x);
+    var y = myArray.indexOf(mycars);
+    document.writeln(y);
+</script> -->
+
+<!-- <p id="demo">单击按钮创建一个数组,调用 ucase（）方法, 并显示结果。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    Array.prototype.myUcase = function()
+    {
+        for(var i = 0; i < this.length; i++)
+        {
+            this[i] = this[i].toUpperCase();
+        }
+    };
+
+    function myFunction()
+    {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.myUcase();
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+</script> -->
+
+<!-- <script>
+    var hege = ["Cecilie", "Lone"];
+    var stale = ["Emil", "Tobias", "Linus"];
+    var children = hege.concat(stale);
+    document.write(children);
+</script> -->
+
+<!-- <script>
+    var parents = ["Jani", "Tove"];
+    var brothers = ["Stale", "Kai Jim", "Borge"];
+    var children = ["Cecilie", "Lone"];
+    var family = parents.concat(brothers, children);
+    document.write(family);
+</script> -->
+
+<!-- <p id="demo">点击按钮将数组作为字符串输出。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // document.write(fruits);
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits.join();
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮删除数组的最后一个元素。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    function myFunction()
+    {
+        fruits.pop();
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+
+</script> -->
+
+<!-- <p id="demo">单击按钮给数组添加新的元素。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    function myFunction()
+    {
+        fruits.push("Kiwi");
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮将数组反转排序。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    function myFunction()
+    {
+        fruits.reverse();
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮删除数组的第一个元素。</p>
+<p id="demo2"></p>
+<button onclick="myFunction()">点我</button>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    function myFunction()
+    {
+        var delell = fruits.shift();
+        // document.write(delell);
+        var x = document.getElementById("demo");
+        x.innerHTML = '删除后数组为：' +  fruits;
+        document.getElementById("demo2").innerHTML = '删除的元素是：' + delell;
+    }
+</script> -->
+
+<!-- <p id="demo">点击按钮截取数组下标 1 到 2 的元素。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        var citrus = fruits.slice(1, 3);
+        // document.write(citrus.length);
+        var x = document.getElementById("demo");
+        x.innerHTML = citrus;
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮升序排列数组。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮升序排列数组。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var points = [40, 100, 1, 5, 25, 10];
+        // points.sort();
+        var x = document.getElementById("demo");
+        points.sort(function(a, b) {return a - b});
+        x.innerHTML = points;
+    }
+</script> -->
+
+<!-- <p id="demo">单击按钮降序排列数组。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var points = [40, 100, 1, 5, 25, 10];
+        points.sort(function(a, b) {return b - a});
+        var x = document.getElementById("demo");
+        x.innerHTML = points;
+    }
+</script> -->
+
+<!-- <p id="demo">点击按钮向数组添加元素。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(2, 0, "Lemon", "Kiwi");
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+</script> -->
+
+<!-- <p id="demo">点击按钮将数组转为字符串并返回。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var str = fruits.toString();
+    var x = document.getElementById("demo");
+    x.innerHTML = str;
+</script> -->
+
+<p id="demo">单击按钮在数组中插入元素。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction()
+    {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.unshift("Lemon", "Pineapple");
+        var x = document.getElementById("demo");
+        x.innerHTML = fruits;
+    }
+</script>
+<p><b>注意:</b> unshift()方法不能用于 Internet Explorer 8 之前的版本，插入的值将被返回成<em> undefined </em>。</p>
