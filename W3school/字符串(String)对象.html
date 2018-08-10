@@ -1,0 +1,67 @@
+<!-- <script>
+    var txt = "Hello World!";
+    document.write(txt.length);
+</script> -->
+
+<!-- <script>
+    var txt = "Hello World";
+
+    document.write("<p>" + txt.big() + "</p>");
+    document.write("<p>Big: " + txt.big() + "</p>");
+    document.write("<p>Small: " + txt.small() + "</p>");
+
+    document.write("<p>Bold: " + txt.bold() + "</p>")
+    document.write("<p>Italic: " + txt.italics() + "</p>")
+
+    document.write("<p>Blink: " + txt.blink() + " (does not work in IE)</p>")
+    document.write("<p>Fixed: " + txt.fixed() + "</p>")
+    document.write("<p>Strike: " + txt.strike() + "</p>")
+
+    document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>")
+    document.write("<p>Fontsize: " + txt.fontsize(16) + "</p>")
+
+    document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>")
+document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>")
+
+document.write("<p>Subscript: " + txt.sub() + "</p>")
+document.write("<p>Superscript: " + txt.sup() + "</p>")
+
+document.write("<p>Link: " + txt.link("http://www.w3school.com.cn") + "</p>")
+</script> -->
+
+<!-- <script>
+    var str = "Hello world!";
+    document.write(str.indexOf("Hello") + "<br/>");
+    document.write(str.indexOf("World") + "<br/>");
+    document.write(str.indexOf("world") + "<br/>");
+</script> -->
+
+<script>
+    var player = {
+        attack: 34,
+        GetAttack: function() {
+            return this.attack;
+        }
+    };
+    var stabChance;
+    var stabSuccess = 4;
+    var stabDamage = 200 /100;
+
+    for(var i = 0; i < 20; i++)
+    {
+        var damage = player.GetAttack();
+    
+        stabChance = Math.random() * 10;
+        // document.write(stabChance);
+        // document.write(stabChance > stabSuccess);
+        if(stabChance > stabSuccess)
+            {
+                damage *= stabDamage;
+                document.write("发生了背刺, 造成 ", damage + " 点伤害" + "<p>");
+            }
+        else
+            document.write("普通, 造成 ", damage + " 点伤害" + "<p>");
+    
+    }
+
+</script>
