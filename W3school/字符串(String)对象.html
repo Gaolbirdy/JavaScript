@@ -36,32 +36,16 @@ document.write("<p>Link: " + txt.link("http://www.w3school.com.cn") + "</p>")
     document.write(str.indexOf("world") + "<br/>");
 </script> -->
 
+<!-- <script>
+    var str = "Hello world!";
+
+    document.write(str.match("world") + "<br/>");
+    document.write(str.match("World") + "<br/>");
+    document.write(str.match("worlld") + "<br/>");
+    document.write(str.match("world!") + "<br/>");
+</script> -->
+
 <script>
-    var player = {
-        attack: 34,
-        GetAttack: function() {
-            return this.attack;
-        }
-    };
-    var stabChance;
-    var stabSuccess = 4;
-    var stabDamage = 200 /100;
-
-    for(var i = 0; i < 20; i++)
-    {
-        var damage = player.GetAttack();
-    
-        stabChance = Math.random() * 10;
-        // document.write(stabChance);
-        // document.write(stabChance > stabSuccess);
-        if(stabChance > stabSuccess)
-            {
-                damage *= stabDamage;
-                document.write("发生了背刺, 造成 ", damage + " 点伤害" + "<p>");
-            }
-        else
-            document.write("普通, 造成 ", damage + " 点伤害" + "<p>");
-    
-    }
-
+    var str = "Visit Microsoft!";
+    document.write(str.replace(/Microsoft/, "W3School"));
 </script>

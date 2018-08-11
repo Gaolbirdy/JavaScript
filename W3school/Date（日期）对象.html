@@ -1,0 +1,83 @@
+<!-- <script>
+    document.write(Date());
+</script> -->
+
+<!-- <script>
+    var d = new Date();
+    document.write("从 1970/01/01 至今已过去 " + d.getTime() + " 毫秒");
+</script> -->
+
+<!-- <script>
+    var d = new Date();
+    d.setFullYear(1992, 10, 3);
+    document.write(d);
+</script> -->
+
+<!-- <script>
+    var d = new Date();
+    document.write(d.toUTCString());
+</script> -->
+
+<!-- <script>
+    var d = new Date();
+    var weekday = new Array(7);
+
+    weekday[0]="星期日";
+    weekday[1]="星期一";
+    weekday[2]="星期二";
+    weekday[3]="星期三";
+    weekday[4]="星期四";
+    weekday[5]="星期五";
+    weekday[6]="星期六";
+
+    document.write("今天是" + weekday[d.getDay()]);
+</script> -->
+
+<!-- <script>
+    function startTime()
+    {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        m = checkTime(m);
+        s = checkTime(s);
+
+        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout("startTime()", 500);
+    }
+
+    function checkTime(i)
+    {
+        if(i < 10)
+            i = "0" + i;
+
+        return i;
+    }
+</script>
+<body onload="startTime()">
+    <div id="txt"></div>
+</body> -->
+
+<!-- <script>
+    // var myDate = new Date();
+    // myDate.setFullYear(2008, 7, 9);
+    // document.write(myDate);
+
+    var myDate = new Date();
+    myDate.setDate(myDate.getDate() + 5);
+    document.write(myDate);
+</script> -->
+
+<script>
+    var myDate = new Date();
+    myDate.setFullYear(2008, 8, 9);
+
+    var today = new Date();
+
+    if(myDate > today)
+        alert("Today is before 9th August 2008");
+    else
+        alert("Today is after 9th August 2008");
+</script>
