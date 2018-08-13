@@ -30,6 +30,24 @@
     write(patt1.exec("The best things in life are free"));
 </script> -->
 
+<!-- <script>
+    var patt1 = new RegExp("e", "g");
+
+    do
+    {
+        var result = patt1.exec("The best things in life are free");
+        write(result);
+    }
+    while(result != null);
+
+</script> -->
+
 <script>
+    var patt1 = new RegExp("e");
+    
+    write(patt1.test("The best things in life are free"));
+
+    patt1.compile("d");
+    write(patt1.test("The best things in life are free"));
     
 </script>
