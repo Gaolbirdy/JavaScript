@@ -135,9 +135,9 @@
     }
 </script> -->
 
-<script>
+<!-- <script>
     // document.write(onerror);
-    onerror = hanndleErr;
+    window.onerror = hanndleErr;
     var txt = "";
 
     function hanndleErr(msg, url, l)
@@ -156,4 +156,282 @@
         adddlert("Welcome guest!")
     }
 </script>
-<input type="button" value="查看消息" onclick="message()" />
+<input type="button" value="查看消息" onclick="message()" /> -->
+
+<!-- <script>
+    var browser = navigator.appName;
+    var b_version = navigator.appVersion;
+    var version = parseFloat(b_version);
+
+    document.write("浏览器名称："+ browser)
+    document.write("<br />")
+    document.write("浏览器版本："+ b_version)
+    document.write("<br />")
+    document.write("浏览器版本："+ version)
+
+</script> -->
+
+<!-- <script>
+    document.write("<p>浏览器：")
+    document.write(navigator.appName + "<p>");
+
+    document.write("<p>浏览器版本：")
+    document.write(navigator.appVersion + "<p>");
+
+    document.write("<p>代码：")
+    document.write(navigator.appCodeName + "<p>");
+
+    document.write("<p>平台：")
+    document.write(navigator.platform + "<p>");
+
+    document.write("<p>Cookies 启用：")
+    document.write(navigator.cookieEnabled + "<p>");
+
+    document.write("<p>浏览器的用户代理报头：")
+    document.write(navigator.userAgent + "<p>");
+</script> -->
+
+<!-- <script>
+    var x = navigator;
+    document.write("CodeName=" + x.appCodeName);
+    document.write("<br />");
+    document.write("MinorVersion=" + x.appMinorVersion);
+    document.write("<br />");
+    document.write("Name=" + x.appName);
+    document.write("<br />");
+    document.write("Version=" + x.appVersion);
+    document.write("<br />");
+    document.write("CookieEnabled=" + x.cookieEnabled);
+    document.write("<br />");
+    document.write("CPUClass=" + x.cpuClass);
+    document.write("<br />");
+    document.write("OnLine=" + x.onLine);
+    document.write("<br />");
+    document.write("Platform=" + x.platform);
+    document.write("<br />");
+    document.write("UA=" + x.userAgent);
+    document.write("<br />");
+    document.write("BrowserLanguage=" + x.browserLanguage);
+    document.write("<br />");
+    document.write("SystemLanguage=" + x.systemLanguage);
+    document.write("<br />");
+    document.write("UserLanguage=" + x.userLanguage);
+</script> -->
+
+<!-- <script>
+    function detectBrowser()
+    {
+        var browser = navigator.appName;
+        var b_version = navigator.appVersion;
+        var version = parseFloat(b_version);
+
+        if((browser == "Netscape" || browser == "Microsoft Internet Explorer") && (version >= 4))
+            alert("您的浏览器够先进了！");
+        else
+            alert("是时候升级您的浏览器了！");
+    }
+</script>
+<body onload="detectBrowser()">
+    
+</body> -->
+
+<!-- <script>
+function getCookie(c_name)
+{
+if (document.cookie.length>0)
+{ 
+c_start=document.cookie.indexOf(c_name + "=")
+if (c_start!=-1)
+{ 
+c_start=c_start + c_name.length+1 
+c_end=document.cookie.indexOf(";",c_start)
+if (c_end==-1) c_end=document.cookie.length
+return unescape(document.cookie.substring(c_start,c_end))
+} 
+}
+return ""
+}
+
+function setCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : "; expires="+exdate.toGMTString())
+}
+
+function checkCookie()
+{
+username=getCookie('username')
+if (username!=null && username!="")
+  {alert('Welcome again '+username+'!')}
+else 
+  {
+  username=prompt('Please enter your name:',"")
+  if (username!=null && username!="")
+    {
+    setCookie('username',username,365)
+    }
+  }
+}
+</script>
+</head>
+<body onLoad="checkCookie()">
+</body> -->
+
+<!-- <script>
+    function mouseOver()
+    {
+        document.b1.src = "images/eg_bulbon.gif";
+    }
+
+    function mouseOut()
+    {
+        document.b1.src = "images/eg_bulboff.gif";
+    }
+</script>
+<a href="/index.html" target="_blank"></a>
+<img border="0" alt="Visit W3School!" src="images/eg_bulboff.gif" name="b1" onmouseover="mouseOver()" onmouseout="mouseOut()"> -->
+
+<!-- <script>
+    function writeText(txt)
+    {
+        document.getElementById("desc").innerHTML = txt;
+    }
+</script>
+<img src="http://www.w3school.com.cn/i/eg_planets.jpg" border="0" usemap="#planetmap" alt="Planets">
+<map name="planetmap" id="planetmap">
+
+<area shape="circle" coords="180,139,14"
+onMouseOver="writeText('直到 20 世纪 60 年代，金星一直被认为是地球的孪生姐妹，因为金星是离我们最近的行星，同时还由于两者拥有很多共同的特征。')"
+href ="/example/html/venus.html" target ="_blank" alt="Venus" />
+
+<area shape="circle" coords="129,161,10"
+onMouseOver="writeText('从地球上是很难研究水星的，这是由于它和太阳的距离总是很近。')"
+href ="/example/html/mercur.html" target ="_blank" alt="Mercury" />
+
+<area shape="rect" coords="0,0,110,260"
+onMouseOver="writeText('太阳和类似木星这样的气态行星是到目前为止太阳系中最大的物体。')"
+href ="/example/html/sun.html" target ="_blank" alt="Sun" />
+
+</map>
+
+<p id="desc"></p> -->
+
+
+<!-- <script>
+    function timedMsg()
+    {
+        var t = setTimeout("alert('5秒')", 5000);
+    }
+</script>
+<input type="button" value="显示定时的警告框" onclick="timedMsg()">
+<p>请点击上面的按钮。警告框会在 5 秒后显示。</p> -->
+
+<!-- <script>
+    var c = 0;
+    var t;
+    
+    function timedCount()
+    {
+        document.getElementById('txt').value = c;
+        c = c + 1;
+        t = setTimeout("timedCount()", 1000);
+    }
+</script>
+<input type="button" value="开始计时" onclick="timedCount()">
+<input type="text" name="" id="txt">
+<p>请点击上面的按钮。输入框会从 0 开始一直进行计时。</p> -->
+
+<!-- <script>
+    var c = 0;
+    var t;
+
+    function timedCount()
+    {
+        document.getElementById("txt").value = c;
+        c = c + 1;
+        t = setTimeout("timedCount()", 1000);
+    }
+
+    function stopCount()
+    {
+        c = 0;
+        setTimeout("document.getElementById('txt').value=0", 0);
+        clearTimeout(t);
+    }
+</script>
+<input type="button" value="开始计时！" onClick="timedCount()">
+<input type="text" id="txt">
+<input type="button" value="停止计时！" onClick="stopCount()">
+<p>请点击上面的“开始计时”按钮来启动计时器。输入框会一直进行计时，从 0 开始。点击“停止计时”按钮可以终止计时，并将计数重置为 0。</p> -->
+
+<!-- <script>
+function timedText()
+{
+var t1=setTimeout("document.getElementById('txt').value='2 秒'",2000)
+var t2=setTimeout("document.getElementById('txt').value='4 秒'",4000)
+var t3=setTimeout("document.getElementById('txt').value='6 秒'",6000)
+}
+</script>
+</head>
+
+<body>
+
+<form>
+<input type="button" value="显示计时的文本" onClick="timedText()">
+<input type="text" id="txt">
+</form>
+
+<p>点击上面的按钮。输入框会显示出已经逝去的时间（2、4、6 秒）。</p>
+</body> -->
+
+<!-- <script>
+    function startTime()
+    {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m=checkTime(m)
+        s=checkTime(s)
+        document.getElementById('txt').innerHTML=h+":"+m+":"+s
+        t=setTimeout('startTime()',500)
+    }
+
+    function checkTime(i)
+    {
+    if (i<10) 
+    {i="0" + i}
+    return i
+    }
+    </script>
+</script>
+<body onload="startTime()">
+<div id="txt"></div> -->
+
+<!-- <script>
+    var personObj = new Object();
+    personObj.firstname="John"
+    personObj.lastname="Adams"
+    personObj.age=35
+    personObj.eyecolor="black"
+
+    document.write(personObj.firstname + " 的年龄是 " + personObj.age + " 岁。")
+</script> -->
+
+<script>
+    function person(firstname, lastname, age, eyecolor)
+    {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.eyecolor = eyecolor;
+    }
+
+    var myFather = new person("John", "Adams", 35, "black");
+    document.writeln(myFather.firstname + " 的年龄是 " + myFather.age + " 岁。")
+    document.writeln(window.myFather);
+    document.writeln(typeof window.myFather);
+    document.writeln(myFather === window.myFather);
+</script>
