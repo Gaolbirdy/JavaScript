@@ -1,0 +1,69 @@
+<!-- <p>
+JavaScript 能够直接写入 HTML 输出流中：
+</p>
+<script>
+document.write("<h1>这是一个标题</h1>");
+document.write("<p>这是一个段落。</p>");
+</script>
+<p>
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p> -->
+
+<!-- <h1>我的第一个 JavaScript</h1>
+<p>
+JavaScript 能够对事件作出反应。比如对按钮的点击：
+</p>
+<button onclick="alert('welcome')">点我!</button> -->
+
+<!-- <h1>我的第一段 JavaScript</h1>
+<p id="demo">
+JavaScript 能改变 HTML 元素的内容。
+</p>
+<script>
+function myFunction()
+{
+    x = document.getElementById("demo");
+    x.innerHTML = "Hello JavaScript";
+}
+</script>
+<button onclick="myFunction()">点击这里</button> -->
+
+<!-- <script>
+    function changeImage()
+    {
+        element = document.getElementById("myimage");
+        if(element.src.match("bulbon"))
+            element.src = "images/eg_bulboff.gif";
+        else
+            element.src = "images/eg_bulbon.gif";
+    }
+</script>
+<img src="images/eg_bulboff.gif" id="myimage" onclick="changeImage()" width="100" height="100">
+<p>点击灯泡就可以打开或关闭这盏灯</p> -->
+
+<!-- <h1>我的第一段 JavaScript</h1>
+<p id="demo">
+JavaScript 能改变 HTML 元素的样式。
+</p>
+<script>
+    function myFunction()
+    {
+        x = document.getElementById("demo");
+        x.style.color = "#ff0000";
+    }
+</script>
+<button type="button" onclick="myFunction()">点击这里</button> -->
+
+<h1>我的第一段 JavaScript</h1>
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<input type="text" name="" id="demo">
+<script>
+    function myFunction()
+    {
+        var x = document.getElementById("demo").value;
+        if(x == "" || isNaN(x))
+            alert("不是数字");
+    }
+</script>
+<button onclick="myFunction()">点击这里</button>
