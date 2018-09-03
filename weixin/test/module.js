@@ -199,3 +199,43 @@
 // exports.done = true;
 // console.log('module.js 执行完毕');
 
+
+// import { bar } from 'math';
+// console.log('module.js');
+// console.log(bar);
+// export let foo = 'foo';
+
+// import { bar } from 'math';
+// console.log('module.js');
+// console.log(bar());
+// function foo() { return 'foo'}
+// export {foo};
+
+// import {bar} from 'math';
+// console.log('moduel.js');
+// console.log(bar());
+// const foo = () => 'foo';
+// export {foo};
+
+// import { odd } from 'math';
+// export var counter = 0;
+// export function even(n) {
+// 	counter++;
+// 	return n === 0 || odd(n - 1);
+// }
+
+// console.log(even(10));
+// console.log(counter);
+// console.log(even(20));
+// console.log(counter);
+
+
+var odd = require('math');
+var counter = 0;
+exports.counter = counter;
+exports.even = function (n) {
+	counter++;
+	return n === 0 || odd(n - 1);
+}
+
+exports.even(10)

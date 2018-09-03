@@ -292,3 +292,25 @@
 // console.log('在 math.js 之中, a.done = ', a.done);
 // exports.done = true;
 // console.log('math.js 执行完毕');
+
+// import { foo } from 'module';
+// console.log('math.js');
+// console.log(foo);
+// export let bar = 'bar';
+
+// import { foo } from 'module';
+// console.log('math.js');
+// console.log(foo());
+// function bar() {return 'bar'}
+// export {bar};
+
+// import { even } from 'module';
+// export function odd(n) {
+// 	return n !== 0 && even(n - 1);
+// }
+
+
+var even = require('module').even;
+module.exports = function(n) {
+	return n !== 0 && even(n - 1);
+}
