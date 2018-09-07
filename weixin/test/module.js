@@ -230,12 +230,37 @@
 // console.log(counter);
 
 
-var odd = require('math');
-var counter = 0;
-exports.counter = counter;
-exports.even = function (n) {
-	counter++;
-	return n === 0 || odd(n - 1);
-}
+// var odd = require('math');
+// var counter = 0;
+// exports.counter = counter;
+// exports.even = function (n) {
+// 	counter++;
+// 	return n === 0 || odd(n - 1);
+// }
 
-exports.even(10)
+// exports.even(10)
+
+
+// const a = require('math');
+// const b = require('math');
+// console.log(a.foo);
+// console.log(a === b);
+
+
+// global._foo = { foo: 'world' };
+
+// const a = require('math');
+// console.log(a.foo);
+
+
+// const a = require('math');
+// console.log(a.foo);
+
+// global[Symbol.for('foo')] = { foo: 'world'};
+
+// const a = require('math');
+
+// console.log(global[a.k]);
+// global[a.k] = {foo: 'world'}
+// console.log(global[a.k]);
+// console.log(a === global[a.k]);

@@ -310,7 +310,32 @@
 // }
 
 
-var even = require('module').even;
-module.exports = function(n) {
-	return n !== 0 && even(n - 1);
-}
+// var even = require('module').even;
+// module.exports = function(n) {
+// 	return n !== 0 && even(n - 1);
+// }
+
+
+// function A() {
+// 	this.foo = 'hello';
+// }
+
+// if (!global._foo) {
+// 	global._foo = new A();
+// }
+
+// module.exports = global._foo;
+
+// const FOO_KEY = Symbol.for('foo');
+// const FOO_KEY = Symbol('foo');
+
+// function A(){
+// 	this.foo = 'hello';
+// }
+
+// if(!global[FOO_KEY]){
+// 	global[FOO_KEY] = new A();
+// }
+
+// module.exports = global[FOO_KEY];
+// module.exports.k = FOO_KEY;
