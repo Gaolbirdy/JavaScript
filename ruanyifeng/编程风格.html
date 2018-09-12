@@ -3,5 +3,224 @@ const { log } = console;
 </script>
 
 <script>
+// if(a)
+//     b();
+// c();
 
+// if(a) {
+//     b();
+//     c();
+// }
+
+// if(a) {
+//     b();
+// }
+// c();
+
+// function f() {
+//     // return
+//     // {
+//     //     key: 1
+//     // };
+    
+//     return {
+//         key: 1
+//     };
+// }
+// log(f());
+
+// log('abc');
+
+// let x = (1 + 2) * 3;
+
+// foo(bar);
+// return (a + b);
+// if (a === 0) {}
+// function foo(b) {}
+// function (x) {}
+
+// for ( ; ; ) {
+
+// }
+
+// while (true) {
+
+// }
+
+// do {
+//     a--;
+// } while (a > 0);
+
+// if (true) {
+
+// }
+
+// switch (a) {
+
+// }
+
+// try {
+
+// } catch {
+
+// }
+
+// function f() {
+
+// }
+
+// var f = function f() {
+
+// };
+
+// var a = 1
+// var a = 1;
+
+// var
+// a
+// =
+// 3
+
+// 'abc'
+// .length
+
+// return a +
+// b;
+
+// obj.foo(arg1,
+// arg2);
+
+// 3 * 2
+// +
+// 10 * (27 / 6)
+
+// x = y
+// (function () {
+
+// })();
+
+// x = y(function() {})();
+
+// var a = b + c
+// (d + e).toString();
+
+// a = b
+// /hi/g.exec(e).map(d);
+
+// var a = 'b'
+// ['red', 'green'].forEach(function (c) {
+//     log(c);
+// })
+
+// var a = 0;
+// var f = function (x) { return x }
+// (a++)
+
+// if (a < 0) a = 0
+// log(a)
+
+// a = b = c = 1
+
+// a
+// ++
+// b
+// --
+// c
+// log(a, b, c)
+
+// function f() {
+//     return
+//     { first: 'Jane' };
+// }
+
+// function f() {
+//     return
+//     1;
+// }
+
+// log(f());
+
+// ;var a = 1;
+
+// var UPPER_CASE = 1;
+
+// if (!x) {
+//     var x = {};
+// }
+
+// var x;
+// if (!x) {
+//     x = {};
+// }
+
+// for (var i = 0; i < 10; i++) {
+
+// }
+
+// var i;
+// for (i = 0; i < 10; i++) {
+
+// }
+
+// var o = {};
+// with (o) {
+//     foo = bar;
+// }
+
+// log(0 == '');
+// log(1 == true);
+// log(2 == true);
+// log(0 == '0');
+// log(false == 'false');
+// log(false == '0');
+// log(' \t\r\n ' == 0);
+
+// a = b;
+// if (a) {
+
+// }
+
+// if (a = b) {
+
+// }
+
+// function doAction(action) {
+//     switch (action) {
+//         case 'hack':
+//             return 'hack';
+//             break;
+//         case 'slash':
+//             return 'slash';
+//             break;
+//         case 'run':
+//             return 'run';
+//             break;
+//         default:
+//             throw new Error('Invalid action.');
+//     }
+// }
+
+// log(doAction('slash'));
+
+function doAction(action) {
+    var actions = {
+        'hack': function () {
+            return 'hack';
+        },
+        'slash': function () {
+            return 'slash';
+        },
+        'run': function () {
+            return 'run';
+        }
+    };
+
+    if (typeof actions[action] !== 'function') {
+        throw new Error('Invalid action.');
+    }
+
+    return actions[action]();
+}
+
+log(doAction('run'));
 </script>
