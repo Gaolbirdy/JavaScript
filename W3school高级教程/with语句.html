@@ -1,0 +1,14 @@
+<script>
+    var sMessage = 'hello';
+    with (sMessage) {
+        console.log(toUpperCase());
+    }
+
+    function f() {
+        console.log(1);
+    }
+
+    with (sMessage) {
+        f();
+    }
+</script>

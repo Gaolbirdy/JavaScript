@@ -1,0 +1,25 @@
+<script>
+    // var sMessage = 'hello world';
+
+    // function sayHelloWorld() {
+    //     console.log(sMessage);
+    // }
+
+    // sMessage = 'changed';
+
+    // sayHelloWorld();
+
+    var iBaseNum = 10;
+
+    function addNum(iNum1, iNum2) {
+        function doAdd() {
+            return iNum1 + iNum2 + iBaseNum;
+        }
+
+        // return doAdd();
+        return doAdd;
+    }
+
+    iBaseNum = 100;
+    console.log(addNum(20, 30)());
+</script>

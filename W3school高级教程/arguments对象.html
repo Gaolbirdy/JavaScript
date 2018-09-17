@@ -1,0 +1,31 @@
+<script>
+    // function sayHi() {
+    //     if (arguments[0] === 'bye') {
+    //         return;
+    //     }
+
+    //     console.log(arguments[0]);
+    // }
+
+    // sayHi('bye');
+    // sayHi('hi');
+
+    // function howManyArgs() {
+    //     console.log(arguments.length);
+    // }
+
+    // howManyArgs('string', 45);
+    // howManyArgs();
+    // howManyArgs(12);
+
+    function doAdd() {
+        if (arguments.length === 1) {
+            console.log(arguments[0] + 5);
+        } else if (arguments.length === 2) {
+            console.log(arguments[0] + arguments[1]);
+        }
+    }
+
+    doAdd(10);
+    doAdd(40, 20);
+</script>
