@@ -1,0 +1,242 @@
+<script>
+const { log } = console;
+</script>
+
+<!-- <script>
+    // var oCar = new Object();
+    // oCar.color = 'blue';
+    // oCar.doors = 4;
+    // oCar.mpg = 25;
+    // oCar.showColor = function () {
+    //     console.log(this.color);
+    // }
+
+    // oCar.showColor();
+
+    // function createCar() {
+    //     var oTempCar = new Object();
+    //     oTempCar.color = 'blue';
+    //     oTempCar.doors = 4;
+    //     oTempCar.mpg = 25;
+    //     oTempCar.showColor = function () {
+    //         console.log(this.color);
+    //     }
+    //     return oTempCar;
+    // }
+
+    // var oCar1 = createCar();
+    // var oCar2 = createCar();
+    // console.log(oCar1);
+
+    // function createCar(sColor, iDoors, iMpg) {
+    //     var oTempCar = new Object();
+    //     oTempCar.color = sColor;
+    //     oTempCar.doors = iDoors;
+    //     oTempCar.mpg = iMpg;
+    //     oTempCar.showColor = function () {
+    //         console.log(this.color);
+    //     }
+    //     return oTempCar;
+    // }
+
+    // var oCar1 = createCar('red', 4, 23);
+    // var oCar2 = createCar('blue', 3, 25);
+    // console.log(oCar1);
+    // oCar1.showColor();
+    // oCar2.showColor();
+
+    // function showColor() {
+    //     console.log(this.color);
+    // }
+    // function createCar(sColor, iDoors, iMpg) {
+    //     var oTempCar = new Object();
+    //     oTempCar.color = sColor;
+    //     oTempCar.doors = iDoors;
+    //     oTempCar.mpg = iMpg;
+    //     oTempCar.showColor = showColor;
+    //     return oTempCar;
+    // }
+
+    // var oCar1 = createCar('red', 4, 23);
+    // var oCar2 = createCar('blue', 3, 25);
+    // console.log(oCar1);
+    // oCar1.showColor();
+    // oCar2.showColor();
+
+    // function Car(sColor, iDoors, iMpg) {
+    //     console.log(this);
+        
+    //     this.color = sColor;
+    //     this.doors = iDoors;
+
+    //     console.log(this);
+
+    //     this.mpg = iMpg;
+    //     this.showColor = function () {
+    //         console.log(this.color);
+    //     };
+
+    //     console.log(this);
+    // }
+
+    // var oCar1 = new Car('red', 4, 23);
+    // var oCar2 = new Car('blue', 3, 25);
+    // console.log(oCar1);
+    // oCar1.showColor();
+
+    function Car() {
+
+    }
+
+    Car.prototype.color = 'blue';
+    Car.prototype.doors = 4;
+    Car.prototype.mpg = 25;
+    Car.prototype.drivers = new Array('Mike', 'John');
+    // Car.prototype.drivers = ['Mike', 'John'];
+    Car.prototype.showColor = function () {
+        console.log(this.color);
+    };
+
+    var oCar1 = new Car();
+    var oCar2 = new Car();
+    console.log(oCar1);
+    console.log(oCar1.doors);
+    console.log(Car.prototype);
+    console.log(oCar1.prototype);
+    oCar1.showColor();
+    oCar2.showColor();
+
+    console.log(oCar1 instanceof Car);
+
+    console.log(oCar1.showColor === oCar2.showColor);
+    console.log(oCar1.drivers === oCar2.drivers);
+
+    oCar1.drivers.push('Bill');
+    console.log(oCar1.drivers);
+    console.log(oCar2.drivers);
+</script> -->
+
+<!-- <script>
+    function Car(sColor, iDoors, iMpg) {
+        this.color = sColor;
+        this.doors = iDoors;
+        this.mpg = iMpg;
+        this.drivers = new Array('Mike', 'John');
+    }
+
+    Car.prototype.showColor = function () {
+        log(this.color);
+    };
+
+    var oCar1 = new Car('red', 4, 23);
+    var oCar2 = new Car('blue', 3, 25);
+
+    oCar1.drivers.push('Bill');
+    log(oCar1.drivers);
+    log(oCar2.drivers);
+
+    // log(Car.prototype.showColor);
+    // log(Car.showColor);
+
+    log(oCar1 instanceof Car);
+</script> -->
+
+<!-- <script>
+    function Car(sColor, iDoors, iMpg) {
+        this.color = sColor;
+        this.doors = iDoors;
+        this.mpg = iMpg;
+        this.drivers = new Array('Mike', 'John');
+        
+        if (typeof Car._initialized === 'undefined') {
+            Car.prototype.showColor = function() {
+                log(this.color);
+            }
+
+            Car._initialized = true;
+        }
+
+        // Car.prototype.showColor = function() {
+        //         log(this.color);
+        // }
+    }
+
+    var oCar1 = new Car('red', 4, 23);
+    var oCar2 = new Car('blue', 3, 25); 
+
+    oCar1.drivers.push('Bill');
+
+    log(oCar1.drivers);
+    log(oCar2.drivers);
+
+    log(Car._initialized);
+
+</script> -->
+
+<!-- <script>
+    function Car() {
+        var oTempCar = new Object();
+        oTempCar.color = 'blue';
+        oTempCar.doors = 4;
+        oTempCar.mpg = 25;
+        oTempCar.showColor = function () {
+            log(this.color);
+        };
+
+        return oTempCar;
+    }
+
+    var car = new Car();
+    log(car);
+</script> -->
+
+<script>
+    // var str = 'hello';
+    // str += 'world';
+    // log(str);
+
+    // var arr = new Array();
+    // arr[0] = 'hello';
+    // arr[1] = 'world';
+    // var str = arr.join('');
+    // log(str);
+
+    function StringBuffer() {
+        this._strings_ = new Array();
+    }
+
+    StringBuffer.prototype.append = function (str) {
+        this._strings_.push(str);
+    };
+
+    StringBuffer.prototype.toString = function () {
+        return this._strings_.join('');
+    };
+
+    var buffer = new StringBuffer();
+    buffer.append('hello ');
+    buffer.append('world');
+    var result = buffer.toString();
+    log(result);
+
+    var d1 = new Date();
+    var str = '';
+    for (var i = 0; i < 10000000; i++) {
+        str += 'text';
+    }
+    var d2 = new Date();
+
+    log('Concatenation with plus: ' + (d2.getTime() - d1.getTime()) + ' milliseconds');
+
+
+    var buffer = new StringBuffer();
+    d1 = new Date();
+    for(var i = 0; i < 10000000; i++) {
+        buffer.append('text');
+    }
+    var result = buffer.toString();
+    d2 = new Date();
+
+    log('Concatenation with StringBuffer: ' + (d2.getTime() - d1.getTime()) + ' milliseconds');
+
+</script>

@@ -10,11 +10,28 @@
     // sayHello();
     // sayHello.alternate();
 
-    var oCar = new Object();
-    oCar.color = 'red';
-    oCar.showColor= function () {
-        // console.log(this.color);
-        console.log(oCar.color);
+    // var oCar = new Object();
+    // oCar.color = 'red';
+    // oCar.showColor= function () {
+    //     // console.log(this.color);
+    //     console.log(oCar.color);
+    //     console.log(oCar === this);
+    // }
+    // oCar.showColor();
+
+    function showColor() {
+        console.log(this.color);
+        // console.log(color);
     }
-    oCar.showColor();
+
+    var oCar1 = new Object();
+    oCar1.color = 'red';
+    oCar1.showColor = showColor;
+
+    var oCar2 = new Object();
+    oCar2.color = 'blue';
+    oCar2.showColor = showColor;
+
+    oCar1.showColor();
+    oCar2.showColor();
 </script>
