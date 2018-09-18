@@ -69,10 +69,79 @@
     sayColor.apply(obj, ['The color is ', ', a very nice color indeed.']);
 </script> -->
 
-<script>
+<!-- <script>
     function ClassA() {
+        this.size = 1;
+    }
+ 
+    ClassA.prototype.color = 'blue';
+    ClassA.prototype.sayColor = function () {
+        log(this.color);
+    }
+
+    function ClassB() {
 
     }
 
+    ClassB.prototype = new ClassA();    // size 1
+    // ClassB.prototype = ClassA.prototype; // size undefined
+
+    ClassB.prototype.name = 'B';
+    ClassB.prototype.sayName = function () {
+        log(this.name);
+    }
+
+    var a = new ClassA();
+    var b = new ClassB();
+    a.color = 'blue';
+    b.color = 'red';
+    b.name = 'John';
+    a.sayColor();
+    b.sayColor();
+    b.sayName();
+    log(b.size);
     
+    log(b instanceof ClassA);
+    log(b instanceof ClassB);
+</script> -->
+
+<script>
+    function ClassA(sColor) {
+        this.color = sColor;
+
+        this.sayHi = () => {
+            log('hi');
+        };
+    }
+
+    ClassA.prototype.sayColor = function () {
+        log(this.color);
+    };
+
+    function ClassB(sColor, sName) {
+        ClassA.call(this, sColor);
+        this.name = sName;
+    }
+
+    ClassB.prototype = new ClassA();
+
+    // ClassB.prototype = new ClassA('yellow');
+    // log(ClassB.prototype.color);
+
+    ClassB.prototype.sayName = function () {
+        log(this.name);
+    };
+
+    var a = new ClassA('blue');
+    var b = new ClassB('red', 'John');
+
+    a.sayColor();
+    b.sayColor();
+    b.sayName();
+
+    log(b instanceof ClassB);
+    log(b instanceof ClassA);
+
+    b.sayHi();
+
 </script>
