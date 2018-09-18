@@ -63,7 +63,7 @@
     log(str.showValue);
 </script> -->
 
-<script>
+<!-- <script>
     Function.prototype.toString = function () {
         return 'Function code hidden';
     };
@@ -73,4 +73,32 @@
     }
 
     log(sayHi.toString());
+</script> -->
+
+<!-- <script>
+    Function.prototype.originalToString = Function.prototype.toString;
+
+    Function.prototype.toString = function () {
+        if (this.originalToString().length > 100) {
+            return 'Function too longt to display';
+        } else {
+            return this.originalToString();
+        }
+    }
+
+    function sayHi() {
+        log(hi);
+    }
+
+    log(sayHi.toString());
+</script> -->
+
+<script>
+    var o = new Object();
+
+    Object.prototype.sayHi = function () {
+        log('hi');
+    }
+
+    o.sayHi();
 </script>

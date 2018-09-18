@@ -1,0 +1,78 @@
+<script>
+    const { log } = console;
+</script>
+
+<!-- <script>
+    function ClassA(sColor) {
+        this.color = sColor;
+        this.sayColor = function () {
+            log(this.color);
+        };
+
+        log(this);
+    }
+
+    function ClassC(sName) {
+        log(this);
+
+        this.name = sName;
+        this.sayName = function () {
+            log(this.name);
+        };
+    }
+
+    function ClassB(sColor, sName) {
+        // this.newMethod = ClassA;
+        // this.newMethod(sColor);
+        // delete this.newMethod;
+        // ClassA.call(this, sColor);
+        // ClassA.apply(this, new Array(sColor));
+        ClassA.apply(this, arguments);
+
+        // this.newMethod = ClassC;
+        // this.newMethod(sName);
+        // delete this.newMethod;
+        // ClassC.call(this, sName);
+        // ClassC.apply(this, [sName]);
+        ClassC.apply(this, arguments);
+
+        log(this);
+    }
+
+    // var objA = new ClassA('blue');
+    var objB = new ClassB('red', 'John');
+    // objA.sayColor();
+    objB.sayColor();
+    objB.sayName();
+</script> -->
+
+<!-- <script>
+    function sayColor(sPrefix, sSuffix) {
+        log(sPrefix + this.color + sSuffix);
+    }
+
+    var obj = new Object();
+    obj.color = 'blue';
+
+    sayColor.call(obj, 'The color is ', ', a very nice color indeed.');
+</script> -->
+
+<!-- <script>
+    function sayColor(sPrefix, sSuffix) {
+        log(sPrefix + this.color + sSuffix);
+    }
+
+    var obj = new Object();
+    obj.color = 'blue';
+
+    // sayColor.apply(obj, new Array('The color is ', ', a very nice color indeed.'));
+    sayColor.apply(obj, ['The color is ', ', a very nice color indeed.']);
+</script> -->
+
+<script>
+    function ClassA() {
+
+    }
+
+    
+</script>
