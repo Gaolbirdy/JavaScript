@@ -1,0 +1,63 @@
+<script>
+const { log } = console;
+</script>
+
+<!-- <p>如果时间早于 20:00，会获得问候 "Good day"。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id='demo'></p>
+<script>
+function myFunction() {
+    var x = '';
+    var time = new Date().getHours();
+
+    if (time < 10) {
+        x = 'Good morning';
+    } else if (time >= 10 && time < 19) {
+        x = 'Good day';
+    } else {
+        x = 'Good evening';
+    }
+    document.getElementById('demo').innerHTML = x;
+}
+</script> -->
+
+<!-- <script>
+    // var x = 5 > 3 ? alert("5大于3") : alert("5小于3");
+    // log(x);
+
+    // var n = 1;
+    // if (n > 1) {
+    //     n = 0;
+    // } else {
+    //     n++;
+    // }
+
+    // log(n);
+
+    // var n = 1;
+    // n = n > 1 ? 0 : n++;
+    // log(n);
+
+    // var n = 1;
+    // if (n > 1) {
+    //     n = 0;
+    // } else {
+    //     ++n;
+    // }
+    // log(n);
+
+    var n = 1;
+    n = n > 1 ? 0 : ++n;
+    log(n);
+</script> -->
+
+<p id='demo'></p>
+<script>
+var r = Math.random();
+var x = document.getElementById('demo');
+if (r > 0.5) {
+    x.innerHTML = "<a href='http://w3cschool.cn'>Visit w3cschool</a>";
+} else {
+    x.innerHTML = "<a href='http://baidu.com'>Visit baidu</a>";
+}
+</script>

@@ -1,0 +1,70 @@
+<script>
+const { log } = console;
+</script>
+
+<!-- <script>
+let cars = ['BMW', 'VOLVO', 'SAAB', 'FORD'];
+
+for (let i = 0; i < cars.length; i++) {
+    log(cars[i]);
+}
+</script> -->
+<!-- 
+<p>点击按钮循环代码5次。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = '';
+    for (let i = 0; i < 5; i++) {
+        x = x + '该数字为 ' + i + "<br>";
+    }
+
+    document.getElementById('demo').innerHTML = x;
+}
+</script> -->
+
+<!-- <script>
+let cars = ['BMW', 'VOLVO', 'SAAB', 'FORD'];
+for (var i = 0, l = cars.length; i < l; i++) {
+    log(cars[i] );
+}
+</script> -->
+
+<!-- <script>
+let cars = ["BMW","Volvo","Saab","Ford"];
+var i = 2, len = cars.length;
+for (; i < len; i++) {
+    log(cars[i]);
+}
+</script> -->
+
+<!-- <script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0,len=cars.length;
+for(; i < len; ) {
+    log(cars[i]);
+    i++;
+}
+</script> -->
+
+<p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x;
+    var txt = '';
+    var person = {
+        fname: 'Bill',
+        lname: 'Gates',
+        age: 56
+    };
+    for(x in person) {
+        log(typeof x);
+        txt = txt + person[x];
+        // txt = txt + person.x;
+    }
+    document.getElementById("demo").innerHTML=txt;
+}
+</script>

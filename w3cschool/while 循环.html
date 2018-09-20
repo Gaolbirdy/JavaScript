@@ -1,0 +1,48 @@
+<script>
+const { log } = console;
+</script>
+
+<!-- <p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = '', i = 0;
+    while (i < 5) {
+        x = x + '该数字为 ' + i + '<br>';
+        i++;
+    }
+    document.getElementById('demo').innerHTML = x;
+}
+</script> -->
+
+<!-- <p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var x = '', i = 0;
+    do {
+        x = x + '该数字为' + i + '<br>';
+        i++;
+    } while (i < 5);
+    document.getElementById('demo').innerHTML = x;
+}
+</script> -->
+
+<!-- <script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+for (;cars[i];){
+    log(cars[i]);
+    i++;
+}
+</script> -->
+
+<script>
+    cars=["BMW","Volvo","Saab","Ford"];
+    var i=0;
+    while (cars[i]) {
+        log(cars[i++]);
+    }
+</script>
