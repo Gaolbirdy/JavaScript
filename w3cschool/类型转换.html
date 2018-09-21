@@ -23,11 +23,56 @@ log(new Date().constructor);
 log((()=>{}).constructor);
 </script> -->
 
-<script>
+<!-- <script>
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// log(isArray(fruits));
+log(isArray(fruits));
 
 function isArray(myArray) {
-
+    return myArray.constructor.toString().indexOf('Array') > -1;
 }
+</script> -->
+
+<!-- <script>
+var myDate = new Date();
+log(isDate(myDate));
+
+function isDate(myDate) {
+    return myDate.constructor.toString().indexOf('Date') > -1;
+}
+</script> -->
+
+<!-- <script>
+var x = 123;
+
+log(String(x));
+log(String(123));
+log(String(100 + 23));
+</script> -->
+
+<!-- <script>
+var x = 123;
+log(x.toString());
+log((123).toString());
+log((100 + 23).toString());
+</script> -->
+
+<!-- <script>
+log(String(false));
+log(String(false) == false);
+log(String(false) === false);
+log(true.toString());
+</script> -->
+
+<!-- <script>
+log(Date());
+log(Date().toString());
+log(String(Date()));
+</script> -->
+
+<script>
+log(Number('3.14'));
+log(Number(' '));
+log(Number('   '));
+log(Number(''));
+log(Number('99 88'));
 </script>
