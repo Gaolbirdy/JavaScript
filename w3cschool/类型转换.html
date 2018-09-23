@@ -69,10 +69,69 @@ log(Date().toString());
 log(String(Date()));
 </script> -->
 
-<script>
+<!-- <script>
 log(Number('3.14'));
 log(Number(' '));
 log(Number('   '));
 log(Number(''));
 log(Number('99 88'));
+</script> -->
+
+<!-- <p> typeof 操作符返回变量或表达式的类型。</p>
+<button onclick="myFunction()">点我</button>
+<p id='demo'></p>
+<script>
+    function myFunction() {
+        var y = '5';
+        var y = 'John';
+        var x = +y;
+        document.getElementById('demo').innerHTML = typeof y + "<br>" + typeof x + '<br>' + x;
+    }
+</script> -->
+
+<!-- <script>
+    log(Number(false));
+    log(Number(true));
+    let d = new Date();
+    log(Number(d));
+
+    log(typeof d.getTime());
+    log(Number(d) === d.getTime());
+</script> -->
+
+<!-- <script>
+    log(5 + null);
+    log('5' + null);
+    log('5' + 1);
+    log('5' - 1);
+</script> -->
+
+<!-- <p id='demo'></p>
+<script>
+let myVar = {name: 'John'};
+myVar = [1, 2, 3, 4];
+myVar = new Date();
+myVar = 123;
+myVar = false;
+
+document.getElementById('demo').innerHTML = myVar;
+</script> -->
+
+<!-- <script>
+    var person = {name: 'John'};
+    person = null;
+    log(person);
+    log(typeof person);
+</script> -->
+
+<script>
+    var person;
+    log(person);
+    log(typeof person);
+    log(person == typeof person);
+    log(person === typeof person);
+    log(undefined == typeof person);
+    log(undefined === typeof person);
+    log('undefined' == typeof person);
+    log('undefined' === typeof person);
 </script>

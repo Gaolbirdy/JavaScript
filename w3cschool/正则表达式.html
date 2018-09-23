@@ -1,0 +1,55 @@
+<script>
+const { log } = console;
+</script>
+
+<!-- <script>
+var patt = /w3cschool/i;
+
+var str = 'Visit w3cschool';
+var n = str.search(/w3cSchool/i);
+var m = str.search(patt);
+var o = str.search('w3cschool')
+
+log(n);
+log(m);
+log(o);
+</script> -->
+
+<!-- <script>
+    var str = 'Visit Microsoft!';
+    var res = str.replace(/microsoft/i, 'w3cschool');
+    var res = str.replace('Microsoft', 'w3cschool');
+
+    log(res);
+</script> -->
+
+<!-- <script>
+    // var patt1 = new RegExp('e');
+    var patt1 = /e/;
+    
+    // var res = patt1.test("The best things in life are free!");
+    var res = /e/.test("The best things in life are free!");
+
+    log(res);
+</script> -->
+
+<!-- <script>
+    // var patt1 = new RegExp('e');
+    var patt1 = /e/;
+
+    // var res = patt1.exec('The best things in life are free');
+    var res = /e/.exec('The best things in life are free');
+
+    document.write(res);
+    log(res);
+</script> -->
+
+<script>
+    var patt1 = new RegExp('e');
+    document.write(patt1.test('The best things in life are free'));
+    
+
+    patt1.compile('d');
+    document.write(patt1.test('The best things in life are free'));
+
+</script>
