@@ -22,7 +22,7 @@
 
             if (x == '')
                 throw '值为空';
-            if (isNaN(s))
+            if (isNaN(x))
                 throw '不是数字';
             if (x > 10)
                 throw '太大';
@@ -30,14 +30,13 @@
                 throw '太小';
         }
         catch (err) {
-            
+            var y = document.getElementById('mess');
+            y.innerHTML = '错误: ' + err + '。';
         }
-        console.log(2)
-
     }
 </script>
 
 <p>请输出一个 5 到 10 之间的数字:</p>
-<input type="demo" type="text">
+<input id="demo" type="text">
 <button onclick="myFunction()">测试输入</button>
 <p id='mess'></p>
