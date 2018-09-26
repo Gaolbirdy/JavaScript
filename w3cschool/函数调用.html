@@ -13,13 +13,57 @@ document.getElementById('demo').innerHTML = window.myFunction(10, 2);
 console.log(myFunction === window.myFunction);
 </script> -->
 
-<p>在 HTML 中 <b>this</b> 的值, 在全局函数是一个 window 对象。</p>
+<!-- <p>在 HTML 中 <b>this</b> 的值, 在全局函数是一个 window 对象。</p>
 <p id="demo"></p>
 <script>
 function myFunction() {
     return this;
 }
 
-// document.getElementById('demo').innerHTML = myFunction();
-document.getElementById('demo').innerHTML = new myFunction();
+document.getElementById('demo').innerHTML = myFunction();
+// document.getElementById('demo').innerHTML = new myFunction();
+</script> -->
+
+<!-- <p>myObject.fullName() 返回 John Doe:</p>
+<p id="demo"></p>
+<script>
+var myObject = {
+    firstName: 'John',
+    lastName: 'Doe',
+    fullName: function() {
+        // return this.firstName + ' ' + this.lastName;
+        console.log(this === myObject);
+        return this;
+    }
+};
+
+document.getElementById('demo').innerHTML = myObject.fullName();
+</script> -->
+
+<!-- <p>该实例中， myFunction 是函数构造函数:</p>
+<p id="demo"></p>
+<script>
+function myFunction(arg1, arg2) {
+    this.firstName = arg1;
+    this.lastName = arg2;
+    console.log(this);
+}
+
+var x = new myFunction('John', 'Doe');
+document.getElementById('demo').innerHTML = x.firstName;
+
+</script> -->
+
+<script>
+function myFunction(a, b) {
+    console.log(this.x);
+    return a * b;
+}
+
+var myObject = {x: 111};
+
+console.log(myFunction.call(myObject, 10, 2));
+
+var myArray = [20, 2];
+console.log(myFunction.apply(myObject, myArray));
 </script>

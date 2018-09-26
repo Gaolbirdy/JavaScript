@@ -1,0 +1,88 @@
+<!-- <p>函数可以访问函数内部定义的变量:</p>
+<button type="button" onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    var a = 4;
+    document.getElementById('demo').innerHTML = a * a;
+}
+</script> -->
+
+<!-- <p>函数可以访问定义在函数外的变量：</p>
+<button type="button" onclick="myFunction()">点我</button>
+<p id="demo"></p>
+<script>
+var a = 4;
+function myFunction() {
+    document.getElementById('demo').innerHTML = a * a;
+}
+</script> -->
+
+<!-- <p>全局变量计数。</p>
+<button type="button" onclick="myFunction()">计数!</button>
+<p id="demo">0</p>
+<script>
+var counter = 0;
+
+function add() {
+    return counter += 1;
+}
+
+function myFunction() {
+    document.getElementById('demo').innerHTML = add();
+}
+</script> -->
+
+<!-- <p>局部变量计数。</p>
+<button type="button" onclick="myFunction()">计数!</button>
+<p id="demo">0</p>
+<script>
+function add() {
+    var counter = 0;
+    return counter += 1;
+}
+
+function myFunction() {
+    document.getElementById('demo').innerHTML = add();
+}
+</script> -->
+
+<!-- <p>局部变量计数。</p>
+<button type="button" onclick="myFunction()">计数!</button>
+<p id="demo">0</p>
+<script>
+document.getElementById('demo').innerHTML = add();
+
+function add() {
+    var counter = 0;
+
+    function plus() {
+        counter += 1;
+    }
+
+    plus();
+
+    return counter;
+}
+
+function myFunction() {
+    document.getElementById('demo').innerHTML = add();
+}
+</script> -->
+
+<p>局部变量计数。</p>
+<button type="button" onclick="myFunction()">计数!</button>
+<p id="demo">0</p>
+<script>
+var add = (function () {
+    var counter = 0;
+    return function () {
+        console.log(counter);        
+        return counter += 1;
+    };
+})();
+
+function myFunction() {
+    document.getElementById('demo').innerHTML = add();
+}
+</script>
