@@ -61,3 +61,45 @@ function mOut(obj) {
     obj.innerHTML = 'Mouse Over Me';
 }
 </script> -->
+
+<!-- <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;">Click Me</div>
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = '#1ec5e5';
+    obj.innerHTML = 'Release Me';
+}
+
+function mUp(obj) {
+    obj.style.backgroundColor = '#D94A38';
+    obj.innerHTML = 'Thank You';
+}
+</script> -->
+
+<!-- <script>
+function lighton() {
+    document.getElementById('myimage').src = '././images/eg_bulbon.gif';
+}
+
+function lightoff() {
+    document.getElementById('myimage').src = '././images/eg_bulboff.gif';
+}
+</script>
+<img id='myimage' onmousedown="lighton()" onmouseup="lightoff()" src="./images/eg_bulboff.gif" width="100" height="180" >
+<p>点击不释放鼠标灯将一直亮着!</p> -->
+
+<!-- <script>
+function mymessage() {
+    alert("消息在 onload 事件触发后弹出。");
+}
+</script>
+<body onload="mymessage()"></body> -->
+
+<!-- <script>
+function myFunction(x) {
+    x.style.background = 'yellow';
+}
+</script>
+输入你的名字：<input type="text" onfocus="myFunction(this)">
+<p>当输入框获取焦点时，修改背景色（background-color属性） 将被触发。</p> -->
+
+<h1 onmouseover="this.style.color='red'" onmouseout="style.color='black'">将鼠标移至文部上</h1>

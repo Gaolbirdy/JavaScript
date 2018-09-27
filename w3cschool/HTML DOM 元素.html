@@ -1,0 +1,26 @@
+<!-- <div id='div1'>
+<p id='p1'>这是一个段落</p>
+<p id='p2'>这是另一个段落</p>
+</div>
+<script>
+var para = document.createElement('p');
+var node = document.createTextNode('这是一个新段落');
+para.appendChild(node);
+
+var element = document.getElementById('div1');
+element.appendChild(para);
+</script> -->
+
+<div id="div1">
+<p id="p1">这是一个段落。</p>
+<p id="p2">这是另一个段落。</p>
+</div>
+<script>
+// var parent = document.getElementById('div1');
+// var child = document.getElementById('p1');
+// parent.removeChild(child);
+
+
+var child = document.getElementById('p1');
+child.parentNode.removeChild(child);
+</script>
