@@ -57,7 +57,7 @@ console.log(x);
 
 </script> -->
 
-<script>
+<!-- <script>
 function person(firstname, lastname, age, eyecolor) {
     this.firstname = firstname;
     this.lastname = lastname;
@@ -71,5 +71,102 @@ function person(firstname, lastname, age, eyecolor) {
     }
 }
 
+var myMother = new person('Sally', 'Rally', 48 ,'green');
+myMother.changeName('Doe');
+console.log(myMother.lastname);
+
+</script> -->
+
+<!-- <p>点击下面的按钮，循环遍历对象 "person" 的属性。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+    function myFunction() {
+        var x;
+        var txt = '';
+        var person = {
+            fname: 'Bill',
+            lname: 'Gates',
+            age: 56
+        };
+
+        for (x in person) {
+            txt = txt + person[x];
+        }
+
+        document.getElementById('demo').innerHTML = txt;
+    }
+</script> -->
+
+<!-- <script>
+function person() {
+    var x = 1;
+    this.y = x;
+    this.change = function () {
+        x = 100;
+    }
+    this.show = function () {
+        console.log(x);
+    }
+}
+
+var p = new person();
+p.show();
+p.change();
+p.show();
+console.log(p.y);
+
+</script> -->
+
+<script>
+function dictionary() {
+    var _obj = new Object();
+    
+    this.containsKey = function(k) {
+        var isContained = false;
+        for (var attr in _obj) {
+            if (attr === k) {
+                isContained = true;
+                break;
+            }
+        }
+        return isContained;
+    }
+
+    this.addElement = function(k, v) {
+        if(!this.containsKey(k)) {
+            _obj[k] = v;
+        }
+    }
+
+    this.removeElement = function(k) {
+        if (this.containsKey(k)) {
+            delete _obj[k];
+        }
+    }
+
+    this.printAll = function () {
+        var result = JSON.stringify(_obj);
+        return result;
+    }
+}
+
+var newD = new dictionary();
+
+function AddAndPrint() {
+    newD.addElement('0000', '张三');
+    newD.addElement('0001', '李四');
+    newD.addElement(0002, '王五');
+    document.getElementById('divContent').innerHTML = newD.printAll();
+}
+
+function RemoveAndPrint() {
+    newD.removeElement('0000');
+    // newD.removeElement('2');
+    document.getElementById('divContent').innerHTML = newD.printAll();
+}
 
 </script>
+<div id='divContent'></div>
+<input type="button" value='Click Me To Add' onclick="AddAndPrint()">
+<input type="button" value="Click Me To Remove" onclick="RemoveAndPrint();"/>
