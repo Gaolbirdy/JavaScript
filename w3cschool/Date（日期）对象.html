@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 // var d = Date();
 // document.write(d);
 // console.log(typeof d);
@@ -15,15 +15,50 @@
 
 // console.log(d.toUTCString());
 
-var d = new Date();
-var weekday = new Array(7);
-weekday[0] = 'Sunday';
-weekday[1]="Monday";
-weekday[2]="Tuesday";
-weekday[3]="Wednesday";
-weekday[4]="Thursday";
-weekday[5]="Friday";
-weekday[6]="Saturday";
+// var d = new Date();
+// var weekday = new Array(7);
+// weekday[0] = 'Sunday';
+// weekday[1]="Monday";
+// weekday[2]="Tuesday";
+// weekday[3]="Wednesday";
+// weekday[4]="Thursday";
+// weekday[5]="Friday";
+// weekday[6]="Saturday";
 
-console.log(weekday[d.getDay()]);
+// console.log(weekday[d.getDay()]);
+
+</script> -->
+
+<!-- <script>
+function startTime(){
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds(); 
+    // 在小于10的数字钱前加一个‘0’
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML = h + ':' + m + ':' + s;
+
+    // t = setTimeout(function() { startTime();}, 500);
+    t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {
+        i = '0' + i;
+    }
+    return i;
+}
+</script>
+<body onload="startTime()">
+   <div id='txt'></div> 
+</body> -->
+
+<script>
+var myDate = new Date();
+console.log(myDate);
+
+var myDate = new Date()
+
 </script>
