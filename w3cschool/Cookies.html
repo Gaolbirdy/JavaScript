@@ -25,7 +25,7 @@ function getCookie(cname) {
     return '';
 }
 
-function checkCooki() {
+function checkCookie() {
     var username = getCookie('username');
 
     if (username !== '') {
@@ -37,5 +37,5 @@ function checkCooki() {
         }
     }
 }
-
 </script>
+<body onload="checkCookie()"></body>
