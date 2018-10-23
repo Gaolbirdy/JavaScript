@@ -133,6 +133,81 @@ while (true) {
 }
 </script> -->
 
-<script>
+<!-- <script>
+// var x = 3;
+// for (var i = 0; i < x; i++) {
+//     console.log(i);
+// }
 
+var x = 3;
+var i = 0;
+
+while (i < x) {
+    console.log(i);
+    i++;
+}
+
+for ( ; ; ) {
+    console.log('hello');
+}
+</script> -->
+
+<!-- <script>
+var x = 3;
+var i = 0;
+
+do {
+    console.log(i);
+    i++;
+} while(i < x);
+</script> -->
+
+<!-- <script>
+// var i = 0;
+
+// while (i < 100) {
+//     console.log('i当前为 ' + i);
+//     i++;
+//     if (i === 10) break;
+// }
+
+// for (var i = 0; i < 5; i++) {
+//     console.log(i);
+//     if (i === 3)
+//         break;
+// }
+
+var i = 0
+
+while (i < 100) {
+    i++;
+    if (i % 2 ===0 ) continue;
+    console.log('i当前为 ' + i);
+}
+</script> -->
+
+<script>
+    // top:
+    //     for (var i = 0; i < 3; i++) {
+    //         for (var j = 0; j < 3; j++) {
+    //             if (i === 1 && j === 1)
+    //                 break top;
+    //             console.log('i=' + i + ', j=' + j);
+    //         }
+    //     }
+
+    // foo: {
+    //     console.log(1);
+    //     break foo;
+    //     console.log('本行不会输出');
+    // }
+    // console.log(2);
+
+    top:
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 3; j++) {
+                if (i === 1 && j === 1) continue top;
+                console.log('i=' + i + ', j=' + j);
+            }
+        }
 </script>
