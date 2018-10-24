@@ -130,7 +130,7 @@ console.log(undefined - Infinity);
 console.log(undefined / Infinity);
 console.log(Infinity / undefined);
 </script> -->
-
+<!-- 
 <script>
 console.log(parseInt('123'));
 console.log(parseInt('     81'));
@@ -171,6 +171,88 @@ console.log(parseInt("10", undefined));
 console.log(parseInt('1546', 2));
 console.log(parseInt('546', 2));
 
+console.log(parseInt(0x11));
+console.log(parseInt('0x11'));
+console.log(parseInt(0x11, 36));
+console.log(parseInt('0x11', 36));
 
+console.log(parseInt(0x11, 2));
+console.log(parseInt('0x11', 2));
 
+console.log(parseInt(String(0x11), 36));
+console.log(parseInt(String(0x11), 2));
+
+console.log(parseInt('17', 36));
+console.log(parseInt('17', 2));
+
+console.log(parseInt(011, 2));
+console.log(parseInt('011', 2));
+console.log(parseInt(String(011), 2));
+console.log(parseInt(String(9), 2));
+
+</script> -->
+
+<!-- <script>
+console.log(parseFloat('3.14'));
+console.log(parseFloat('314e-2'));
+console.log(parseFloat('0.0314E+2'));
+console.log(parseFloat('3.14more non-digit characters'));
+console.log(parseFloat('\t\v\r12.34\n '));
+console.log(parseFloat([]));
+console.log(parseFloat('FF2'));
+console.log(parseFloat(''));
+
+console.log(parseFloat(true));
+console.log(Number(true));
+console.log(parseFloat(null));
+console.log(Number(null));
+console.log(parseFloat(''));
+console.log(Number(''));
+console.log(parseFloat('123.45#'));
+console.log(Number('123.45#'));
+</script> -->
+
+<!-- <script>
+console.log(isNaN(NaN));
+console.log(isNaN(123));
+console.log(isNaN('hello'));
+console.log(isNaN(Number('hello')));
+console.log(Number('hello'));
+
+console.log(isNaN({}));
+console.log(isNaN(Number({})));
+console.log(isNaN(['xyz']));
+console.log(isNaN(Number(['xyz'])));
+
+console.log(isNaN([]));
+console.log(isNaN([123]));
+console.log(isNaN(['123']));
+console.log(Number([]));
+console.log(Number([123]));
+console.log(Number(['123']));
+
+// function myIsNaN(value) {
+//     return typeof value === 'number' && isNaN(value);
+// }
+
+var x = NaN;
+console.log(x !== x);
+
+function myIsNaN(value) {
+    return value !== value;
+}
+
+console.log(myIsNaN(x));
+
+console.log((Number(null)));
+
+</script> -->
+
+<script>
+console.log(isFinite(Infinity));
+console.log(isFinite(-Infinity));
+console.log(isFinite(NaN));
+console.log(isFinite(undefined));
+console.log(isFinite(null));
+console.log(isFinite(-1));
 </script>
