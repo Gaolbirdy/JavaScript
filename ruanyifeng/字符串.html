@@ -69,7 +69,7 @@ s.length = 7;
 console.log(s.length);
 </script> -->
 
-<script>
+<!-- <script>
 var s = '\u00A9';
 console.log(s);
 
@@ -78,4 +78,23 @@ console.log(foo);
 console.log(f\u006F\u006F);
 
 console.log('𝌆'.length);
+</script> -->
+
+<script>
+var string = 'Hello World!';
+console.log(btoa(string));
+console.log(atob('SGVsbG8gV29ybGQh'));
+
+// console.log(btoa('你好'));
+
+function b64Encode(str) {
+    return btoa(encodeURIComponent(str));
+}
+
+function b64Decode(str) {
+    return decodeURIComponent(atob(str));
+}
+
+console.log(b64Encode('你好'));
+console.log(b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE'));
 </script>
