@@ -1,0 +1,424 @@
+<!-- <script>
+// function print(s) {
+//     console.log(s);
+// }
+
+// var print = function(s) {
+//     console.log(s);
+// };
+
+// var print = function x() {
+//     console.log(typeof x);
+//     console.log(x);
+// };
+
+// // console.log(x);
+// print();
+
+var f = function f() {};
+</script> -->
+
+<!-- <script>
+var add = new Function(
+    'x',
+    'y',
+    'return x + y'
+);
+
+console.log(add(1, 3));
+
+// var foo = new Function(
+//     'return "hello";'
+// );
+
+// console.log(foo());
+
+var foo = Function(
+    'return "hello";'
+);
+
+console.log(foo());
+</script> -->
+
+<!-- <script>
+function f() {
+    console.log(1);
+}
+
+f();
+
+function f() {
+    console.log(2);
+}
+f();
+</script> -->
+
+<!-- <script>
+function add(x, y) {
+    return x + y;
+}
+
+console.log(add(1, 1));
+
+function fib(num) {
+    if (num === 0) return 0;
+    if (num === 1) return 1;
+    return fib(num - 2) + fib(num - 1);
+}
+
+console.log(fib(6));
+</script> -->
+
+<!-- <script>
+function add(x, y) {
+    return x + y;
+}
+
+var operator = add;
+
+function a(op) {
+    return op;
+}
+console.log(a(add)(1, 1));
+</script> -->
+
+<!-- <script>
+// f();
+
+// function f() {
+
+// }
+
+// f();
+// var f = function () {};
+
+// var f;
+// f();
+// f = function () {};
+
+var f = function () {
+    console.log(1);
+}
+
+function f() {
+    console.log(2);
+}
+
+f();
+</script> -->
+
+<!-- <script>
+function f1() {}
+console.log(f1.name);
+
+var f2 = function () {};
+console.log(f2.name);
+
+var f3 = function myName() {};
+console.log(f3.name);
+
+var myFunc = function () {};
+
+function test(f) {
+    console.log(f.name);
+}
+
+test(myFunc);
+</script> -->
+
+<!-- <script>
+function f(a, b) {}
+console.log(f.length);
+</script> -->
+
+<!-- <script>
+// function f() {
+//     a();
+//     b();
+//     c();
+//     /*
+//   这是一个
+//   多行注释
+// */
+// }
+
+// console.log(f.toString());
+
+var multiline = function (fn) {
+    var arr = fn.toString().split('\n');
+    return arr.slice(1, arr.length - 1).join('\n');
+};
+
+function f() {/*
+  这是一个
+  多行注释
+*/    
+}
+
+console.log(multiline(f));
+</script> -->
+
+<!-- <script>
+// var v = 1;
+
+// function f() {
+//     console.log(v);
+// }
+
+// f();
+
+// function f() {
+//     var v = 1;
+// }
+
+// console.log(v);
+
+// var v = 1;
+
+// function f() {
+//     console.log(v);
+//     var v = 2;
+//     console.log(v);
+// }
+
+// f();
+// console.log(v);
+
+if (true) {
+    var x = 5;
+}
+console.log(x);
+</script> -->
+
+<!-- <script>
+function foo(x) {
+    if (x > 100) {
+        var temp = x - 100;
+    }
+}
+
+function foo(x) {
+    var temp;
+    if (x > 100) {
+        temp = x - 100;
+    }
+}
+</script> -->
+
+<!-- <script>
+// var a = 1;
+// var x = function () {
+//     console.log(a);
+// };
+
+// function f() {
+//     var a = 2;
+//     x();
+// }
+
+// f();
+
+// var x = function() {
+//     console.log(a);
+// }
+
+// function y(f) {
+//     var a = 2;
+//     f();
+// }
+
+// y(x);
+
+function foo() {
+    var x = 1;
+    function bar() {
+        console.log(x);
+    }
+    return bar;
+}
+
+var x = 2;
+var f = foo();
+f();
+</script> -->
+
+<!-- <script>
+function square(x) {
+    return x * x;
+}
+console.log(square(2));
+console.log(square(3));
+console.log(square());
+
+function f(a, b) {
+    return a;
+}
+
+console.log(f(1, 2, 3));
+console.log(f(1));
+console.log(f());
+console.log(f.length);
+
+// console.log(f( , 1));
+console.log(f(undefined, 1));
+</script> -->
+
+<!-- <script>
+// var p = 2;
+
+// function f(p) {
+//     p = 3;
+// }
+// f(p);
+// console.log(p);
+
+// var obj = { p: 1};
+
+// function f(o) {
+//     o.p = 2;
+// }
+// f(obj);
+// console.log(obj);
+
+var obj = [1, 2, 3];
+
+function f(o) {
+    o = [2, 3, 4];
+}
+f(obj);
+console.log(obj);
+</script> -->
+
+<!-- <script>
+// function f(a, a) {
+//     console.log(a);
+// }
+
+// f(1, 2);
+// f(1);
+
+function f(a, a) {
+    console.log(arguments[0]);
+}
+
+f(1);
+</script> -->
+
+<!-- <script>
+// var f = function (one) {
+//     console.log(arguments[0]);
+//     console.log(arguments[1]);
+//     console.log(arguments[2]);
+// };
+
+// f(1, 2, 3);
+
+// var f = function(a, b) {
+//     arguments[0] = 3;
+//     arguments[1] = 2;
+//     return a + b;
+// };
+
+// console.log(f());
+// console.log(f(1, 1));
+// console.log(f(1));
+
+// var f = function(a, b) {
+//     'use strict';
+//     arguments[0] = 3;
+//     arguments[1] = 2;
+//     return a + b;
+// };
+
+// console.log(f(1, 1));
+
+// function f() {
+//     return arguments.length;
+// }
+
+// console.log(f(1, 2, 3));
+// console.log(f(1));
+// console.log(f());
+
+// function f() {
+//     var args =  Array.prototype.slice.call(arguments);
+//     console.log(args);
+// }
+
+// function f() {
+//     var args = [];
+//     for (var i = 0; i < arguments.length; i++) {
+//         args.push(arguments[i]);
+//     }
+//     console.log(args);
+// }
+
+// f(1, 2, 3);
+
+var f = function () {
+    console.log(arguments.callee === f);
+};
+
+f();
+</script> -->
+
+<!-- <script>
+// var n = 999;
+
+// function f1() {
+//     console.log(n);
+// }
+
+// f1();
+
+// function f1() {
+//     var n = 999;
+// }
+// console.log(n);
+
+// function f1() {
+//     var n = 999;
+//     function f2() {
+//         console.log(n);
+//     }
+//     return f2;
+// }
+
+// var result = f1();
+// console.log(result);
+// result();
+
+// function createIncrementor(start) {
+//     return function () {
+//         return start++;
+//     };
+// }
+
+// var inc = createIncrementor(5);
+// console.log(inc());
+// console.log(inc());
+// console.log(inc());
+</script> -->
+
+<script>
+function Person(name) {
+    var _age;
+    function setAge(n) {
+        _age = n;
+    }
+    function getAge() {
+        return _age;
+    }
+
+    return {
+        name: name,
+        getAge: getAge,
+        setAge: setAge
+    };
+}
+
+var p1 = Person('张三');
+console.log(p1);
+p1.setAge(25);
+console.log(p1.getAge());
+</script>

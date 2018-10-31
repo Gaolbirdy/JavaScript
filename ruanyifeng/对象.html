@@ -142,10 +142,106 @@ obj.p = 1;
 console.log(obj);
 </script> -->
 
-<script>
+<!-- <script>
 var obj = {
     key1: 1,
     key2: 2
 };
 console.log(Object.keys(obj));
+</script> -->
+
+<!-- <script>
+// var obj = { p: 1 };
+// console.log(Object.keys(obj));
+
+// console.log(delete obj.p);
+// console.log(obj.p);
+// console.log(Object.keys(obj));
+
+// var obj = {};
+// console.log(delete obj.p);
+
+// var obj = Object.defineProperty({}, 'p', {
+//     value: 123,
+//     configurable: false
+// });
+
+// console.log(obj.p);
+// console.log(delete obj.p);
+
+var obj = {};
+console.log(obj.toString);
+
+console.log(delete obj.toString);
+console.log(obj.toString);
+</script> -->
+
+<!-- <script>
+var obj = { p: 1 };
+console.log('p' in obj);
+console.log('toString' in obj);
+
+if ('toString' in obj) {
+    console.log(obj.hasOwnProperty('toString'));
+}
+</script> -->
+
+<!-- <script>
+// var obj = { a: 1, b: 2, c: 3};
+
+// for (var i in obj) {
+//     console.log('键名 ', i);
+//     console.log('键值 ', obj[i]);
+// }
+
+// var obj = {};
+
+// console.log(obj.toString);
+
+// for (var p in obj) {
+//     console.log(p);
+// }
+
+var person = { name: ' laozhang'};
+
+for (var key in person) {
+    if (person.hasOwnProperty(key)) {
+        console.log(key);
+    }
+}
+</script> -->
+
+<script>
+// var obj = {
+//     p1: 1,
+//     p2: 2,
+// };
+
+// with (obj) {
+//     p1 = 4;
+//     p2 = 5;
+// }
+// console.log(obj);
+
+// with (document.links[0]) {
+//     console.log(href);
+//     console.log(title);
+//     console.log(style);
+// }
+
+// var obj = { p2: 3 };
+// with (obj) {
+//     p1 = 4;
+//     p2 = 5;
+// }
+
+// console.log(obj);
+// console.log(p1);
+
+with (obj1.obj2.obj3) {
+    console.log(p1 + p2);
+}
+
+var temp = obj1.obj2.obj3;
+console.log(temp.p1 + temp.p2);
 </script>
