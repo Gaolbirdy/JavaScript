@@ -400,7 +400,7 @@ f();
 // console.log(inc());
 </script> -->
 
-<script>
+<!-- <script>
 function Person(name) {
     var _age;
     function setAge(n) {
@@ -421,4 +421,88 @@ var p1 = Person('张三');
 console.log(p1);
 p1.setAge(25);
 console.log(p1.getAge());
+</script> -->
+
+<!-- <script>
+// function () {}();
+// (function () {}());
+
+// (function () {})();
+
+// (function(){}())
+// (function(){}())
+
+var i = function(){ return 10;}();
+true && function(){}();
+0, function(){}();
+
+!function () {}();
+~function () {}();
+-function () {}();
++function () {}();
+
+// var tmp = newData;
+// processData(tmp);
+// storeData(tmp);
+
+(function () {
+    var tmp = newData;
+    processData(tmp);
+    storeData(tmp);
+}());
+
+</script> -->
+
+<script>
+// eval('var a = 1;');
+// console.log(a);
+
+// eval('3x');
+
+// eval('return;');
+
+// console.log(eval(123));
+
+// var a = 1;
+// eval('a = 2');
+// console.log(a);
+
+// (function f() {
+//     'use strict';
+//     eval('var foo = 123');
+//     console.log(foo);
+// })();
+
+// (function f() {
+//     'use strict';
+//     var foo = 1;
+//     eval('foo = 2');
+//     console.log(foo);
+// })();
+
+// var m = eval;
+// m('var x = 1');
+// console.log(x);
+
+// var a = 1;
+// function f() {
+//     var a = 2;
+//     eval('console.log(a)');
+// }
+
+// f();
+
+// var a = 1;
+// function f() {
+//     var a = 2;
+//     var e = eval;
+//     e('console.log(a)');
+// }
+
+// f();
+
+eval.call(null, '...');
+window.eval('...');
+(1, eval)('...');
+(eval, eval)('...');
 </script>
