@@ -142,7 +142,7 @@ colors.forEach(function (color) {
 });
 </script> -->
 
-<script>
+<!-- <script>
 // var a = [1, , 1];
 // console.log(a.length);
 
@@ -161,7 +161,8 @@ colors.forEach(function (color) {
 // console.log(a);
 
 // var a = [1, , 3,];
-var a = [, , ,];
+// var a = [, , ,];
+var a = [undefined, undefined, undefined];
 
 a.forEach(function (x, i) {
     console.log(i + '. ' + x);
@@ -172,4 +173,73 @@ for (var i in a) {
 }
 
 console.log(Object.keys(a));
+</script> -->
+
+<script>
+// var obj = {
+//     0: 'a',
+//     1: 'b',
+//     2: 'c',
+//     length: 3
+// };
+
+// console.log(obj[0]);
+// console.log(obj[1]);
+// console.log(obj.length);
+// obj.push('d');
+
+// var obj = {
+//     length: 0
+// };
+// obj[3] = 'd';
+// console.log(obj.length);
+
+// function args() {return arguments;}
+// var arrayLike = args('a', 'b');
+// console.log(arrayLike);
+// console.log(arrayLike[0]);
+// console.log(arrayLike.length);
+// console.log(arrayLike instanceof Array);
+
+// var elts = document.getElementsByTagName('h3');
+// console.log(elts.length);
+// console.log(elts instanceof Array);
+
+// console.log('abc'[1]);
+// console.log('abc'.length);
+// console.log('abc' instanceof Array);
+
+// function args() {return arguments;}
+// var arrayLike = args('a', 'b');
+// var arr = Array.prototype.slice.call(arrayLike);
+// console.log(arr);
+// console.log(arr instanceof Array);
+
+// function print(value, index) {
+//     console.log(index + ' : ' + value);
+// }
+// Array.prototype.forEach.call(arrayLike, print);
+
+// function logArgs() {
+//     Array.prototype.forEach.call(arguments, function (elem, i) {
+//         console.log(i + '. ' + elem);
+//     });
+// }
+
+// function logArgs() {
+//     for (var i = 0; i < arguments.length; i++) {
+//         console.log(i + '. ' + arguments[i]);
+//     }
+// }
+
+// logArgs(1, 2, 3, 4);
+
+// Array.prototype.forEach.call('abc', function (chr) {
+//     console.log(chr);
+// });
+
+var arr = Array.prototype.slice.call('abc');
+arr.forEach(function (chr) {
+    console.log(chr);
+});
 </script>
