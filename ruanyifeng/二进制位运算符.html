@@ -26,6 +26,91 @@ console.log(2147483649.4 | 0);
 console.log(0 & 3);
 </script> -->
 
+<!-- <script>
+// console.log(~3);
+// console.log(~-3);
+// console.log(~~3);
+// console.log(~~2.9);
+// console.log(~~47.11);
+// console.log(~~1.9999);
+
+// console.log(~'011');
+// console.log(~'42 cats');
+// console.log(~'0xcafebabe');
+// console.log(~'deadbeef');
+
+console.log(~[]);
+console.log(~NaN);
+console.log(~null);
+
+</script> -->
+
+<!-- <script>
+// console.log(0 ^3);
+
+var a = 10;
+var b = 99;
+a ^= b, b ^= a, a ^= b;
+console.log(a);
+console.log(b);
+
+console.log(12.9 ^ 0);
+</script> -->
+
+<!-- <script>
+// console.log(4 << 1);
+// console.log(-4 << 1);
+
+// console.log(13.5 << 0);
+// console.log(-13.5 << 0);
+
+var color = {r: 186, g: 218, b: 85};
+
+var rgb2hex = function(r, g, b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).substr(1);
+};
+
+console.log(rgb2hex(color.r, color.g, color.b));
+</script> -->
+
+<!-- <script>
+console.log(4 >> 1);
+console.log(-4 >> 1);
+console.log(5 >> 1);
+console.log(21 >> 2);
+console.log(21 >> 3);
+console.log(21 >> 4);
+
+</script> -->
+
+<!-- <script>
+console.log(4 >>> 1);
+console.log(-4 >>> 1);
+console.log(-1 >>> 0);
+
+</script> -->
+
 <script>
-console.log(~3);
+var FLAG_A = 1;
+var FLAG_B = 2;
+var FLAG_C = 4;
+var FLAG_D = 8;
+
+var flags = 5;
+
+if (flags & FLAG_C) {
+
+}
+
+var mask = FLAG_A | FLAG_B | FLAG_D;
+console.log(mask);
+
+flags = flags | mask;
+console.log(flags);
+flags = flags & mask;
+console.log(flags);
+flags = flags ^ mask;
+console.log(flags);
+flags = ~flags;
+console.log(flags);
 </script>
