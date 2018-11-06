@@ -1,0 +1,74 @@
+<!-- <script>
+// var err = new Error('出错了');
+// console.log(err.message);
+// // console.log(err.name);
+// // console.log(err.stack);
+
+// if (err.name) {
+//     console.log(err.name + ': ' + err.message);  
+// }
+
+function throwit() {
+    throw new Error('');
+}
+
+function catchit() {
+    try {
+        throwit();
+    } catch(e) {
+        console.log(e.stack);
+    }
+}
+
+catchit();
+</script> -->
+
+<!-- <script>
+// var 1a;
+
+// console.log 'hello');
+
+// unknownVariable;
+
+// console.log() = 1;
+
+// this = 1;
+
+// new Array(-1);
+
+// new 123;
+
+// var obj = {};
+// // obj.unknownMethod();
+// console.log(obj.unknownMethod);
+
+// decodeURI('%2')
+
+var err1 = new Error('出错了！');
+var err2 = new RangeError('出错了，变量超出有效范围！');
+var err3 = new TypeError('出错了，变量类型无效！');
+console.log(err1.message);
+console.log(err2.message);
+console.log(err3.message);
+</script> -->
+
+<!-- <script>
+function UserError(message) {
+    this.message = message || '默认信息';
+    this.name = 'UserError';
+}
+
+UserError.prototype = new Error();
+UserError.prototype.constructor = UserError;
+
+var e = new UserError('这是自定义的错误！');
+console.log(e.message);
+</script> -->
+
+<script>
+var x = 0;
+
+if (x <= 0){
+    throw new Error('x 必须为正数');
+}
+</script>

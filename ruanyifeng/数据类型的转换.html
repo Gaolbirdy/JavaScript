@@ -73,7 +73,7 @@ console.log(Number({
 }));
 </script> -->
 
-<script>
+<!-- <script>
 // console.log(String(123));
 // console.log(String('123'));
 // console.log(String('abc'));
@@ -95,6 +95,84 @@ console.log(Number({
 //     }
 // };
 // console.log(String(obj));
+
+console.log(String({
+    toString: function () {
+        return 3;
+    }
+}));
+
+console.log(String({
+    valueOf: function () {
+        return 2;
+    }
+}));
+
+console.log(String({
+    valueOf: function () {
+        return 2;
+    },
+    toString: function () {
+        return 3;
+    }
+}));
+</script> -->
+
+<!-- <script>
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(0));
+// console.log(Boolean(NaN));
+// console.log(Boolean(''));
+
+console.log(Boolean({}));
+console.log(Boolean([]));
+console.log(Boolean(new Boolean(false)));
+</script> -->
+
+<!-- <script>
+// console.log(123 + 'abc');
+
+// if ('abc') {
+//     console.log('hello');
+    
+// }
+
+// console.log(+{foo: 'bar'});
+// console.log(-[1, 2, 3]);
+
+if ( !undefined && !null && !0 && !NaN && !'') {
+    console.log('true');
+}
+
+// expression ? true : false;
+// !!expression;
+</script> -->
+
+<script>
+// console.log('5' + {});
+// console.log('5' + []);
+// console.log('5' + function (){});
+// console.log('5' + undefined);
+// console.log('5' + null);
+
+// var obj = {
+//     // width: '100'
+//     width: 100
+// };
+// console.log(obj.width + 20);
+
+// console.log(false / '5');
+// console.log('abc' - 1);
+// console.log(Number(null));
+// console.log(null + 1);
+// console.log(Number(undefined));
+// console.log(undefined + 1);
+
+console.log(+'abc');
+console.log(-'abc');
+console.log(+true );
+console.log(-false);
 
 
 </script>
