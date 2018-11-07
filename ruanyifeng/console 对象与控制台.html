@@ -1,0 +1,45 @@
+<!-- <script>
+// console.log(typeof console);
+
+// console.log('Hello World');
+// console.log('a', 'b', 'c');
+// console.log(1);
+// console.log(2);
+// console.log(3);
+
+// console.log(' %s + %s = %s', 1, 1, 2);
+
+// var number = 11 * 9;
+// var color = 'red';
+
+// console.log('%d %s balloons', number, color);
+
+// console.log(
+//   '%cThis text is styled!',
+//   'color: red; background: yellow; font-size: 24px;'
+// );
+
+// console.log(' %s + %s ', 1, 1, '= 2');
+
+// console.log({foo: 'bar'});
+// console.log(Date);
+// console.log(typeof Date);
+
+// console.info(1);
+// console.debug(2);
+
+['log', 'info', 'warn', 'error'].forEach(function(method) {
+    console[method] = console[method].bind(
+        console,
+        new Date().toISOString(),
+        'my'
+    );
+});
+
+console.log('出错了');
+</script> -->
+
+<script>
+console.error('Error: %s (%i)', 'Server is not responding', 500);
+console.warn('Warning! Too few nodes (%d)', document.childNodes.length);
+</script>
