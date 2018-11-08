@@ -83,7 +83,7 @@ var obj = new Object({a: 123});
 console.log(obj);
 </script> -->
 
-<script>
+<!-- <script>
 // var obj = {
 //     p1: 123,
 //     p2: 456
@@ -92,7 +92,137 @@ console.log(obj);
 // console.log(Object.keys(obj));
 // console.log(Object.getOwnPropertyNames(obj));
 
-var a = ['hello', 'world'];
-console.log(Object.keys(a));
-console.log(Object.getOwnPropertyNames(a));
+// var a = ['hello', 'world'];
+// console.log(Object.keys(a));
+// console.log(Object.getOwnPropertyNames(a));
+
+var obj = {
+    p1: 123,
+    p2: 456
+};
+
+console.log(Object.keys(obj).length);
+console.log(Object.getOwnPropertyNames(obj).length);
+</script> -->
+
+<!-- <script>
+// console.log(Object.prototype);
+// console.log(typeof Object.prototype);
+
+// var obj = new Object();
+// console.log(obj.valueOf());
+// console.log(obj.valueOf() === obj);
+
+// console.log(1 + obj);
+
+// var obj = new Object();
+// obj.valueOf = function () {
+//     return 2;
+// };
+
+// console.log(1 + obj);
+
+
+// var o1 = new Object();
+// console.log(o1.toString());
+
+// var o2 = {a: 1};
+// console.log(o2.toString());
+
+// function myObj() {
+//     this.a = 1;
+// }
+
+// var o3 = new myObj();
+// console.log(o3.toString());
+// console.log(o3);
+
+// var obj = new Object();
+// obj.toString = function () {
+//     return 'hello';
+// };
+
+// console.log(obj + ' ' + 'world');
+
+// console.log([1, 2, 3].toString());
+// console.log('123'.toString());
+// console.log((function () {
+//     return 123;
+// }).toString());
+// console.log(new Date().toString());
+
+// var obj = {};
+// console.log(obj.toString());
+// console.log(Object.prototype.toString(obj));
+// console.log(Object.prototype.toString.call(obj));
+
+// console.log(new Number(1).toString());
+
+// console.log(Object.prototype.toString(2));
+
+// function myObj() {
+//     this.a = 1;
+// }
+
+// var o = new myObj();
+
+// console.log(Object.prototype.toString.call(2));
+// console.log(Object.prototype.toString.call('2'));
+// console.log(Object.prototype.toString.call(true));
+// console.log(Object.prototype.toString.call(undefined));
+// console.log(Object.prototype.toString.call(null));
+// console.log(Object.prototype.toString.call(Math));
+// console.log(Object.prototype.toString.call({}));
+// console.log(Object.prototype.toString.call([2]));
+// console.log(Object.prototype.toString.call(o));
+
+var type = function (o) {
+    var s = Object.prototype.toString.call(o);
+    return s.match(/\[object (.*?)\]/)[1].toLowerCase();
+};
+
+// console.log(type({}));
+// console.log(type([]));
+// console.log(type(5));
+// console.log(type(null));
+// console.log(type());
+// console.log(type(/abcd/));
+// console.log(type(new Date()));
+
+['Null',
+ 'Undefined',
+ 'Object',
+ 'Array',
+ 'String',
+ 'Number',
+ 'Boolean',
+ 'Function',
+ 'RegExp'
+].forEach(function (t) {
+    type['is' + t] = function (o) {
+        return type(o) === t.toLowerCase();
+    };
+});
+
+console.log(type.isObject({}));
+console.log(type.isNumber(NaN));
+console.log(type.isRegExp(/abc/));
+
+</script> -->
+
+<script>
+// var obj = {};
+// console.log(obj.toString());
+// console.log(obj.toLocaleString());
+
+// var date = new Date();
+// console.log(date.toString());
+// console.log(date.toLocaleString());
+
+var obj = {
+    p: 123,
+    // toString: 1
+};
+console.log(obj.hasOwnProperty('p'));
+console.log(obj.hasOwnProperty('toString'));
 </script>
