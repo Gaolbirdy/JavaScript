@@ -1,4 +1,98 @@
-<script>
-    console.log();
+<!-- <script>
+    // console.log(typeof Object);
+    // console.log(typeof Object.print);
     
+    // Object.print = function (o) {
+    //     console.log(o);
+    // };
+
+    // Object.print(33);
+
+    // var obj = new Object();
+    // obj.print();
+
+    Object.prototype.print = function () {
+        console.log(this);
+    };
+
+    var obj = new Object();
+    obj.a = 123;
+    obj.print();
+</script> -->
+
+<!-- <script>
+// var obj = Object();
+// var obj = Object(undefined);
+// var obj = Object(null);
+
+// console.log(obj);
+// console.log(obj instanceof Object);
+
+// var obj = Object(1);
+// console.log(obj);
+// console.log(obj instanceof Object);
+// console.log(obj instanceof Number);
+
+// var obj = Object('foo');
+// console.log(obj);
+// console.log(obj instanceof Object);
+// console.log(obj instanceof String);
+
+// var obj = Object(true);
+// console.log(obj);
+// console.log(obj instanceof Object);
+// console.log(obj instanceof Boolean);
+
+// var arr = [];
+// var obj = Object(arr);
+// console.log(arr === obj);
+
+// var value = {};
+// var obj = Object(value);
+// console.log(obj === value);
+
+// var fn = function () {};
+// var obj = Object(fn);
+// console.log(typeof fn);
+// console.log(fn instanceof Object);
+// console.log(fn instanceof Function);
+// console.log(obj === fn);
+
+function isObject(value) {
+    return value === Object(value);
+}
+
+console.log(isObject([]));
+console.log(isObject(true));
+console.log(isObject(null));
+</script> -->
+
+<!-- <script>
+// var obj = new Object();
+// var obj = {};
+
+// var o1 = {a: 1};
+// var o2 = new Object(o1);
+// console.log(o2);
+// console.log(o1 === o2);
+
+// var obj = new Object(123);
+// console.log(obj instanceof Number);
+
+var obj = new Object({a: 123});
+console.log(obj);
+</script> -->
+
+<script>
+// var obj = {
+//     p1: 123,
+//     p2: 456
+// };
+
+// console.log(Object.keys(obj));
+// console.log(Object.getOwnPropertyNames(obj));
+
+var a = ['hello', 'world'];
+console.log(Object.keys(a));
+console.log(Object.getOwnPropertyNames(a));
 </script>
