@@ -134,7 +134,7 @@ console.log(obj.foo);
 
 </script> -->
 
-<script>
+<!-- <script>
 // var obj = {};
 // console.log('toString' in obj);
 
@@ -153,4 +153,252 @@ for (var key in obj) {
 
 console.log(Object.keys(obj));
 console.log(JSON.stringify(obj));
+</script> -->
+
+<!-- <script>
+// var obj = Object.defineProperty({}, 'p', {
+//     value: 1,
+//     writable: false,
+//     enumerable: false,
+//     configurable: false
+// });
+
+// // Object.defineProperty(obj, 'p', {value: 2});
+// // Object.defineProperty(obj, 'p', {writable: 2});
+// // Object.defineProperty(obj, 'p', {enumerable: true});
+// // Object.defineProperty(obj, 'p', {configurable: 2});
+
+// var obj = Object.defineProperty({}, 'p', {
+//     writable: true,
+//     configurable: false
+// });
+
+// Object.defineProperty(obj, 'p', {writable: false});
+
+// var o1 = Object.defineProperty({}, 'p', {
+//     value: 1,
+//     writable: false,
+//     configurable: true
+// });
+
+// Object.defineProperty(o1, 'p', {value: 2});
+// console.log(o1.p);
+
+// var obj = Object.defineProperty({}, 'p', {
+//     value: 1,
+//     configurable: false
+// });
+
+// obj.p = 2;
+// console.log(obj.p);
+
+var obj = Object.defineProperties({}, {
+    p1: { value: 1, configurable: true},
+    p2: { value: 2, configurable: false},
+});
+
+console.log(delete obj.p1);
+console.log(delete obj.p2);
+console.log(obj.p1);
+console.log(obj.p2);
+</script> -->
+
+<!-- <script>
+// var obj = Object.defineProperty({}, 'p', {
+//     get: function () {
+//         return 'getter';
+//     },
+//     set: function (value) {
+//         console.log('setter: ' + value)
+//     }
+// });
+
+// console.log(obj.p);
+// obj.p = 123;
+// console.log(obj.p);
+
+// var obj = {
+//     get p() {
+//         return 'getter';
+//     },
+//     set p(value) {
+//         console.log('setter: ' + value);
+//     }
+// };
+// console.log(obj);
+// console.log(obj.p);
+// obj.p = 123;
+// console.log(obj.p);
+
+// var obj = {
+//     $n: 5,
+//     next: this.$n
+// };
+
+// console.log(obj.$n);
+// console.log(obj.next);
+
+var obj = {
+    $n: 5,
+    get next() { return this.$n},
+    set next(n) {
+        if (n >= this.$n)
+            this.$n = n;
+        else
+            throw new Error('新的值必须大于当前值');
+    }
+};
+
+console.log(obj.next);
+obj.next = 10;
+console.log(obj.next);
+console.log(obj.$n);
+obj.next = 5;
+
+</script> -->
+
+<!-- <script>
+// var extend = function (to, from) {
+//     for (var property in from) {
+//         to[property] = from[property];
+//     }
+
+//     return to;
+// };
+
+// console.log(extend({}, {a: 1}));
+// console.log(extend({}, {
+//     get a() {return 1;}
+// }));
+
+var extend = function (to, from) {
+    for (var property in from) {
+        if (!from.hasOwnProperty(property)) continue;
+        Object.defineProperty(
+            to,
+            property,
+            Object.getOwnPropertyDescriptor(from, property)
+        );
+    }
+
+    return to;
+}
+
+console.log(extend({}, { get a() { return 1;}}));
+</script> -->
+
+<script>
+// var obj = new Object();
+// Object.preventExtensions(obj);
+
+// // Object.defineProperty(obj, 'p', {
+// //     value: 'hello'
+// // });
+
+// obj.p = 1;
+// console.log(obj.p);
+
+// var obj = {};
+// console.log(Object.isExtensible(obj));
+// Object.preventExtensions(obj);
+// console.log(Object.isExtensible(obj));
+
+// var obj = { p: 'hello'};
+// Object.seal(obj);
+
+// console.log(delete obj.p);
+// console.log(obj.p);
+
+// obj.x = 'world';
+// console.log(obj.x);
+
+// var obj = {
+//     p: 'a'
+// };
+
+// console.log(Object.getOwnPropertyDescriptor(obj, 'p'));
+
+// Object.seal(obj);
+// console.log(Object.getOwnPropertyDescriptor(obj, 'p'));
+
+// Object.defineProperty(obj, 'p', {
+//     enumerable: false
+// });
+
+// var obj = { p: 'a'};
+// Object.seal(obj);
+// obj.p = 'b';
+// console.log(obj.p);
+
+// var obj = { p: 'a'};
+// console.log(Object.isSealed(obj));
+// Object.seal(obj);
+// console.log(Object.isSealed(obj));
+// console.log(Object.isExtensible(obj));
+
+// var obj = {
+//     p: 'hello'
+// };
+
+// Object.freeze(obj);
+
+// obj.p = 'world';
+// console.log(obj.p);
+
+// obj.t = 'h';
+// console.log(obj.t);
+
+// console.log(delete obj.p);
+// console.log(obj.p);
+
+// var obj = {
+//     p: 'hello'
+// };
+
+// console.log(Object.isFrozen(obj));
+// Object.freeze(obj);
+// console.log(Object.isFrozen(obj));
+
+// console.log(Object.isSealed(obj));
+// console.log(Object.isExtensible(obj));
+
+// var obj = {
+//     p: 'hello'
+// };
+// Object.freeze(obj);
+
+// if (!Object.isFrozen(obj)) {
+//     obj.p = 'world';
+// }
+// console.log(obj.p);
+
+// var obj = new Object();
+// Object.preventExtensions(obj);
+
+// var proto = Object.getPrototypeOf(obj);
+// console.log(proto);
+// proto.t = 'hello';
+// console.log(obj.t);
+
+// var obj = new Object();
+// Object.preventExtensions(obj);
+
+// var proto = Object.getPrototypeOf(obj);
+// Object.preventExtensions(proto);
+
+// proto.t = 'hello';
+// console.log(obj.t);
+
+var obj = {
+    foo: 1,
+    bar: ['a', 'b']
+};
+
+Object.freeze(obj);
+obj.bar = [1];
+console.log(obj.bar);
+
+obj.bar.push('c');
+console.log(obj.bar);
+
 </script>

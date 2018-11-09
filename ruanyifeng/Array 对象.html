@@ -1,0 +1,144 @@
+<!-- <script>
+// console.log(Array);
+// console.log(typeof Array);
+// console.log(Array instanceof Object);
+
+// var arr = new Array(2);
+// var arr = Array(2);
+// console.log(arr.length);
+// console.log(arr);
+
+// console.log(new Array());
+
+// console.log(new Array(1));
+// console.log(new Array(2));
+
+// console.log(new Array(3.2));
+// console.log(new Array(-22));
+
+// console.log(new Array('abc'));
+// console.log(new Array([1]));
+
+// console.log(new Array(1, 2));
+// console.log(new Array('a', 'b', 'c'));
+
+// var arr = new Array(1, 2);
+
+// var arr = [1, 2];
+
+var a = new Array(3);
+var b = [undefined, undefined, undefined];
+
+console.log(a.length);
+console.log(b.length);
+
+console.log(a[0]);
+console.log(b[0]);
+
+console.log(0 in a);
+console.log(0 in b);
+</script> -->
+
+<!-- <script>
+var arr = [1, 2, 3];
+console.log(typeof arr);
+
+console.log(Array.isArray(arr));
+
+</script> -->
+
+<!-- <script>
+// var arr = [1, 2, 3];
+// console.log(arr.valueOf());
+
+// console.log(arr.toString());
+
+// var arr = [1, 2, 3, [4, 5, 6]];
+// console.log(arr.valueOf());
+// console.log(arr.toString());
+
+// var arr = [];
+// console.log(arr.length);
+
+// console.log(arr.push(1));
+// console.log(arr.push('a'));
+// console.log(arr.push(true, {}));
+// console.log(arr);
+
+// var arr = ['a', 'b', 'c'];
+// console.log(arr.pop());
+// console.log(arr);
+
+// console.log([].pop());
+
+var arr = [];
+arr.push(1, 2);
+arr.push(3);
+arr.pop();
+console.log(arr);
+
+</script> -->
+
+<!-- <script>
+// var a = ['a', 'b', 'c'];
+
+// console.log(a.shift());
+// console.log(a);
+
+// var list = [1, 2, 3, 4];
+// var item;
+
+// while (item = list.shift()) {
+//     console.log(item);
+// }
+// console.log(list);
+
+// var a = ['a', 'b', 'c'];
+
+// a.unshift('x');
+// console.log(a);
+
+var arr = ['c', 'd'];
+console.log(arr.unshift('a', 'b'));
+console.log(arr);
+
+</script> -->
+
+<script>
+// var a =[1, 2, 3, 4];
+// console.log(a.join(' '));
+// console.log(a.join(' | '));
+// console.log(a.join());
+
+// console.log([undefined, null].join('#'));
+// console.log(['a',, 'b'].join('-'));
+
+// console.log(Array.prototype.join('hello', '-'));
+// console.log(Array.prototype.join.call('hello', '-'));
+
+// var obj = {
+//     0: 'a',
+//     1: 'b',
+//     length: 2
+// };
+// console.log(Array.prototype.join.call(obj, '-'));
+
+// console.log(['hello'].concat(['world']));
+// console.log(['hello'].concat(['world'], ['!']));
+
+// console.log([].concat({a: 1}, {b: 2}));
+// console.log([2].concat({a: 1}));
+
+// console.log([1, 2, 3].concat(4, 5, 6));
+
+var obj = { a: 1};
+var oldArray = [obj];
+console.log(oldArray);
+
+var newArray = oldArray.concat();
+console.log(newArray);
+
+obj.a = 2;
+console.log(newArray[0].a);
+
+</script>
