@@ -37,17 +37,120 @@ console.log(Object.keys(Object.prototype));
 console.log(Object.getOwnPropertyNames(Object.prototype));
 </script> -->
 
-<script>
-var obj = Object.defineProperty({}, 'p', {
-    value: 123,
-    writable: false,
-    enumerable: true,
-    configurable: false
+<!-- <script>
+// var obj = Object.defineProperty({}, 'p', {
+//     value: 123,
+//     writable: false,
+//     enumerable: true,
+//     configurable: false
+// });
+
+// console.log(obj);
+// console.log(obj.p);
+// obj.p = 246;
+// console.log(obj.p);
+
+// var obj = Object.defineProperties({}, {
+//     p1: {
+//         value: 123,
+//         enumerable: true
+//     },
+//     p2: {
+//         value: 'abc',
+//         enumerable: true
+//     },
+//     p3: {
+//         get: function () {
+//             return this.p1 + this.p2;
+//         },
+//         enumerable: true,
+//         configurable: true
+//     }
+// });
+
+// console.log(obj.p1);
+// console.log(obj.p2);
+// console.log(obj.p3);
+
+var obj = {};
+
+// Object.defineProperty(obj, 'p', {
+//     value: 123,
+//     get: function () { return 456;}
+// });
+
+// Object.defineProperty(obj, 'p', {
+//     writable: true,
+//     get: function () {return 456; }
+// });
+
+Object.defineProperty(obj, 'foo', {});
+console.log(Object.getOwnPropertyDescriptor(obj, 'foo'));
+
+</script> -->
+
+<!-- <script>
+var obj = {};
+obj.p = 123;
+console.log(obj.propertyIsEnumerable('p'));
+console.log(obj.propertyIsEnumerable('toString'));
+</script> -->
+
+<!-- <script>
+// var obj = {};
+// obj.p = 123;
+
+// console.log(Object.getOwnPropertyDescriptor(obj, 'p').value);
+
+// Object.defineProperty(obj, 'p', { value: 246});
+// console.log(obj.p);
+
+// 'use strict';
+// var obj = {};
+
+// Object.defineProperty(obj, 'a', {
+//     value: 37,
+//     writable: false
+// });
+
+// console.log(obj.a);
+// obj.a = 37;
+// console.log(obj.a);
+
+var proto = Object.defineProperty({}, 'foo', {
+    value: 'a',
+    writable: false
 });
 
-console.log(obj);
-console.log(obj.p);
-obj.p = 246;
-console.log(obj.p);
+// var obj = Object.create(proto);
+// obj.foo= 'b';
+// console.log(obj.foo);
 
+var obj = Object.create(proto);
+Object.defineProperty(obj, 'foo', {
+    value: 'b'
+});
+console.log(obj.foo);
+
+</script> -->
+
+<script>
+// var obj = {};
+// console.log('toString' in obj);
+
+var obj = {};
+
+Object.defineProperty(obj, 'x', {
+    value: 123,
+    enumerable: false
+});
+
+console.log(obj.x);
+
+for (var key in obj) {
+    console.log(key);
+}
+
+console.log(Object.keys(obj));
+console.log(JSON.stringify(obj));
 </script>
