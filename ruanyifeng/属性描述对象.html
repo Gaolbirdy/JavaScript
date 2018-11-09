@@ -22,7 +22,7 @@ console.log(Object.getOwnPropertyDescriptor(obj, 'toString'));
 
 </script> -->
 
-<script>
+<!-- <script>
 // var obj = Object.defineProperties({}, {
 //     p1: { value: 1, enumerable: true},
 //     p2: { value: 2, enumerable: false}
@@ -35,4 +35,19 @@ console.log(Object.getOwnPropertyDescriptor(obj, 'toString'));
 
 console.log(Object.keys(Object.prototype));
 console.log(Object.getOwnPropertyNames(Object.prototype));
+</script> -->
+
+<script>
+var obj = Object.defineProperty({}, 'p', {
+    value: 123,
+    writable: false,
+    enumerable: true,
+    configurable: false
+});
+
+console.log(obj);
+console.log(obj.p);
+obj.p = 246;
+console.log(obj.p);
+
 </script>
