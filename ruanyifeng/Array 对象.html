@@ -104,7 +104,7 @@ console.log(arr);
 
 </script> -->
 
-<script>
+<!-- <script>
 // var a =[1, 2, 3, 4];
 // console.log(a.join(' '));
 // console.log(a.join(' | '));
@@ -141,4 +141,212 @@ console.log(newArray);
 obj.a = 2;
 console.log(newArray[0].a);
 
+</script> -->
+
+<!-- <script>
+var a = ['a', 'b', 'c'];
+console.log(a.reverse());
+console.log(a);
+</script> -->
+
+<!-- <script>
+var a = ['a', 'b', 'c'];
+
+// console.log(a.slice(0));
+// console.log(a.slice(1));
+// console.log(a.slice(1, 2));
+// console.log(a.slice(2, 6));
+// console.log(a.slice());
+
+// console.log(a.slice(-2));
+// console.log(a.slice(-2, -1));
+
+// console.log(a.slice(4));
+// console.log(a.slice(2, 1));
+
+// console.log(Array.prototype.slice.call({
+//     0: 'a',
+//     1: 'b',
+//     length: 2
+// }));
+
+// console.log(Array.prototype.slice.call(document.querySelectorAll('div')));
+// console.log(Array.prototype.slice.call(arguments));
+
+</script> -->
+
+<!-- <script>
+var a = ['a', 'b', 'c', 'd', 'e', 'f'];
+// console.log(a.splice(4, 2));
+// console.log(a);
+
+// console.log(a.splice(4, 2, 1, 2));
+// console.log(a);
+
+// console.log(a.splice(-4, 2));
+
+// var a = [1, 1, 1];
+
+// console.log(a.splice(1, 0, 2));
+// console.log(a);
+
+
+var a = [1, 2, 3, 4];
+console.log(a.splice(2));
+console.log(a);
+
+</script> -->
+
+<!-- <script>
+// console.log(['d', 'c', 'b', 'a'].sort());
+
+// console.log([4, 3, 2, 1].sort());
+// console.log([11, 101].sort());
+// console.log([10111, 1101, 111].sort());
+
+// console.log([10111, 1101, 111].sort(function (a, b) {
+//     return a - b;
+// }));
+
+// console.log([10111, 1101, 111].sort(function (a, b) {
+//     return b - a;
+// }));
+
+var arr = [
+    { name: '张三', age: 30 },
+    { name: '李四', age: 24 },
+    { name: '王五', age: 28 },    
+].sort(function(o1, o2) {
+    return o1.age - o2.age;
+});
+console.log(arr);
+</script> -->
+
+<!-- <script>
+// var numbers = [1, 2, 3];
+
+// console.log(numbers.map(function (n) {
+//     return n + 1;
+// }));
+// console.log(numbers);
+
+// console.log([1, 2, 3].map(function(elem, index, arr) {
+//     return elem * index;
+// }));
+
+// var arr = ['a', 'b', 'c'];
+
+// // console.log([1, 2].map(function (e) {
+// //     return this[e];
+// // }));
+
+// console.log([1, 2].map(function (e) {
+//     return this[e];
+// }, arr));
+
+var f = function (n) { return 'a'; };
+
+console.log([1, undefined, 2].map(f));
+console.log([1, null, 2].map(f));
+console.log([1, , 2].map(f));
+
+</script> -->
+
+<!-- <script>
+// function log(element, index, array) {
+//     console.log('[' + index + '] = ' + element);
+// }
+
+// [2, 5, 9].forEach(log);
+
+// var out = [];
+
+// [1, 2, 3].forEach(function (elem) {
+//     console.log(this);
+//     this.push(elem * elem);
+// }, out);
+// console.log(out);
+
+// var arr = [1, 2, 3];
+
+// for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] === 2) break;
+//     console.log(arr[i]);
+// }
+
+var log = function (n) {
+    console.log(n + 1);
+};
+
+[1, undefined, 2].forEach(log);
+[1, null, 2].forEach(log);
+[1, , 2].forEach(log);
+</script> -->
+
+<!-- <script>
+// console.log([1, 2, 3, 4, 5].filter(function (elem) {
+//     return (elem > 3);
+// }));
+
+// function fun(elem) {
+//     return (elem > 2);
+// }
+
+// console.log([1, 2, 3, 4, 5].filter(fun));
+
+// var arr = [0, 1, 'a', false];
+
+// console.log(arr.filter(Boolean));
+
+// console.log([1, 2, 3, 4, 5].filter(function (elem, index, arr) {
+//     return index % 2 === 0;
+// }));
+
+var obj = { MAX: 3};
+var myFilter = function (item) {
+    if (item > this.MAX)
+        return true;
+};
+
+var arr = [2, 8, 3, 4, 1, 3, 2, 9];
+console.log(arr.filter(myFilter, obj));
+
+</script> -->
+
+<!-- <script>
+// var arr = [1, 2, 3, 4, 5];
+
+// console.log(arr.some(function (elem, index, arr) {
+//     return elem > 3;
+// }));
+
+// var arr = [1, 2, 3, 4, 5];
+
+// console.log(arr.every(function (elem, index, arr) {
+//     return elem > 3;
+// }));
+
+function isEven(x) {
+    return x % 2 === 0;
+}
+
+console.log([].some(isEven));
+console.log([].every(isEven));
+</script> -->
+
+<script>
+// console.log([1, 2, 3, 4, 5].reduce(function (a, b) {
+//     console.log(a, b);
+//     return a + b;
+// }));
+
+// console.log([1, 2, 3, 4, 5].reduceRight(function (a, b) {
+//     console.log(a, b);
+//     return a + b;
+// }));
+
+console.log([1, 2, 3, 4, 5].reduce(function (a, b) {
+    console.log(a, b);
+    return a + b;
+}, 10));
 </script>
