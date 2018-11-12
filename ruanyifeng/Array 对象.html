@@ -334,7 +334,7 @@ console.log([].some(isEven));
 console.log([].every(isEven));
 </script> -->
 
-<script>
+<!-- <script>
 // console.log([1, 2, 3, 4, 5].reduce(function (a, b) {
 //     console.log(a, b);
 //     return a + b;
@@ -345,8 +345,77 @@ console.log([].every(isEven));
 //     return a + b;
 // }));
 
-console.log([1, 2, 3, 4, 5].reduce(function (a, b) {
-    console.log(a, b);
-    return a + b;
-}, 10));
+// console.log([1, 2, 3, 4, 5].reduce(function (a, b) {
+//     console.log(a, b);
+//     return a + b;
+// }, 10));
+
+// function add(prev, cur) {
+//     return prev + cur;
+// }
+
+// // console.log([].reduce(add));
+// console.log([].reduce(add, 1));
+
+// function substract(prev, cur) {
+//     return prev - cur;
+// }
+
+// console.log([3, 2, 1].reduce(substract));
+// console.log([3, 2, 1].reduceRight(substract));
+
+function findLongest(entries) {
+    return entries.reduce(function (longest, entry) {
+        return entry.length > longest.length ? entry : longest;
+    }, '');
+};
+
+console.log(findLongest(['aaa', 'bb', 'c']));
+
+</script> -->
+
+<!-- <script>
+// var a = ['a', 'b', 'c'];
+
+// console.log(a.indexOf('b'));
+// console.log(a.indexOf('y'));
+
+// console.log(['a', 'b', 'c'].indexOf('a', 1));
+
+// var a = [2, 5, 9, 2];
+
+// console.log(a.lastIndexOf(2));
+// console.log(a.lastIndexOf(7));
+
+// console.log(NaN == NaN);
+// console.log(NaN === NaN);
+
+// console.log([NaN].indexOf(NaN));
+// console.log([NaN].lastIndexOf(NaN));
+
+</script> -->
+
+<script>
+var users = [
+    {
+        name: 'tom',
+        email: 'tom@example.com'
+    },
+    {
+        name: 'peter',
+        email: 'peter@example.com'
+    }
+];
+
+users
+.map(function (user) {
+    return user.email;
+})
+.filter(function (email) {
+    return /^t/.test(email);
+})
+.forEach(function (email) {
+    console.log(email);
+});
+
 </script>
