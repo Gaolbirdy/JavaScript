@@ -80,11 +80,34 @@ console.log((12.45).toPrecision(3));
 // console.log(Number.prototype);
 // console.log(Number);
 
-Number.prototype.add = function (x) {
-    return this + x;
-};
+// Number.prototype.add = function (x) {
+//     return this + x;
+// };
 
-console.log(Number.prototype);
-console.log(8['add'](2));
-console.log((8).add(2));
+// console.log(Number.prototype);
+// console.log(8['add'](2));
+// console.log((8).add(2));
+
+// Number.prototype.subtract = function (x) {
+//     return this - x;
+// };
+// console.log((8).add(2).subtract(4));
+
+// Number.prototype.iterate = function () {
+//     var result = [];
+//     for (var i = 0; i <= this; i++) {
+//         result.push(i);
+//     }
+//     return result;
+// };
+// console.log((8).iterate());
+
+// console.log(typeof Number.prototype);
+
+var n = 1;
+n.x = 1;
+console.log(n.x);
+console.log(n.x = 1);
+console.log(n.x);
+
 </script>
