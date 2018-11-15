@@ -80,7 +80,7 @@ console.log(elapsed);
 
 </script> -->
 
-<script>
+<!-- <script>
 var d = new Date(2013, 0, 1);
 
 // console.log(d.toString());
@@ -99,5 +99,92 @@ var d = new Date(2013, 0, 1);
 // console.log(d.toLocaleString());
 // console.log(d.toLocaleDateString());
 // console.log(d.toLocaleTimeString());
+
+// console.log(d.toLocaleString('en-US'));
+// console.log(d.toLocaleString('zh-CN'));
+// console.log(d.toLocaleDateString('en-US'));
+// console.log(d.toLocaleDateString('zh-CN'));
+// console.log(d.toLocaleTimeString('en-US'));
+// console.log(d.toLocaleTimeString('zh-CN'));
+
+console.log(d.toLocaleDateString('en-US', {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}));
+
+console.log(d.toLocaleTimeString('en-US', {
+  timeZone: 'UTC',
+  timeZoneName: 'short'
+}));
+
+console.log(d.toLocaleTimeString('en-US', {
+  timeZone: 'Asia/Shanghai',
+  timeZoneName: 'long'
+}));
+
+console.log(d.toLocaleTimeString('en-US', {
+  hour12: false
+}));
+
+console.log(d.toLocaleTimeString('en-US', {
+  hour12: true
+}));
+
+
+</script> -->
+
+<!-- <script>
+// var d = new Date('January 6, 2013');
+
+// console.log(d.getDate());
+// console.log(d.getMonth());
+// console.log(d.getYear());
+// console.log(d.getFullYear());
+// console.log(d.getTimezoneOffset());
+
+// function leftDays() {
+//     var today = new Date();
+//     var endYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59, 999);
+//     var msPerDay = 24 * 60 * 60 * 1000;
+//     return Math.round((endYear.getTime() - today.getTime()) / msPerDay);
+// }
+
+// console.log(leftDays());
+
+var d = new Date('January 6, 2013');
+console.log(d.getDate());
+console.log(d.getUTCDate() );
+
+
+</script> -->
+
+<script>
+// var d = new Date ('January 6, 2013');
+
+// console.log(d);
+// d.setDate(9);
+// console.log(d);
+
+// var d1 = new Date('January 6, 2013');
+// console.log(d1.setDate(32));
+// console.log(d1);
+
+// var d2 = new Date ('January 6, 2013');
+// console.log(d2.setDate(-1));
+// console.log(d2);
+
+// var d = new Date();
+// d.setDate(d.getDate() + 1000);
+// d.setHours(d.getHours() + 6);
+// d.setFullYear(d.getFullYear() - 1);
+
+// console.log(d);
+
+var d = new Date('January 6, 2013');
+console.log(d.getUTCHours());
+console.log(d.setUTCHours(22) );
+console.log(d);
 
 </script>
