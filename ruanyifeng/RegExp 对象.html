@@ -18,7 +18,7 @@ console.log((r.source));
 
 </script> -->
 
-<script>
+<!-- <script>
 // console.log(/cat/.test('cats and dogs'));
 
 // var r = /x/g;
@@ -102,5 +102,98 @@ while (true) {
     if (!match) break;
     console.log('#' + match.index + ':' + match[0]);
 }
+
+</script> -->
+
+<!-- <script>
+// var s = '_x_x';
+// var r1 = /x/;
+// var r2 = /y/;
+
+// console.log(s.match(r1));
+// console.log(s.match(r2));
+
+// var s = 'abba';
+// var r = /a/g;
+
+// console.log(s.match(r));
+// console.log(r.exec(s));
+
+// var r = /a|b/g;
+// r.lastIndex = 7;
+// console.log('xaxb'.match(r));
+// console.log(r.lastIndex);
+
+// console.log('_x_x'.search(/x/));
+
+// console.log('aaa'.replace('a', 'b'));
+// console.log('aaa'.replace(/a/, 'b'));
+// console.log('aaa'.replace(/a/g, 'b'));
+
+// var str = '  #id div.class  ';
+// console.log(str.replace(/^\s+|\s+$/g, ''));
+
+// console.log('hello world'.replace(/(\w+)\s(\w+)/, '$2 $1'));
+// console.log('abc'.replace('b', '[$`-$&-$\']'));
+
+// console.log('3 and 5'.replace(/[0-9]+/g, function (match) {
+//   return 2 * match;
+// }));
+
+// var a = 'The quick brown fox jumped over the lazy dog.';
+// var pattern = /quick|brown|lazy/ig;
+
+// console.log(a.replace(pattern, function replacer(match) {
+//     return match.toUpperCase();
+// }));
+
+// var prices = {
+//   'p1': '$1.99',
+//   'p2': '$9.99',
+//   'p3': '$5.00'
+// };
+
+// var template = '<span id="p1"></span>'
+//   + '<span id="p2"></span>'
+//   + '<span id="p3"></span>';
+
+// console.log(template.replace(
+//   /(<span id=")(.*?)(">)(<\/span>)/g,
+//   function(match, $1, $2, $3, $4){
+//     return $1 + $2 + $3 + prices[$2] + $4;
+//   }
+// ));
+
+// console.log('a,  b,c, d'.split(','));
+// console.log('a,  b,c, d'.split(/, */));
+// console.log('a,  b,c, d'.split(/, */, 2));
+
+// console.log('aaa*a*'.split(/a*/));
+console.log('aaa**a*'.split(/a*/));
+
+console.log('aaa*a*'.split(/(a*)/));
+
+</script> -->
+
+
+<script>
+// console.log(/dog/.test('old dog'));
+
+// console.log(/^test/.test('test123') );
+// console.log(/test$/.test('new test'));
+// console.log(/^test$/.test('test'));
+// console.log(/^test$/.test('test test'));
+
+// console.log(/11|22/.test('911'));
+// console.log(/a( |\t)b/.test('a\tb'));
+
+// console.log(/1+1/.test('1+1'));
+// console.log(/1\+1/.test('1+1'));
+// console.log((new RegExp('1\+1')).test('1+1'));
+// console.log((new RegExp('1\\+1')).test('1+1'));
+
+console.log(/[abc]/.test('hello world'));
+console.log(/[abc]/.test('apple'));
+
 
 </script>
