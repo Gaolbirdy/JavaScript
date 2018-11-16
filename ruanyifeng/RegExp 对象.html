@@ -192,8 +192,127 @@ console.log('aaa*a*'.split(/(a*)/));
 // console.log((new RegExp('1\+1')).test('1+1'));
 // console.log((new RegExp('1\\+1')).test('1+1'));
 
-console.log(/[abc]/.test('hello world'));
-console.log(/[abc]/.test('apple'));
+// console.log(/[abc]/.test('hello world'));
+// console.log(/[abc]/.test('apple'));
 
+// console.log(/[^abc]/.test('hello world'));
+// console.log(/[^abc]/.test('bbc'));
+
+// var s = 'Please yes\nmake my day!';
+
+// console.log(s.match(/yes.*day/) );
+// console.log(s.match(/yes[^]*day/));
+
+
+// console.log(/a-z/.test('b'));
+// console.log(/[a-z]/.test('b'));
+
+// var str = "\u0130\u0131\u0132";
+// console.log(/[\u0128-\uFFFF]/.test(str));
+
+// console.log(/[A-z]/.test('\\'));
+
+// console.log(/\s\w*/.exec('hello world'));
+
+// console.log(/\bworld/.test('hello world') );
+// console.log(/\bworld/.test('hello-world') );
+// console.log(/\bworld/.test('helloworld'));
+
+// console.log(/\Bworld/.test('hello-world'));
+// console.log(/\Bworld/.test('helloworld') );
+
+// var html = "<b>Hello</b>\n<i>world!</i>";
+// // console.log(/.*/.exec(html)[0]);
+// console.log(/[\S\s]*/.exec(html)[0]);
+
+// console.log(/lo{2}k/.test('look'));
+// console.log(/lo{2,5}k/.test('looook'));
+
+// console.log(/t?est/.test('test'));
+// console.log(/t?est/.test('est') );
+
+// console.log(/t+est/.test('test'));
+// console.log(/t+est/.test('ttest'));
+// console.log(/t+est/.test('est'));
+
+// console.log(/t*est/.test('test') );
+// console.log(/t*est/.test('ttest'));
+// console.log(/t*est/.test('tttest'));
+// console.log(/t*est/.test('est'));
+
+// var s = 'aaa';
+// console.log(s.match(/a+/));
+// console.log(s.match(/a+?/));
+
+// console.log('abb'.match(/ab*b/));
+// console.log('abb'.match(/ab*?b/));
+
+// console.log('abb'.match(/ab?b/));
+// console.log('abb'.match(/ab??b/));
+
+// var regex = /test/i;
+// var regex = /test/ig;
+
+// var regex = /b/;
+// // console.log(regex);
+// // console.log(typeof regex);
+// var str = 'abba';
+
+// console.log(regex.test(str));
+// console.log(regex.test(str));
+// console.log(regex.test(str));
+
+// var regex = /b/g;
+// var str = 'abba';
+// console.log(regex.test(str));
+// console.log(regex.test(str));
+// console.log(regex.test(str));
+
+
+// console.log(/abc/.test('ABC'));
+// console.log(/abc/i.test('ABC'));
+
+// console.log(/world$/.test('hello world\n'));
+// console.log(/world$/m.test('hello world\n'));
+
+// console.log(/^b/m.test('a\nb'));
+
+// console.log(/fred+/.test('fredd'));
+// console.log(/(fred)+/.test('fredfred'));
+
+// var m = 'abcabc'.match(/(.)b(.)/);
+// console.log(m);
+
+// var m = 'abcabc'.match(/(.)b(.)/g);
+// console.log(m);
+
+// var str = 'abcabc';
+// var reg = /(.)b(.)/g;
+// while (true) {
+//   var result = reg.exec(str);
+//   if (!result) break;
+//   console.log(result);
+// }
+
+// console.log(/(.)b(.)\1b\2/.test("abcabc"));
+// console.log(/y(..)(.)\2\1/.test('yabccab'));
+// console.log(/y((..)\2)\1/.test('yabababab'));
+
+// var tagName = /<([^>]+)>[^<]*<\/\1>/;
+// console.log(tagName.exec("<b>bold</b>")[1]);
+
+var html = '<b class="hello">Hello</b><i>world</i>';
+var tag = /<(\w+)([^>]*)>(.*?)<\/\1>/g;
+
+var match = tag.exec(html);
+
+console.log(match[1]);
+console.log(match[2]);
+console.log(match[3]);
+
+match = tag.exec(html);
+console.log(match[1]);
+console.log(match[2]);
+console.log(match[3]);
 
 </script>
