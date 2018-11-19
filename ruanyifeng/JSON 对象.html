@@ -24,7 +24,7 @@ console.log(typeof JSON);
 
 </script> -->
 
-<script>
+<!-- <script>
 // console.log(JSON.stringify('abc'));
 // console.log(JSON.stringify(1));
 // console.log(JSON.stringify(false));
@@ -87,13 +87,110 @@ console.log(typeof JSON);
 
 // console.log(JSON.stringify({ a: 1, b: 2, c: '3'}, f));
 
-var o = {a: {b: 1}};
+// var o = {a: {b: 1}};
+
+// function f(key, value) {
+//     console.log("[" + key + "]:" + value);
+//     return value;
+// }
+
+// console.log(JSON.stringify(o, f));
+
+// var o = {a: 1};
+
+// function f(key, value) {
+//     if (typeof value === 'object') {
+//         return {b: 2};
+//     }
+//     return value * 2;
+// }
+
+// console.log(JSON.stringify(o, f));
+
+// function f(key, value) {
+//     if (typeof(value) === 'string') {
+//         return undefined;
+//     }
+//     return value;
+// }
+// console.log(JSON.stringify({ a: 'abc', b: 123}, f));
+
+// console.log(JSON.stringify({ p1: 1, p2: 2 }, null, 2));
+// console.log(JSON.stringify({ p1: 1, p2: 2 }, null, "|-"));
+
+// var user = {
+//     firstName: '三',
+//     lastName: '张',
+
+//     get fullName() {
+//         return this.lastName + this.firstName;
+//     }
+// };
+
+// console.log(JSON.stringify(user));
+
+// var user = {
+//     firstName: '三',
+//     lastName: '张',
+
+//     get fullName() {
+//         return this.lastName + this.firstName;
+//     },
+
+//     toJSON: function() {
+//         return {
+//             name: this.lastName + this.firstName
+//         };
+//     }
+// };
+
+// console.log(JSON.stringify(user));
+
+// var date = new Date('2015-01-01');
+// console.log(date.toJSON);
+// console.log(date.toJSON());
+// console.log(JSON.stringify(date));
+
+var obj = {
+    reg: /foo/
+};
+
+console.log(JSON.stringify(obj));
+
+RegExp.prototype.toJSON = RegExp.prototype.toString;
+console.log(JSON.stringify(obj));
+console.log(JSON.stringify(/foo/));
+
+
+</script> -->
+
+<script>
+// console.log(JSON.parse('{}'));
+// console.log(JSON.parse('true'));
+// console.log(JSON.parse('"foo"'));
+// console.log(JSON.parse('[1, 5, "false"]'));
+// console.log(JSON.parse('null'));
+
+// var o = JSON.parse('{"name": "张三"}');
+// console.log(o);
+// console.log(o.name);
+
+// console.log(JSON.parse("'String'"));
+
+// try {
+//     JSON.parse("'String'");
+// } catch (e) {
+//     console.log('parsing error');
+// }
 
 function f(key, value) {
-    console.log("[" + key + "]:" + value);
+    if (key === 'a') {
+        return value + 10;
+    }
     return value;
 }
 
-console.log(JSON.stringify(o, f));
+console.log(JSON.parse('{"a": 1, "b": 2}', f));
+
 
 </script>
