@@ -7,7 +7,7 @@ console.log(typeof Vehicle);
 
 </script> -->
 
-<script>
+<!-- <script>
 // var Vehicle = function () {
 //     this.price = 1000;
 // };
@@ -68,6 +68,66 @@ console.log(typeof Vehicle);
 // console.log(new Vehicle().price);
 
 
+// function getMessage() {
+//     return 'this is a message';
+// }
 
+// var msg = new getMessage();
+// console.log(msg);
+// console.log(typeof msg);
+
+// function _new(/* 构造函数 */ constructor, /* 构造函数参数 */ params) {
+//     // 将 arguments 对象转为数组
+//     var args = [].slice.call(arguments);
+//     // 取出构造函数
+//     var constructor = args.shift();
+//     // 创建一个空对象，继承构造函数的 prototype 属性
+//     var context = Object.create(constructor.prototype);
+//     // 执行构造函数
+//     var result = constructor.apply(context, args);
+//     // 如果返回结果是对象，就直接返回，否则返回 context 对象
+//     return (typeof result === 'object' && result != null) ? result : context;
+// }
+
+// // console.log((typeof null));
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// // 实例
+// var actor = _new(Person, '张三', 28);
+// console.log(actor);
+
+// function f() {
+//     console.log(new.target);
+//     console.log(new.target === f);    
+// }
+
+// f();
+// new f();
+
+function f() {
+    if (!new.target) {
+        throw new Error('请使用 new 命令调用！');
+    }
+}
+
+f();
+</script> -->
+
+<script>
+var person1 = {
+    name: '张三',
+    age: 38,
+    greeting: function () {
+        console.log('Hi! I\'m ' + this.name + '.');
+    }
+};
+
+var person2 = Object.create(person1);
+console.log(person2.name);
+person2.greeting();
 
 </script>

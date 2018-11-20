@@ -1,0 +1,94 @@
+<!-- <script>
+// var person = {
+//     name: '张三',
+//     describe: function () {
+//         return '姓名: ' + this.name;
+//     }
+// };
+
+// console.log(person.describe());
+
+// var A = {
+//     name: '张三',
+//     describe: function () {
+//         return '姓名: ' + this.name;
+//     }
+// };
+
+// var B = {
+//     name: '李四'
+// };
+
+// B.describe = A.describe;
+// console.log(B.describe());
+
+// function f() {
+//     return '姓名: ' + this.name;
+// }
+
+// var A = {
+//     name: '张三',
+//     describe: f
+// };
+
+// var B = {
+//     name: '李四',
+//     describe: f
+// };
+
+// console.log(A.describe());
+// console.log(B.describe());
+
+var A = {
+    name: '张三',
+    describe: function () {
+        return '姓名: ' + this.name;
+    }
+};
+
+var name = '李四';
+console.log(this.name);
+
+var f = A.describe;
+console.log(this.f);
+
+console.log(f());
+console.log(this.f());
+
+
+</script> -->
+
+<!-- <input type="text" name="age" size=3 onChange="validate(this, 18, 99);">
+<script>
+function validate(obj, lowval, hival) {
+    console.log(obj);
+    
+    if ((obj.value < lowval) || (obj.value > hival))
+        console.log('Invalid value');
+}
+</script> -->
+
+<script>
+// var obj = { foo: 5 };
+// var obj = { foo: function () {} };
+
+// var f = function () { console.log(1);};
+// var obj = { f: f };
+
+// f();
+// obj.f();
+
+// var f = function () {
+//     console.log(x);
+// };
+
+// f();
+x=1
+var p = {
+    foo: function () {
+        console.log(this.name)
+    }
+}
+p.foo()
+
+</script>
