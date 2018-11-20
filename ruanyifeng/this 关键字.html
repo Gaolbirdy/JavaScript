@@ -68,7 +68,7 @@ function validate(obj, lowval, hival) {
 }
 </script> -->
 
-<script>
+<!-- <script>
 // var obj = { foo: 5 };
 // var obj = { foo: function () {} };
 
@@ -78,17 +78,118 @@ function validate(obj, lowval, hival) {
 // f();
 // obj.f();
 
+// var x = 1;
+
+// // var f = function () {
+// //     console.log(x);
+// // };
+
 // var f = function () {
-//     console.log(x);
+//     console.log(this.x);
 // };
 
 // f();
-x=1
-var p = {
+
+// var o = {
+//     x: 2,
+//     foo: f
+// };
+
+// o.foo();
+
+var f = function () {
+    console.log(this.x);
+};
+
+var x = 1;
+var obj = {
+    f: f,
+    x: 2,
+};
+
+f();
+obj.f();
+
+</script> -->
+
+<script>
+// console.log(this === window);
+
+// function f() {
+//     console.log(this === window);
+// }
+
+// f();
+
+// var Obj = function (p) {
+//     this.p = p;
+// };
+
+// var o = new Obj('hello');
+// console.log(o.p);
+
+var obj = {
     foo: function () {
-        console.log(this.name)
+        console.log(this);
     }
-}
-p.foo()
+};
+
+obj.foo();
+
+// var other = { p: 123 };
+// other.foo = obj.foo;
+// other.foo();
+
+// obj.foo = obj.foo;
+// obj.foo();
+
+// (obj.foo = obj.foo)();
+// (false || obj.foo)();
+// (1, obj.foo)();
+// var a = obj.foo;
+// a();
+
+// (obj.foo = function () {
+//     console.log(this);
+// })();
+// (function () {
+//     console.log(this);
+// })();
+
+// (false || function () {
+//     console.log(this);
+// })();
+
+// (1, function () {
+//     console.log(this);
+// })();
+
+// var a = {
+//     p: 'hello',
+//     b: {
+//         m: function () {
+//             console.log(this.p);
+//         },
+//         p: 123
+//     }
+// };
+// a.b.m();
+
+// var b = {
+//     m: function () {
+//         console.log(this.p);
+//     }
+// };
+
+// // b.m();
+
+// var a = {
+//     p: 'hello',
+//     b: b
+// };
+
+// // a.b.m();
+// (a.b).m();
+
 
 </script>
