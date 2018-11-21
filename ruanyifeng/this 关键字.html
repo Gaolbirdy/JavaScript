@@ -112,7 +112,7 @@ obj.f();
 
 </script> -->
 
-<script>
+<!-- <script>
 // console.log(this === window);
 
 // function f() {
@@ -191,5 +191,155 @@ obj.foo();
 // // a.b.m();
 // (a.b).m();
 
+var a = {
+    b: {
+        m: function () {
+            console.log(this.p);
+        },
+        p: 'hello'
+    }
+};
+(a.b).m();
+
+var hello = a.b.m;
+hello();
+
+var hello = a.b;
+hello.m();
+
+</script> -->
+
+<!-- <script>
+// var o = {
+//     f1: function () {
+//         console.log(this);
+//         var f2 = function () {
+//             console.log(this);
+//         }();
+//     }
+// };
+
+// o.f1();
+
+// var temp = function () {
+//     console.log(this);
+// };
+
+// var o = {
+//     f1: function () {
+//         console.log(this);
+//         var f2 = temp(); 
+//     }
+// };
+
+// o.f1();
+
+// var o = {
+//     f1: function () {
+//         console.log(this);
+//         var that = this;
+//         var f2 = function () {
+//             console.log(that);
+//         }();
+//     }
+// }
+// o.f1();
+
+// var foo = {};
+// foo.f2 = o.f1;
+// foo.f2();
+
+// var counter = {
+//     count: 0
+// };
+// counter.inc = function () {
+//     'use strict';
+//     this.count++;
+// };
+
+// counter.inc();
+// console.log(counter);
+
+// var f = counter.inc;
+// f();
+
+// var o = {
+//     v: 'hello',
+//     p: [ 'a1', 'a2' ],
+//     f: function f() {
+//         // console.log(this.p);
+//         var that = this;
+
+//         this.p.forEach(function (item) {
+//             // console.log(this);
+            
+//             // console.log(this.v + ' ' + item);
+//             console.log(that.v + ' ' + item);
+//         })
+//     }
+// };
+
+// o.f();
+
+// var o = {
+//     v: 'hello',
+//     p: [ 'a1', 'a2' ],
+//     f: function f() {
+//         this.p.forEach(function (item) {
+//             // console.log(this);
+//             console.log(this.v + ' ' + item);
+//         }, this);
+//     }
+// };
+
+// o.f();
+
+var o = new Object();
+o.f = function () {
+    console.log(this === o, this);
+};
+
+o.f();
+
+var foo = { b: 2 };
+foo.f = o.f;
+foo.f();
+
+</script> -->
+
+<script>
+// var obj = { a: 1 };
+
+// var f = function () {
+//     return this;
+// };
+
+// console.log(f() === window);
+
+// console.log(f.call(obj) === obj);
+// console.log(f.call([obj]));
+// console.log(f.call(this));
+// console.log(f.call(this) === window);
+
+// var n = 123;
+// var obj = { n: 456 };
+
+// function a() {
+//     console.log(this.n);
+// }
+
+// a();
+
+// a.call();
+// a.call(null);
+// a.call(undefined);
+// a.call(window);
+// a.call(obj);
+
+var f = function () {
+    return this;
+};
+
+console.log(f.call(5));
 
 </script>
