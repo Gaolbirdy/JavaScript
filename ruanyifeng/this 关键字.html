@@ -336,10 +336,68 @@ foo.f();
 // a.call(window);
 // a.call(obj);
 
+// var f = function () {
+//     return this;
+// };
+
+// console.log(f.call(5));
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// console.log(add.call(this, 1, 2));
+
+// var obj = {};
+// console.log(obj.hasOwnProperty('toString'));
+
+// obj.hasOwnProperty = function () {
+//     return true;
+// };
+
+// console.log(obj.hasOwnProperty('toString'));
+
+// console.log(Object.prototype.hasOwnProperty.call(obj, 'toString'));
+
+// function f(x, y) {
+//     // console.log(this);
+    
+//     console.log(x + y);
+// }
+// f.call(null, 1, 1);
+// f.apply(null, [1, 1]);
+
+// var a = [10, 2, 4, 15, 9];
+// console.log(Math.max.apply(null, a));
+
+// console.log(Array.apply(null, ['a', ,'b']));
+
+// var a = ['a', , 'b'];
+
+// function print(i) {
+//     console.log(i);
+// }
+
+// a.forEach(print);
+
+// Array.apply(null, a).forEach(print);
+
+// console.log(Array.prototype.slice.apply({0: 1, length: 1}));
+// console.log(Array.prototype.slice.apply({0: 1}));
+// console.log(Array.prototype.slice.apply({0: 1, length: 2}));
+// console.log(Array.prototype.slice.apply({length: 1}));
+
+var o = new Object();
+
+o.f = function () {
+    console.log(this === o);
+}
+
 var f = function () {
-    return this;
+    o.f.apply(o);
+    o.f.call(o);
 };
 
-console.log(f.call(5));
+f();
 
 </script>
