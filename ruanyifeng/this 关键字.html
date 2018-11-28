@@ -507,6 +507,7 @@ foo.f();
 // console.log(Array.prototype.slice.call([1, 2, 3], 0, 1));
 
 // var slice = Function.prototype.call.bind(Array.prototype.slice);
+// // var slice = Array.prototype.slice.call;
 // console.log(slice([1, 2, 3], 0, 1));
 
 // var push = Function.prototype.call.bind(Array.prototype.push);
@@ -519,6 +520,33 @@ foo.f();
 // pop(a);
 // console.log(a);
 
+function f() {
+    console.log(this.v);
+}
 
+var o = { v: 123};
+var bind = Function.prototype.call.bind(Function.prototype.bind);
+bind(f, o)();
 
+var push = bind(Function.prototype.call, Array.prototype.push);
+var pop = Function.prototype.bind.call(Array.prototype.pop);
+
+var a = [1, 2, 3];
+push(a, 4);
+console.log(a);
+
+pop(a);
+console.log(a);
+
+a.push(5);
+console.log(a);
+
+a.pop();
+console.log(a);
+
+Array.prototype.push.call(a, 6);
+console.log(a);
+
+Array.prototype.pop.call(a);
+console.log(a);
 </script>
