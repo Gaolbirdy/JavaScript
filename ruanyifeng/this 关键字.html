@@ -530,7 +530,8 @@ var bind = Function.prototype.call.bind(Function.prototype.bind);
 bind(f, o)();
 
 var push = bind(Function.prototype.call, Array.prototype.push);
-var pop = Function.prototype.bind.call(Array.prototype.pop);
+var pop = bind(Function.prototype.call, Array.prototype.pop);
+// var pop = Function.prototype.bind.call(Array.prototype.pop);
 
 var a = [1, 2, 3];
 push(a, 4);
