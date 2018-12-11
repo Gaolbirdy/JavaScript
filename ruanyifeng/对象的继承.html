@@ -1,0 +1,24 @@
+<!-- <script> -->
+
+<script>
+// console.log(Object);
+// console.log(Object.prototype.__proto__);
+// console.log(Object.getPrototypeOf(Object.prototype));
+// console.log(Object.prototype);
+
+// // console.log(null);
+
+var myArray = function () {};
+
+myArray.prototype = new Array();
+
+console.log(myArray.prototype.constructor);
+myArray.prototype.constructor = myArray;
+console.log(myArray.prototype.constructor);
+
+var mine = new myArray();
+mine.push(1, 2, 3);
+console.log(mine.length);
+console.log(mine instanceof Array);
+
+</script>
