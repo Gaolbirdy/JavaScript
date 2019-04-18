@@ -1,3 +1,123 @@
+<!-- <script>
+    function Cat(name, color) {
+        this.name = name;
+        this.color = color;
+        this.meow = function () {
+            console.log('喵喵');
+        }
+    }
+
+    var cat1 = new Cat('大毛', '白色');
+    var cat2 = new Cat('二毛', '黑色');
+
+    console.log(cat1.name);
+    console.log(cat1.color);
+
+    console.log(cat1.name === cat2.name);
+    console.log(cat1.meow === cat2.meow);
+    
+</script> -->
+
+<!-- <script>
+    // function f() {}
+    // console.log(typeof f.prototype);
+    // console.log(f.prototype);
+    
+    function Animal(name) {
+        this.name = name;
+    }
+    console.log(Animal.prototype);
+
+    Animal.prototype.color = 'white';
+    console.log(Animal.prototype);
+
+    var cat1= new Animal('大毛');
+    var cat2= new Animal('二毛');
+
+    console.log(cat1.color);
+    console.log(cat2.color);
+    
+    Animal.prototype.color = 'yellow';
+    console.log(cat1.color);
+    console.log(cat2.color);
+    console.log(cat2.color === Animal.prototype.color);
+
+    cat1.color = 'black';
+    console.log(cat1.color);
+    console.log(cat2.color);
+    console.log(Animal.prototype.color);
+    console.log(cat1.color === Animal.prototype.color);
+    
+    Animal.prototype.walk = function () {
+        console.log(this.name + ' is walking');
+    };
+
+    // Animal.prototype.walk();
+    cat1.walk();
+    cat2.walk();
+
+    console.log(Animal.prototype);
+    
+</script> -->
+
 <script>
+    // function Animal(name) {
+    //     this.name = name;
+    // }
+
+    // // console.log(Animal.prototype);
+    // // Animal.prototype = {color:'yellow'};
+    // // console.log(Animal.prototype);
+    // // console.log(Animal.prototype.constructor);
+
+    // // console.log(Object.prototype);
+    // // console.log(Object.prototype.prototype);
+
+    // console.log(Object.getPrototypeOf(Object.prototype));
+    // console.log(Object.getPrototypeOf({}));
+    
+    // function Animal(name) {
+    //     this.name = name;
+    // }
+    
+    // var cat1 = new Animal('大毛');
+    
+    // console.log(Animal.prototype.constructor);
+
+    // Animal.prototype.color = 'white';
+    // Animal.prototype = { size: 1};
+    // console.log(Animal.prototype.constructor);
+    
+    // console.log(cat1.color);
+    // console.log(cat1.size);
+    
+    // var cat2 = new Animal('二毛');
+    // console.log(cat2.color);
+    // console.log(cat2.size);
+    
+    var MyArray = function () {};
+
+    console.log(MyArray.prototype);
+    console.log(MyArray.prototype.constructor);
+    
+    // MyArray.prototype = Array;
+    // console.log(MyArray.prototype);
+    // console.log(MyArray.prototype.constructor);
+
+    MyArray.prototype = new Array();
+    console.log(MyArray.prototype);
+    console.log(MyArray.prototype.constructor);
+    
+    MyArray.prototype.constructor = MyArray;
+    console.log(MyArray.prototype.constructor);
+
+    var mine = new MyArray();
+    mine.push(1, 2, 3);
+    console.log(mine.length);
+
+    console.log(mine.constructor);
+    
+    console.log(mine instanceof MyArray)
+    console.log(mine instanceof Array);
     
 </script>
