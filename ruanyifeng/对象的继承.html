@@ -60,7 +60,7 @@
     
 </script> -->
 
-<script>
+<!-- <script>
     // function Animal(name) {
     //     this.name = name;
     // }
@@ -120,4 +120,48 @@
     console.log(mine instanceof MyArray)
     console.log(mine instanceof Array);
     
+</script> -->
+
+<script>
+    // function P() {}
+    // console.log(P.prototype.constructor);
+    // console.log(P.prototype.constructor === P);
+
+    // var p = new P();
+
+    // console.log(p.constructor);
+    // console.log(p.constructor === P);
+    // console.log(p.constructor === P.prototype.constructor);
+    // console.log(p.hasOwnProperty('constructor'));
+    // console.log(P.prototype.hasOwnProperty('constructor'));
+    
+    // function F() {}
+    // var f = new F();
+
+    // console.log(f.constructor === F);
+    // console.log(f.constructor === RegExp);
+    
+    // function Constr() {}
+    // var x = new Constr();
+
+    // console.log(x.constructor);
+    
+    // var y = new x.constructor();
+    // console.log(y instanceof Constr);
+
+    // Constr.prototype.createCopy = function () {
+    //     return new this.constructor();
+    // };
+
+    // console.log(x.createCopy() === x);
+    
+    function Person(name) {
+        this.name = name;
+    }
+
+    console.log(Person.prototype.constructor === Person);
+    
+    Person.prototype = {
+        method
+    }
 </script>
