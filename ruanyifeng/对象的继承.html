@@ -122,7 +122,7 @@
     
 </script> -->
 
-<script>
+<!-- <script>
     // function P() {}
     // console.log(P.prototype.constructor);
     // console.log(P.prototype.constructor === P);
@@ -160,8 +160,42 @@
     }
 
     console.log(Person.prototype.constructor === Person);
-    
+    console.log(Person.prototype.constructor);
+    console.log(Person.prototype);
+
     Person.prototype = {
-        method
-    }
+        method: function () {}
+    };
+
+    console.log(Person.prototype.constructor === Person);
+    console.log(Person.prototype.constructor === Object);
+    console.log(Person.prototype.constructor);
+    console.log(Person.prototype);
+
+    var p = new Person('a');
+    console.log(p instanceof Person);
+    console.log(p.constructor);
+
+    // Person.prototype = {
+    //     constructor: Person,
+    //     method: function () {}
+    // };
+    // console.log(Person.prototype.constructor === Person);
+    // console.log(Person.prototype.constructor === Object);
+    // console.log(Person.prototype.constructor);
+
+    // Person.prototype.method = function () {};
+    // console.log(Person.prototype.constructor === Person);
+    // console.log(Person.prototype.constructor === Object);
+    // console.log(Person.prototype.constructor);
+    // console.log(Person.prototype.constructor.name);
+
+    // function Foo() {}
+    // var f = new Foo();
+    // console.log(f.constructor.name);
+    
+</script> -->
+
+<script>
+    var v = new Vehicle();
 </script>
