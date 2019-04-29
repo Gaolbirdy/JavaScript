@@ -197,11 +197,41 @@
 </script> -->
 
 <script>
-    function Vehicle() {}
+    // function Vehicle(name) {
+    //     this.name = name;
+    // }
 
-    var v = new Vehicle();
-    console.log(v instanceof Vehicle);
-    console.log(v);
+    // var v = new Vehicle('q5');
+    // console.log(v instanceof Vehicle);
+    // console.log(v);
     
+    // console.log(Vehicle.prototype.isPrototypeOf(v));
+    // console.log(Vehicle.prototype);
+    
+    // var d = new Date();
+    // console.log(d instanceof Vehicle);
+    // console.log(d instanceof Date);
+    // console.log(d instanceof Object);
 
+    // var obj = { foo: 123};
+    // console.log(obj instanceof Object);
+    // console.log(obj);
+    
+    // console.log(null instanceof Object);
+    // console.log(undefined instanceof Object);
+    
+    // console.log(typeof null);
+    // console.log(typeof undefined);
+    
+    var obj = Object.create(null);
+    console.log(obj);
+    console.log(obj === null);
+    
+    console.log(typeof null);
+    console.log(typeof obj);
+
+    console.log(obj instanceof Object);
+    console.log(Object.create(null) instanceof Object);
+    
+    
 </script>
