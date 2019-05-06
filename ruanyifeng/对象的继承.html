@@ -196,7 +196,7 @@
     
 </script> -->
 
-<script>
+<!-- <script>
     // function Vehicle(name) {
     //     this.name = name;
     // }
@@ -215,6 +215,41 @@
     // console.log(obj instanceof Object);
     // console.log(null instanceof Object);
     
-    var obj = Object.create(null);
+    // var obj = Object.create(null);
+    // console.log(obj);
+    // console.log(typeof obj);
+    // console.log(obj instanceof Object);
+    // console.log(Object.create(null) instanceof Object);
     
+    // var x = [1, 2, 3];
+    // var y = {};
+    // console.log(x instanceof Array);
+    // console.log(x instanceof Object);
+    // console.log(y instanceof Object);
+    
+    var s = 'hello';
+    console.log(s instanceof String);
+    console.log(s instanceof Object);
+
+    console.log(undefined instanceof Object);
+    console.log(null instanceof Object);
+
+    function Fubar(foo, bar) {
+        if (this instanceof Fubar) {
+            this._foo = foo;
+            this._bar = bar;
+        } else {
+            return new Fubar(foo, bar);
+        }
+    }
+    
+</script> -->
+
+<script>
+    function Sub(value) {
+        Super.call(this);
+        this.prop = value;
+    }
+
+    Sub.prototype = Object.create(Super.prototype);
 </script>
