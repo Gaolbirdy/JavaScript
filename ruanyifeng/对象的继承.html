@@ -246,10 +246,23 @@
 </script> -->
 
 <script>
+    function Super(name) {
+        this.name = name;
+    }
+
     function Sub(value) {
         Super.call(this);
         this.prop = value;
     }
 
+    console.log(Sub.prototype.constructor);
+    console.log(Sub.prototype);
+
     Sub.prototype = Object.create(Super.prototype);
+    console.log(Sub.prototype.constructor);
+    Sub.prototype.constructor = Sub;
+    console.log(Sub.prototype.constructor);
+    console.log(Sub.prototype);
+
+    
 </script>
