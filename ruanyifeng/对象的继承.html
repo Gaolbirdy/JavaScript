@@ -249,11 +249,15 @@
     function Super(name) {
         this.name = name;
     }
-
+    
     function Sub(value) {
-        Super.call(this);
+        Super.call(this, 'ho');
         this.prop = value;
     }
+
+    var s = new Sub(123);
+    console.log(s.name, s.prop);
+    
 
     console.log(Sub.prototype.constructor);
     console.log(Sub.prototype);
